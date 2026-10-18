@@ -1,0 +1,117 @@
+/* ==========================================================================
+   GAJA LANKA - ORGANIC LUXURY BOTANICAL GLOBAL STYLESHEET
+   100% working icons, visible smooth scrollbar, borderless & shadowless
+   ========================================================================== */
+
+/* Google Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Local High-Speed Material Symbols Font (323 KB) */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url('../fonts/materialsymbolsoutlined.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/materialsymbolsoutlined/v377/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2') format('woff2');
+  font-display: block;
+}
+
+/* Ensure Material Symbols icons ALWAYS render as glyphs */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga' 1;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  vertical-align: middle;
+}
+
+/* Global Typography & Colors */
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #0b160c;
+  color: #d9e6d5;
+}
+
+/* Global Scrolling Fix - Ensure page is ALWAYS freely scrollable with visible scrollbar */
+html {
+  overflow-y: scroll !important;
+  scroll-behavior: smooth;
+  height: auto !important;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: auto !important;
+}
+
+main {
+  min-height: 100vh;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Custom Visible Scrollbar */
+::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b160c !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c382c !important;
+  border-radius: 9999px !important;
+  border: 2px solid #0b160c !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #487F2F !important;
+}
+
+/* USER REQUIREMENT: Remove ALL borders and shadows globally */
+*, *::before, *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Clean accessible inputs */
+input, textarea, select {
+  border: 1px solid rgba(144, 146, 131, 0.25) !important;
+  background-color: rgba(6, 17, 7, 0.8) !important;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #acd37c !important;
+  outline: none !important;
+}
+
+/* Selection */
+::selection {
+  background: #304f05;
+  color: #c7ef95;
+}
+
+/* Navigation: Strictly single-line links */
+nav a {
+  white-space: nowrap !important;
+}

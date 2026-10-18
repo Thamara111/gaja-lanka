@@ -1,0 +1,93 @@
+{
+  "subspecies": "Elephas maximus maximus",
+  "common_name": "Sri Lankan Elephant",
+  "historical_population": [
+    {
+      "year": 1800,
+      "population": 14000,
+      "note": "Pre-colonial baseline"
+    },
+    {
+      "year": 1850,
+      "population": 10500,
+      "note": "Bounty slaughter era begins"
+    },
+    {
+      "year": 1900,
+      "population": 6000,
+      "note": "Extirpated from central highlands"
+    },
+    {
+      "year": 1960,
+      "population": 1800,
+      "note": "Historic nadir"
+    },
+    {
+      "year": 1993,
+      "population": 3100,
+      "note": "Early conservation protections"
+    },
+    {
+      "year": 2011,
+      "population": 5879,
+      "note": "First DWC water-hole census"
+    },
+    {
+      "year": 2024,
+      "population": 7451,
+      "note": "Latest DWC census & estimates"
+    }
+  ],
+  "annual_hec_mortalities": [
+    {
+      "year": 2018,
+      "elephants_killed": 319,
+      "humans_killed": 96
+    },
+    {
+      "year": 2019,
+      "elephants_killed": 405,
+      "humans_killed": 121
+    },
+    {
+      "year": 2020,
+      "elephants_killed": 328,
+      "humans_killed": 112
+    },
+    {
+      "year": 2021,
+      "elephants_killed": 375,
+      "humans_killed": 142
+    },
+    {
+      "year": 2022,
+      "elephants_killed": 433,
+      "humans_killed": 145
+    },
+    {
+      "year": 2023,
+      "elephants_killed": 488,
+      "humans_killed": 169
+    },
+    {
+      "year": 2024,
+      "elephants_killed": 425,
+      "humans_killed": 134
+    },
+    {
+      "year": 2025,
+      "elephants_killed": 412,
+      "humans_killed": 138
+    }
+  ],
+  "mortality_causes_percentage": {
+    "hakka_patas_jaw_bombs": 44.8,
+    "gunshots": 21.6,
+    "illegal_electrocution": 17.5,
+    "train_collisions": 7.2,
+    "poisons_and_traps": 5.4,
+    "natural_and_other": 3.5
+  },
+  "news_api_endpoint": "news-feed.json",
+  "news_source_live_rss": "https://news.google.com/rss/search?q=sri+lanka+elephant&hl=en-US&gl=US&ceid=US:en"
+}

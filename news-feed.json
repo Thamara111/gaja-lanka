@@ -1,0 +1,1036 @@
+{
+  "status": "ok",
+  "total": 28,
+  "updated_at": "2026-10-18T18:10:12.603Z",
+  "source": "Google News RSS (Sri Lanka Elephant)",
+  "items": [
+    {
+      "id": "legend-kawanthissa-galgamuwa",
+      "title": "Kawanthissa: The Fallen Galgamuwa Wild Giant Whose Death Shook Sri Lanka",
+      "source": "DWC Wild Telemetry Bureau",
+      "category": "legends",
+      "badge": "DECEASED • RECENT TRAGEDY (OCT 2026)",
+      "date": "c. 1974 – October 16, 2026 (Age ~50–52)",
+      "rawDate": "2026-10-16T18:18:00Z",
+      "snippet": "Regarded by wildlife biologists and photographers as the tallest and most magnificent wild tusker in Sri Lanka, standing nearly 11 feet tall. In late September 2026, Kawanthissa was found crippled by a severe poacher gunshot injury to his right foreleg in the Galgamuwa region. Department of Wildlife Conservation veterinarians treated him daily for over 3 weeks. Despite intensive care, he stopped eating and tragically collapsed in a Siyambalangamuwa paddy field, passing away on October 16, 2026 at 6:18 PM. Following public grief, a suspect was arrested with firearms and an independent ministerial inquiry was ordered.",
+      "link": "conservation-news.html#kawanthissa",
+      "image": "assets/images/kavantissa-wild-tusker.jpg",
+      "elephantData": {
+        "name": "Kawanthissa (Galgamuwa Tusker)",
+        "sinhalaName": "කාවන්තිස්ස (ගල්ගමුවේ ඇතා)",
+        "type": "wild",
+        "typeLabel": "Wild Tusker",
+        "status": "Deceased",
+        "statusDetail": "Died Oct 16, 2026 (Gunshot Injury)",
+        "statusType": "deceased",
+        "height": "10.5 to 11 ft (3.25 m) — Largest Wild Tusker in Sri Lanka",
+        "tusks": "Pair of massive, thick curved ivory tusks measuring ~6.5 ft",
+        "role": "Tallest Living Wild Tusker of Sri Lanka (Galgamuwa Cascade)",
+        "facts": [
+          {
+            "label": "Wild Status",
+            "value": "Tallest Wild Tusker"
+          },
+          {
+            "label": "Height",
+            "value": "10.5–11 ft (3.25 m)"
+          },
+          {
+            "label": "Fell in Battle",
+            "value": "October 16, 2026"
+          },
+          {
+            "label": "Cause",
+            "value": "Gunshot Wound / Sepsis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-agbo-thirappane",
+      "title": "Agbo of Thirappane: The Nation's United Battle to Save a Wounded Wild Tusker",
+      "source": "DWC Wild Telemetry Bureau",
+      "category": "legends",
+      "badge": "LIVING WILD GIANT • VETERINARY RECOVERY",
+      "date": "Estimated Age: ~45–50 Years (Living Wild Giant)",
+      "rawDate": "2026-10-18T18:10:12.601Z",
+      "snippet": "Sri Lanka's most closely monitored living wild tusker. In June 2023, Agbo was discovered near Thirappane crippled by a poacher gunshot blast to his left front leg. An unprecedented national rescue initiative mobilized DWC veterinary surgeons, military engineers, and local farmers. Over 18 months of continuous antibiotic darting, specialized harness slings, and GPS collar telemetry, Agbo survived and continues to roam the dry-zone cascade as a living symbol of resilience and human compassion.",
+      "link": "conservation-news.html#agbo-thirappane",
+      "image": "assets/images/sri-lanka-elephant-udawalawe.jpg",
+      "elephantData": {
+        "name": "Agbo of Thirappane (Kalawewa)",
+        "sinhalaName": "තිරප්පනේ අග්බෝ",
+        "type": "wild",
+        "typeLabel": "Wild Tusker",
+        "status": "Living",
+        "statusDetail": "Under Active Veterinary Care (Gunshot Survival)",
+        "statusType": "living",
+        "height": "Approx. 9.8 ft (2.98 m)",
+        "tusks": "Thick parallel ivory tusks measuring over 5.5 ft",
+        "role": "Wild Solitary Tusker of the Anuradhapura & Kalawewa Sanctuaries",
+        "facts": [
+          {
+            "label": "Wild Status",
+            "value": "Living Wild Tusker"
+          },
+          {
+            "label": "Medical Care",
+            "value": "50+ Field Darts"
+          },
+          {
+            "label": "Tracking",
+            "value": "DWC GPS Collar Synced"
+          },
+          {
+            "label": "Key Threat",
+            "value": "Trap Gun / Poaching"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-mahasen-minneriya",
+      "title": "Mahasen of Minneriya: The Sovereign Bull of the Great Asian Gathering",
+      "source": "DWC Wild Telemetry Bureau",
+      "category": "legends",
+      "badge": "LIVING WILD GIANT • MONARCH OF THE GATHERING",
+      "date": "Estimated Age: ~50–55 Years (Living Wild Patriarch)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Named after ancient King Mahasen who engineered the 4,670-acre Minneriya reservoir in the 3rd century, this magnificent wild tusker is the undisputed sovereign of the annual Minneriya Elephant Gathering. Possessing some of the longest and most symmetrical ivory tusks among wild Asian elephants, Mahasen commands deep respect among the wild matriarchal herds and draws wildlife researchers and naturalists from around the world.",
+      "link": "conservation-news.html#mahasen",
+      "image": "assets/images/mahasen-wild-tusker.jpg",
+      "elephantData": {
+        "name": "Mahasen of Minneriya",
+        "sinhalaName": "මින්නේරියේ මහසෙන් ඇතා",
+        "type": "wild",
+        "typeLabel": "Wild Tusker",
+        "status": "Living",
+        "statusDetail": "Monarch of the Minneriya & Kaudulla Gathering",
+        "statusType": "living",
+        "height": "10.2 ft (3.11 m)",
+        "tusks": "Magnificent sweeping ivory tusks measuring over 6 feet",
+        "role": "Dominant Bull of the Minneriya Reservoir Gathering",
+        "facts": [
+          {
+            "label": "Wild Status",
+            "value": "Living Patriarch"
+          },
+          {
+            "label": "Tusk Length",
+            "value": "6.2 ft (1.89 m)"
+          },
+          {
+            "label": "Habitat",
+            "value": "Minneriya / Kaudulla"
+          },
+          {
+            "label": "Gathering",
+            "value": "Dominant Herd Bull"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-galgamuwa-dala-poottuwa",
+      "title": "Galgamuwa Dala Poottuwa: The Wild Crossed-Tusk King Whose Murder Awakened a Nation",
+      "source": "DWC Wild Telemetry Bureau",
+      "category": "legends",
+      "badge": "DECEASED WILD MARTYR • CROSSED TUSKS",
+      "date": "c. 1967 – November 2017 (Age ~50)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "A mythic wild tusker celebrated for his extraordinarily rare 'Dala Poottuwa' morphology—tusks that crossed over each other symmetrically in front of his trunk. Partially blind from shotgun pellet traps, he roamed the tank cascades peacefully until November 2017, when ivory poachers gunned him down. His death triggered massive nationwide protests, special task force anti-poaching operations, and strict penal revisions in Parliament protecting wild tuskers.",
+      "link": "conservation-news.html#dala-poottuwa",
+      "image": "assets/images/sri-lanka-elephant-wild-herd.jpg",
+      "elephantData": {
+        "name": "Galgamuwa Dala Poottuwa",
+        "sinhalaName": "ගල්ගමුවේ දළ පූට්ටුවා",
+        "type": "wild",
+        "typeLabel": "Wild Tusker",
+        "status": "Deceased",
+        "statusDetail": "Martyr of Anti-Poaching Movement (Nov 2017)",
+        "statusType": "deceased",
+        "height": "Approx. 9.2 ft (2.80 m)",
+        "tusks": "Rare overlapping crossed tusks (Dala Poottuwa)",
+        "role": "Iconic Wild Tusker of Herathgama & Galgamuwa Sanctum",
+        "facts": [
+          {
+            "label": "Phenotype",
+            "value": "Crossed Ivory (Poottuwa)"
+          },
+          {
+            "label": "Habitat",
+            "value": "Galgamuwa-Herathgama"
+          },
+          {
+            "label": "Outcome",
+            "value": "STF Ivory Crackdown"
+          },
+          {
+            "label": "Legacy",
+            "value": "Wildlife Law Reform 2018"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-nadungamuwa-raja",
+      "title": "Nadungamuwa Raja: The Gentle Titan Who Walked 90km for Sacred Duty",
+      "source": "Gaja Lanka Heritage Bureau",
+      "category": "legends",
+      "badge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
+      "date": "c. 1953 – March 7, 2022 (Age ~69)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Revered as the tallest tamed tusker in Asia (10.5 ft). Gifted by a Mysore prince in 1953, he served as the casket bearer of the Sacred Tooth Relic for 15 consecutive seasons. He refused vehicular transport and walked 90 km from Gampaha to Kandy each August under armed military escorts. Declared a National Cultural Treasure by Presidential decree, he was posthumously honored with a state stamp and museum preservation.",
+      "link": "heritage-and-culture.html#nadungamuwa-raja",
+      "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
+      "elephantData": {
+        "name": "Nadungamuwa Vijaya Raja",
+        "sinhalaName": "නැදුන්ගමුවේ විජය රාජා",
+        "type": "sacred",
+        "typeLabel": "Sacred Relic Tusker",
+        "status": "Deceased",
+        "statusDetail": "Memorialized National Treasure (2022)",
+        "statusType": "deceased",
+        "height": "10.5 ft (3.2 m) — Tallest Tamed Tusker in Asia",
+        "tusks": "Pair of 7-foot forward-curving floor-touching tusks",
+        "role": "Chief Relic Bearer of Kandy Esala Perahera (2006–2021)",
+        "facts": [
+          {
+            "label": "Height",
+            "value": "10.5 ft (3.20 m)"
+          },
+          {
+            "label": "Tusk Length",
+            "value": "7 ft (2.13 m)"
+          },
+          {
+            "label": "Pilgrimage",
+            "value": "90 km on foot"
+          },
+          {
+            "label": "State Honor",
+            "value": "National Treasure (2022)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-maligawa-raja",
+      "title": "Maligawa Raja: The 50-Year Sovereign of the Sacred Tooth Relic",
+      "source": "Gaja Lanka Heritage Bureau",
+      "category": "legends",
+      "badge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
+      "date": "c. 1913 – July 16, 1988 (Age ~75)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Captured in Batticaloa in 1925 and gifted to the Temple of the Tooth in 1937, Raja carried the golden casket for 50 years without an incident. His poise amidst booming cannons and drumming became legend. The President proclaimed a national day of mourning upon his death in 1988, and his taxidermied remains are enshrined in Kandy's dedicated Raja Museum.",
+      "link": "heritage-and-culture.html#maligawa-raja",
+      "image": "assets/images/history-elephant.jpg",
+      "elephantData": {
+        "name": "Maligawa Raja",
+        "sinhalaName": "මාලිගාවේ රාජා",
+        "type": "sacred",
+        "typeLabel": "Sacred Relic Tusker",
+        "status": "Deceased",
+        "statusDetail": "Declared National Cultural Treasure (1986)",
+        "statusType": "deceased",
+        "height": "9 ft 3 in (2.82 m) with exceptional Sathdanta symmetry",
+        "tusks": "Pair of symmetrical 5 ft 8 in upward-swept ivory tusks",
+        "role": "Supreme Relic Bearer of Sri Dalada Maligawa (1937–1987)",
+        "facts": [
+          {
+            "label": "Service",
+            "value": "50 Years (1937–1987)"
+          },
+          {
+            "label": "Origin",
+            "value": "Batticaloa Wilds (1925)"
+          },
+          {
+            "label": "Memorial",
+            "value": "Raja Museum, Kandy"
+          },
+          {
+            "label": "State Honor",
+            "value": "National Day of Mourning"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-indi-raja",
+      "title": "Indi Raja: The Reigning Sacred Tusker of the Senkadagala Kingdom",
+      "source": "Gaja Lanka Heritage Bureau",
+      "category": "legends",
+      "badge": "LIVING • REIGNING CHIEF RELIC BEARER",
+      "date": "c. 1980 – Present (Age ~46 Years)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Gifted by Indian Prime Minister Rajiv Gandhi in 1987, Indi Raja has matured into the premier temple tusker of Sri Lanka. He carries the golden Karanduwa (relic casket) during the grand Kandy Esala Perahera. His dignified step, gentle disposition, and perfect tusk symmetry have earned him deep national affection.",
+      "link": "heritage-and-culture.html#sacred-tuskers",
+      "image": "assets/images/hero-elephant.jpg",
+      "elephantData": {
+        "name": "Indi Raja",
+        "sinhalaName": "ඉන්දි රාජා",
+        "type": "sacred",
+        "typeLabel": "Sacred Relic Tusker",
+        "status": "Living",
+        "statusDetail": "Active Chief Relic Bearer of Sri Dalada Maligawa",
+        "statusType": "living",
+        "height": "Approx. 9.6 ft (2.92 m)",
+        "tusks": "Impeccably balanced ivory tusks measuring ~6.2 ft",
+        "role": "Current Senior Tusker of the Temple of the Sacred Tooth Relic",
+        "facts": [
+          {
+            "label": "Status",
+            "value": "Living & Serving"
+          },
+          {
+            "label": "Gifted By",
+            "value": "Govt of India (1987)"
+          },
+          {
+            "label": "Sanctuary",
+            "value": "Sri Dalada Maligawa"
+          },
+          {
+            "label": "Role",
+            "value": "Chief Karanduwa Bearer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-millangoda-raja",
+      "title": "Millangoda Raja: The Kegalle Giant with Asia's Longest Tusks",
+      "source": "Gaja Lanka Heritage Bureau",
+      "category": "legends",
+      "badge": "DECEASED • LONGEST TUSKS IN ASIA",
+      "date": "1938 – July 30, 2011 (Age ~73)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Captured in Nawagaththegama in 1945, Millangoda Raja bore the longest recorded tusks of any living Asian elephant in modern history—measuring 7.5 feet (2.3 meters) each. He carried the Sacred Tooth Relic for decades and led the Kelaniya Duruthu Perahera. He was buried with Buddhist rites and military honors in Kegalle in 2011.",
+      "link": "heritage-and-culture.html#sacred-tuskers",
+      "image": "assets/images/sri-lanka-elephant-male-portrait.jpg",
+      "elephantData": {
+        "name": "Millangoda Raja",
+        "sinhalaName": "මිල්ලන්ගොඩ රාජා",
+        "type": "sacred",
+        "typeLabel": "Sacred Relic Tusker",
+        "status": "Deceased",
+        "statusDetail": "Possessor of the Longest Tusks in Asia (7.5 ft)",
+        "statusType": "deceased",
+        "height": "9 ft 4 in (2.84 m)",
+        "tusks": "World-record 7 ft 6 in (2.3 m) tusks touching the ground",
+        "role": "Grand Tusker of Kegalle & Maligawa Relic Bearer",
+        "facts": [
+          {
+            "label": "Tusk Length",
+            "value": "7 ft 6 in (2.3 m)"
+          },
+          {
+            "label": "Captured",
+            "value": "Nawagaththegama (1945)"
+          },
+          {
+            "label": "Custody",
+            "value": "Millangoda Family, Kegalle"
+          },
+          {
+            "label": "Honor",
+            "value": "State Honors Burial"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-wasana-kataragama",
+      "title": "Wasana of Kataragama: Guardian of the Menik Ganga Sacred Perahera",
+      "source": "Gaja Lanka Heritage Bureau",
+      "category": "legends",
+      "badge": "LIVING • RUHUNU DEITY TUSKER",
+      "date": "c. 1985 – Present (Age ~41 Years)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Revered in the deep south of Sri Lanka, Wasana carries the sacred casket of Lord Murugan/Kataragama Deviyo during the annual Esala festival, wading through the Menik River. Known for his disciplined demeanor and deep bond with his mahout, he is considered a living national treasure.",
+      "link": "heritage-and-culture.html#sacred-tuskers",
+      "image": "assets/images/sri-lanka-minneriya-herd.jpg",
+      "elephantData": {
+        "name": "Wasana of Kataragama",
+        "sinhalaName": "කතරගම වාසනා",
+        "type": "sacred",
+        "typeLabel": "Sacred Relic Tusker",
+        "status": "Living",
+        "statusDetail": "Living Sacred Tusker of the Southern Realm",
+        "statusType": "living",
+        "height": "Approx. 9.5 ft (2.90 m)",
+        "tusks": "Heavy, robust forward-curving tusks measuring ~5.8 ft",
+        "role": "Chief Tusker of Ruhunu Maha Kataragama Devalaya",
+        "facts": [
+          {
+            "label": "Status",
+            "value": "Living & Serving"
+          },
+          {
+            "label": "Sanctuary",
+            "value": "Kataragama Devalaya"
+          },
+          {
+            "label": "Festival",
+            "value": "Menik Ganga Perahera"
+          },
+          {
+            "label": "Province",
+            "value": "Southern / Uva"
+          }
+        ]
+      }
+    },
+    {
+      "id": "legend-heiyantuduwa-raja",
+      "title": "Heiyantuduwa Raja: The Kelaniya Duruthu Sovereign Whose Bones Educate Generations",
+      "source": "Gaja Lanka Heritage Bureau",
+      "category": "legends",
+      "badge": "DECEASED • NATIONAL MUSEUM MONUMENT",
+      "date": "1924 – November 6, 2002 (Age 78)",
+      "rawDate": "2026-10-18T18:10:12.602Z",
+      "snippet": "Captured in 1925, Heiyantuduwa Raja served as Chief Relic Bearer of the Kelaniya Duruthu Perahera and Kandy. Known for his inward-curved 7.5-foot tusks, he lived to age 78. In a rare act of scientific foresight, his complete skeleton was donated to the state, where it stands fully articulated in the Colombo National Museum.",
+      "link": "heritage-and-culture.html#sacred-tuskers",
+      "image": "assets/images/elephant-mist.jpg",
+      "elephantData": {
+        "name": "Heiyantuduwa Raja",
+        "sinhalaName": "හෙයියන්තුඩුවේ රාජා",
+        "type": "sacred",
+        "typeLabel": "Sacred Relic Tusker",
+        "status": "Deceased",
+        "statusDetail": "Preserved in Colombo National Museum",
+        "statusType": "deceased",
+        "height": "9 ft 1 in (2.77 m)",
+        "tusks": "Graceful 7 ft 6 in inward curving ivory tusks",
+        "role": "Kelaniya Duruthu & Kandy Esala Senior Relic Tusker",
+        "facts": [
+          {
+            "label": "Lifespan",
+            "value": "78 Years (1924–2002)"
+          },
+          {
+            "label": "Tusks",
+            "value": "7 ft 6 in inward arc"
+          },
+          {
+            "label": "Current Site",
+            "value": "Colombo National Museum"
+          },
+          {
+            "label": "Exhibit",
+            "value": "Complete Articulated Skeleton"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dispatch-1",
+      "title": "In Sri Lanka, human-elephant conflict takes deadly toll",
+      "source": "Reuters",
+      "category": "coexistence",
+      "badge": "HEC COEXISTENCE",
+      "date": "October 13, 2026",
+      "rawDate": "Tue, 13 Oct 2026 18:02:00 GMT",
+      "snippet": "Frontline coexistence report by Reuters: Investigating human-elephant encounters, agricultural interface barriers, and escalating casualties across dry-zone agricultural heartlands.",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5lZFJEOGhQT3M0NXNxbE55T3dKYktLRkRmNm1uSC1MMFZoTS1yampHLXZrbjNudXcxSm56bzBQMXppQWtHWFZNUTlrdnRMWTl1UXJzamd6TkJlM0VsUTdhNnBZcm1RV2h4SU9RS25YZE8xaWtpYjM5NHNiaw?oc=5",
+      "image": "assets/images/hero-elephant.jpg"
+    },
+    {
+      "id": "dispatch-2",
+      "title": "Sri Lanka elephant found with a gunshot wound. How can tuskers be protected? - news",
+      "source": "Mongabay",
+      "category": "rescue",
+      "badge": "WELFARE & PROTECTION",
+      "date": "October 09, 2026",
+      "rawDate": "Fri, 09 Oct 2026 07:00:00 GMT",
+      "snippet": "Wildlife veterinary bulletin via Mongabay: Field teams and wildlife veterinarians respond to urgent tusker injuries, assessing poaching threats and critical veterinary interventions.",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQkdudlpZNTV5MFk4NHFfMVhEQ2tFQzdvVXNpNnJKbHVpcU5BOWIzOVczWVZ0ejR4bjRZUmtsTWg2LWc5NVJFdVY3RlowZkRXV0FtTl9HdXF0S1FuZEdHN2RDQllxRndXcHVqSUU0bnJ1dVE0SnA3cnBxV0Y2bDN5d1lWVTVmdkk5bXo3S094TmpQa2dnRWtpRGg5UndCcHRzT19xMHdIcnZsbmN6emfSAbMBQVVfeXFMTW1RWXl3QmRibVJpdjR5WXV2dUFwbEs0cEJNSUFZTlV6cDh6dW9CMkdEZUpaMi1KZnl6amV3Q1UwQzQ2aWRfSF81ekM0ZkhPRkx1Z2xmcTJmV3laSENZRWFxazROMDJ5TjBqUXMwV0diM1hpcUxnUV9kc2JuX2ZxMndPUFNPNHoxd0JSVnhKZ1RqZWxKRVBXbXZZcjh2QlFLSWFjTU9qQ2VRQWNhNDV4MHp4bGc?oc=5",
+      "image": "assets/images/sri-lanka-elephant-udawalawe.jpg"
+    },
+    {
+      "id": "dispatch-3",
+      "title": "Elephants eat their crops. Farmers strike back. It's a war that's only getting worse",
+      "source": "NPR",
+      "category": "coexistence",
+      "badge": "HEC COEXISTENCE",
+      "date": "May 16, 2026",
+      "rawDate": "Sat, 16 May 2026 07:00:00 GMT",
+      "snippet": "Frontline coexistence report by NPR: Investigating human-elephant encounters, agricultural interface barriers, and escalating casualties across dry-zone agricultural heartlands.",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPTEVrMTN0N0hrSC1yNlh4b05wU1Bvd0FsZ3ZyUXNoR3FMcndXNVFpVkhBNDdNeDByOGJsQXl2ZVdQSm5SM3YwVUc3RFAtcHdHUGtmZDdzYzdVNGliN3hZTlJneEF3M0xRc2pQS1EtNlRFcnR4MGNkckRjMGkybGJaR2ZB?oc=5",
+      "image": "assets/images/sri-lanka-elephant-wild-herd.jpg"
+    },
+    {
+      "id": "dispatch-4",
+      "title": "Sri Lanka seeks police probe into possible network behind elephant killings",
+      "source": "Daily Excelsior",
+      "category": "policy",
+      "badge": "LEGAL & ENFORCEMENT",
+      "date": "October 18, 2026",
+      "rawDate": "Sun, 18 Oct 2026 10:28:00 GMT",
+      "snippet": "Judicial and enforcement dispatch via Daily Excelsior: State authorities and conservation bodies demand high-level criminal investigations and systemic legal accountability.",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUU5fY1k0ZFRqRUNGamhfekR4TXNqX1gyZjc4MmZyRVRtejQtbUVTeXFrd0FWX3FGN25tX1YzMGs2cWVQVU5ZYlUxWHpTdHViTTdOTUtGT1R1bVZmdVBodVhJWmc4U3lYeWlvN3BLRVZWdDdtWHJFekl5WXhuVnZTVnZiSTZ0V1kyYkFSMHNLSUNmaHhZR2tlMUdkSWRyOXdfMF9aSDVuWHRxdknSAa8BQVVfeXFMTXFBLVJ1RGFYSFJEN1Y3MW1GT3M4ejhyOW1BTzI3RG0zMU01aWw1bFhuVTRVc0FSamQzY3pLWjgydlk5WURMQ2xQSjhuRTBrQmlhbTlGX1BtR2oxUEo3YmJkcktRaDRyNDdlRXM0cEl5UWt1bGJ2ZjhoX2MzZ1p5Wkp1a2JDbnBqWjJXQS1oUmtjTnhKQUEzN3lJbTBaUDlVRzNQT2ptZ2lqamV5MXJ2cw?oc=5",
+      "image": "assets/images/sri-lanka-elephant-male-portrait.jpg"
+    },
+    {
+      "id": "dispatch-5",
+      "title": "WIDER IMAGE-In Sri Lanka, human-elephant conflict takes deadly toll",
+      "source": "Devdiscourse",
+      "category": "coexistence",
+      "badge": "HEC COEXISTENCE",
+      "date": "October 15, 2026",
+      "rawDate": "Wed, 14 Oct 2026 23:00:24 GMT",
+      "snippet": "Frontline coexistence report by Devdiscourse: Investigating human-elephant encounters, agricultural interface barriers, and escalating casualties across dry-zone agricultural heartlands.",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNR1NTSGtJR1JBTkhGYnhUakhMSHA0OE1xcElWb21nQ1VZNE1CaHJoc2RFdFV2clJVVk5NQ3lfcW9VZWpRU2tCR2hLcW1aeVpOcmpMMFJXcXhFeWZlWmxDUUNvLWxQX3lVbWMxU1N1Z3EtZEtzWDdvejJYWHdMYnplNkJybnNVUmo1allqelNNN0phUEgtZExBZE9GSVVTQUdGQUJFNG5xRFhXb014R3FqTFBzWU14RGFSN3pzMUxmZ2RTdm9hNEhVTdIByAFBVV95cUxNR1NTSGtJR1JBTkhGYnhUakhMSHA0OE1xcElWb21nQ1VZNE1CaHJoc2RFdFV2clJVVk5NQ3lfcW9VZWpRU2tCR2hLcW1aeVpOcmpMMFJXcXhFeWZlWmxDUUNvLWxQX3lVbWMxU1N1Z3EtZEtzWDdvejJYWHdMYnplNkJybnNVUmo1allqelNNN0phUEgtZExBZE9GSVVTQUdGQUJFNG5xRFhXb014R3FqTFBzWU14RGFSN3pzMUxmZ2RTdm9hNEhVTQ?oc=5",
+      "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg"
+    },
+    {
+      "id": "dispatch-6",
+      "title": "In Sri Lanka, humans and elephants are locked in a deadly standoff",
+      "source": "ABS-CBN",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "October 15, 2026",
+      "rawDate": "Thu, 15 Oct 2026 14:20:08 GMT",
+      "snippet": "Official conservation dispatch via ABS-CBN: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdVJHYU9vRGF3MS1FeTA0TWdGWFkxSUxwMHhabFJhZjlOR1BMNGZkVE4yeHQ1d0pneFBLdnV4aWZ5b2tGTUlfNjJCTU12Q0VSQjhLRGJoR254LVRRWDA2eG1CV3NCaW5RcnpzcFVncHQzU1ZHTzgwMnhGd3JHbnowdl9CNzFlOXlCbXA4UWpyeTdDWloxLTVzZ2hKSDQwMFdqcUpBQmh5MHhkX2lVcUJ6QWxrQlAxM2s?oc=5",
+      "image": "assets/images/sri-lanka-minneriya-herd.jpg"
+    },
+    {
+      "id": "dispatch-7",
+      "title": "SIGN: End Cruel Elephant Chaining in Sri Lanka’s Festivals & Tourism",
+      "source": "Lady Freethinker",
+      "category": "rescue",
+      "badge": "WELFARE & PROTECTION",
+      "date": "June 02, 2026",
+      "rawDate": "Mon, 01 Jun 2026 20:51:50 GMT",
+      "snippet": "Wildlife veterinary bulletin via Lady Freethinker: Field teams and wildlife veterinarians respond to urgent tusker injuries, assessing poaching threats and critical veterinary interventions.",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNV2tsMl9ILXdNVUtIX1V6UnRzOVdxcldkaVNsUWEtNHFaR0lqWWJRaGJJVzg4TlBLTmc2VThWWWFlWGw3a3A4QXZNNHJ2dDB2SXdBUWh4UTVzdXBXVUlLOThQVExoWk5tdGdUYnRpTEQ2YU9JV05MWHlMd0taTmRLbDYxQzl0Sk1veFNSNXlVekdGdmRmSnc4STJWVlJ4QQ?oc=5",
+      "image": "assets/images/sri-lanka-elephant-mother-calf.jpg"
+    },
+    {
+      "id": "dispatch-8",
+      "title": "New elephant protection initiative launched in memory of Kavantissa",
+      "source": "Newswire",
+      "category": "research",
+      "badge": "HABITAT INITIATIVE",
+      "date": "October 18, 2026",
+      "rawDate": "Sun, 18 Oct 2026 11:31:31 GMT",
+      "snippet": "Official conservation dispatch via Newswire: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkN2WHVIYURLT0Uwb2trTXV1cERWOHN0QnVuV0RKdlNFbFQ2NUpaclcyYjlHeU9ta1ZCNUFEdWNiNFpaMjBBdVhIcFEtY0JBQkNpdUpyb21kZlBWMnQ1NnJfR2p0azBFVDg3eGVvdXhYX25pSHZNZkNoVlczQXlDNzNxOF9PVDktRlp0OFl6aUVPcDJKRUpmSkxBU0hFQ2xHRWh0YW5n?oc=5",
+      "image": "assets/images/habitats-elephant.jpg"
+    },
+    {
+      "id": "dispatch-9",
+      "title": "Greetings from a wildlife park in central Sri Lanka that's a haven for elephants",
+      "source": "NPR",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "August 06, 2026",
+      "rawDate": "Thu, 06 Aug 2026 07:00:00 GMT",
+      "snippet": "Official conservation dispatch via NPR: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1QUzRjRm5Pc2pSdUxEVGhNbTl3VDBtaWNOWE1nQzJ2UW1KS1hJWTZYZTB0MjhQNG1fdFVXVDJna240SjUzN281R1pLa1ZubVowNkRRTVBwTlpTczhUS1dQZEpfQzV0Mkw2R25zeE02bw?oc=5",
+      "image": "assets/images/elephant-mist.jpg"
+    },
+    {
+      "id": "dispatch-10",
+      "title": "Asia Album: Wild Asian elephants wandering in Sri Lanka's national park",
+      "source": "Xinhua",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "July 31, 2026",
+      "rawDate": "Fri, 31 Jul 2026 07:00:00 GMT",
+      "snippet": "Official conservation dispatch via Xinhua: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1aUHNOay1rTWREUVVCbk9VajRGQVNpbHQ4Z1I3d3FXdndlbzlScWhfc2R2R2tSaXg1czN1ZHVfRks0T1hTeVBLR00yTUhvWWJReUtXOW4td0pfbWtkNGxOMEhvM1RXVkFwRFNWandrbUVrSVlTVkpUdW5wQ2M?oc=5",
+      "image": "assets/images/hero-elephant.jpg"
+    },
+    {
+      "id": "dispatch-11",
+      "title": "The Elephants in the Courtroom",
+      "source": "Tricycle: The Buddhist Review",
+      "category": "policy",
+      "badge": "LEGAL & ENFORCEMENT",
+      "date": "June 26, 2026",
+      "rawDate": "Fri, 26 Jun 2026 07:00:00 GMT",
+      "snippet": "Judicial and enforcement dispatch via Tricycle: The Buddhist Review: State authorities and conservation bodies demand high-level criminal investigations and systemic legal accountability.",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5zT2VzM0E4QmIxTG01YVNfbzlNM1lJY0RIUUZrSTNCWlVhazVya2tCS2pOaUNvbUdlcnNWLW1XQm95ODRLZG9JLU1rSFhGN25zMXFBTkNVa05MUVlVdDE4OFd4YkNINVM1Ym5rVGdnV0ZmTTNa?oc=5",
+      "image": "assets/images/sri-lanka-elephant-udawalawe.jpg"
+    },
+    {
+      "id": "dispatch-12",
+      "title": "Human–Elephant Conflict: What Sri Lanka Can Learn from Africa",
+      "source": "IDN-InDepthNews",
+      "category": "coexistence",
+      "badge": "HEC COEXISTENCE",
+      "date": "January 16, 2026",
+      "rawDate": "Fri, 16 Jan 2026 08:00:00 GMT",
+      "snippet": "Frontline coexistence report by IDN-InDepthNews: Investigating human-elephant encounters, agricultural interface barriers, and escalating casualties across dry-zone agricultural heartlands.",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaTZDdkkzNnNkdFJwcmZTV2tMVFNMTU0xTDg5RHlBMGUyU042bFUyTi1NQ3FnekhjNFltQ0xnb2M5ZGhVU1VheTdxWWQ3NUU3aGdNRE9kUVdraEk5Tm1oT1Y0OEQ4bnRpem9kaEw5YTNRUXdOUFdJOWVwT0stTFdJMHNZLWtiV0t3bnZ5VzJR?oc=5",
+      "image": "assets/images/sri-lanka-elephant-wild-herd.jpg"
+    },
+    {
+      "id": "dispatch-13",
+      "title": "Photographing Sri Lanka’s human-elephant conflict — Interview with Federico Borella - news",
+      "source": "Mongabay",
+      "category": "coexistence",
+      "badge": "HEC COEXISTENCE",
+      "date": "September 22, 2026",
+      "rawDate": "Tue, 22 Sep 2026 07:00:00 GMT",
+      "snippet": "Frontline coexistence report by Mongabay: Investigating human-elephant encounters, agricultural interface barriers, and escalating casualties across dry-zone agricultural heartlands.",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOU12dXZZN1ZqZzV5OUtvV29pVWluVm55UTBzRGE5NjJSZ2FsTlBUZkxNdGVwcURLcm84X0FPbUd2Z2tPNnkxeUFTdV9wY3RjRjdTLV9mZTUwTlFxX0FtdFpickE5RHhEREFhUExmSi1Bb2wwT281WjBFNjNZc0h5SEVJODZRR041eDl4MDcyM3JjS1hHVXBlNksyc0RTWDJLaUVZUWVmbWFSQXRCaW1rTW04VlRUd9IBuwFBVV95cUxOMzNSQUJQdlpEcWpTZEYtdWE1SWlJRGFEaWgwZ2lsLWpOaW9HQ1I1aC00LUdLV0o1OXdmczl6SXZuM0dHbmRoY2xadVFCcTRHbmJJWTFaWEVtcDZEUndCUXlVOHB4RG5MZE5iMWdPSXRZbnA3dmxZVl8wbDcwMDFnX1B5b2JpZkRPUWdHYmhBc1p4X1dNX2szSVBuRzJYZ0p4NU9hWnJmRVFYWVhxZzlUSk9Zck1aVmwwQjU4?oc=5",
+      "image": "assets/images/sri-lanka-elephant-male-portrait.jpg"
+    },
+    {
+      "id": "dispatch-14",
+      "title": "Sri Lanka mourns loss of iconic tusker Kawanthissa",
+      "source": "Newswire",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "October 16, 2026",
+      "rawDate": "Fri, 16 Oct 2026 14:31:46 GMT",
+      "snippet": "Official conservation dispatch via Newswire: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQck1wQ0ZqTkhVcmFSa0pKMXlncFVkNEo5Yi1mNDl6R2dROVRqTmxqOFV4T0dDeDJkcFFRSDk1V2l5MV9DR3ZETEROeWZ4YmRnU3pzZVJJRlBYM25tYXA5T3Bwb08tem5NWjB5UTA5VU5MOW83T3hKUkd4OVM1OTF3UXhYeUw3OEJzLTRSdWNiTQ?oc=5",
+      "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg"
+    },
+    {
+      "id": "dispatch-15",
+      "title": "World Elephant Day marked in Sri Lanka",
+      "source": "Xinhua",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "August 12, 2026",
+      "rawDate": "Wed, 12 Aug 2026 07:00:00 GMT",
+      "snippet": "Official conservation dispatch via Xinhua: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMEZsZFR2M1hqbVNwVVhlMnV4RWluSTlETkpKQkphZ2RCWl9qUVV5a2VubWVOeWVUS2dGSUdpYjhzRDBQUDZMS0k0NWRocFVGSFZiY2M1bUV2bi1PR0Y5QlR1WGkyVlR4MElVblVlRGY0VElReTNFVUlBU09fY2MwNDZTYWtMTUlQWXpvLQ?oc=5",
+      "image": "assets/images/sri-lanka-minneriya-herd.jpg"
+    },
+    {
+      "id": "dispatch-16",
+      "title": "Elephant Smashes Bus Windshield in Wild Attack Video",
+      "source": "The Daily Beast",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "June 26, 2026",
+      "rawDate": "Fri, 26 Jun 2026 07:00:00 GMT",
+      "snippet": "Official conservation dispatch via The Daily Beast: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQaEl1TGZ2eEsxZEt1OEJyN3A3YlMwc2tNcjZzMVM3Tnl2cWN6OXE3YlQwdDM2RGpYbWpNY1ZfWmFKbUU2ZDVIRjFBQlpVTDVSYXpvMk5wVWFNTm5BcFpyNktzRnZhWWRMTndEMjF3Z1p5UHhnZHcybmtMQXBlYi1CUHp1OXZaS0tUelRPc3ZSOTdxeVE?oc=5",
+      "image": "assets/images/sri-lanka-elephant-mother-calf.jpg"
+    },
+    {
+      "id": "dispatch-17",
+      "title": "Who shot Kavantissa? Questions remain after iconic tusker’s death",
+      "source": "Newswire",
+      "category": "research",
+      "badge": "HABITAT INITIATIVE",
+      "date": "October 17, 2026",
+      "rawDate": "Sat, 17 Oct 2026 02:46:20 GMT",
+      "snippet": "Official conservation dispatch via Newswire: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOLWdRcEZZV2p3LXg0V3EwTVhKOGFsa1FxcTktMldpLUJyMzQ4bGpONDktS0JtWFRVWG5paDhwMWg2YkU2M3VtWnNNdENpUUhmMmtVZEN2ZmpsZDNRNVlBeFdyLURQYUlFeHBKLUNJMUozSG9oQjNyUEJPei1lcWRqYlA3QVU3TzZ3bmdlVkl3TzNfdTJISGd3RlVZN3BPVEUy?oc=5",
+      "image": "assets/images/habitats-elephant.jpg"
+    },
+    {
+      "id": "dispatch-18",
+      "title": "Wild Asian elephants gather at Sri Lanka's Kaudulla National Park during dry season",
+      "source": "Global Times",
+      "category": "Conservation",
+      "badge": "FIELD REPORT",
+      "date": "July 31, 2026",
+      "rawDate": "Fri, 31 Jul 2026 07:00:00 GMT",
+      "snippet": "Official conservation dispatch via Global Times: Comprehensive field intelligence covering wild elephant herd dynamics, habitat corridors, and regional protection measures across Sri Lanka.",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE00LWsxbzhNT0N6Y2Z5bVF3R0JDMHowUzdxUEN1RVFROFRKQV9DdV9lZkJ0WTh5Q1k4SVZFQW1wWW1uQmp2RTYtU3hPM1AwSUV4LXlOT1ZGYXZSSXJaUm1qZVdB?oc=5",
+      "image": "assets/images/elephant-mist.jpg"
+    }
+  ],
+  "famous_elephants": [
+    {
+      "id": "legend-kawanthissa-galgamuwa",
+      "name": "Kawanthissa (Galgamuwa Tusker)",
+      "sinhalaName": "කාවන්තිස්ස (ගල්ගමුවේ ඇතා)",
+      "type": "wild",
+      "typeLabel": "Wild Tusker",
+      "status": "Deceased",
+      "statusDetail": "Died Oct 16, 2026 (Gunshot Injury)",
+      "statusType": "deceased",
+      "lifespan": "c. 1974 – October 16, 2026 (Age ~50–52)",
+      "category": "legends",
+      "badge": "DECEASED • RECENT TRAGEDY (OCT 2026)",
+      "badgeClass": "bg-rose-950/80 text-rose-300 border-rose-500/30",
+      "role": "Tallest Living Wild Tusker of Sri Lanka (Galgamuwa Cascade)",
+      "height": "10.5 to 11 ft (3.25 m) — Largest Wild Tusker in Sri Lanka",
+      "tusks": "Pair of massive, thick curved ivory tusks measuring ~6.5 ft",
+      "image": "assets/images/kavantissa-wild-tusker.jpg",
+      "title": "Kawanthissa: The Fallen Galgamuwa Wild Giant Whose Death Shook Sri Lanka",
+      "summary": "Regarded by wildlife biologists and photographers as the tallest and most magnificent wild tusker in Sri Lanka, standing nearly 11 feet tall. In late September 2026, Kawanthissa was found crippled by a severe poacher gunshot injury to his right foreleg in the Galgamuwa region. Department of Wildlife Conservation veterinarians treated him daily for over 3 weeks. Despite intensive care, he stopped eating and tragically collapsed in a Siyambalangamuwa paddy field, passing away on October 16, 2026 at 6:18 PM. Following public grief, a suspect was arrested with firearms and an independent ministerial inquiry was ordered.",
+      "facts": [
+        {
+          "label": "Wild Status",
+          "value": "Tallest Wild Tusker"
+        },
+        {
+          "label": "Height",
+          "value": "10.5–11 ft (3.25 m)"
+        },
+        {
+          "label": "Fell in Battle",
+          "value": "October 16, 2026"
+        },
+        {
+          "label": "Cause",
+          "value": "Gunshot Wound / Sepsis"
+        }
+      ],
+      "dossierLink": "conservation-news.html#kawanthissa"
+    },
+    {
+      "id": "legend-agbo-thirappane",
+      "name": "Agbo of Thirappane (Kalawewa)",
+      "sinhalaName": "තිරප්පනේ අග්බෝ",
+      "type": "wild",
+      "typeLabel": "Wild Tusker",
+      "status": "Living",
+      "statusDetail": "Under Active Veterinary Care (Gunshot Survival)",
+      "statusType": "living",
+      "lifespan": "Estimated Age: ~45–50 Years (Living Wild Giant)",
+      "category": "legends",
+      "badge": "LIVING WILD GIANT • VETERINARY RECOVERY",
+      "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+      "role": "Wild Solitary Tusker of the Anuradhapura & Kalawewa Sanctuaries",
+      "height": "Approx. 9.8 ft (2.98 m)",
+      "tusks": "Thick parallel ivory tusks measuring over 5.5 ft",
+      "image": "assets/images/sri-lanka-elephant-udawalawe.jpg",
+      "title": "Agbo of Thirappane: The Nation's United Battle to Save a Wounded Wild Tusker",
+      "summary": "Sri Lanka's most closely monitored living wild tusker. In June 2023, Agbo was discovered near Thirappane crippled by a poacher gunshot blast to his left front leg. An unprecedented national rescue initiative mobilized DWC veterinary surgeons, military engineers, and local farmers. Over 18 months of continuous antibiotic darting, specialized harness slings, and GPS collar telemetry, Agbo survived and continues to roam the dry-zone cascade as a living symbol of resilience and human compassion.",
+      "facts": [
+        {
+          "label": "Wild Status",
+          "value": "Living Wild Tusker"
+        },
+        {
+          "label": "Medical Care",
+          "value": "50+ Field Darts"
+        },
+        {
+          "label": "Tracking",
+          "value": "DWC GPS Collar Synced"
+        },
+        {
+          "label": "Key Threat",
+          "value": "Trap Gun / Poaching"
+        }
+      ],
+      "dossierLink": "conservation-news.html#agbo-thirappane"
+    },
+    {
+      "id": "legend-mahasen-minneriya",
+      "name": "Mahasen of Minneriya",
+      "sinhalaName": "මින්නේරියේ මහසෙන් ඇතා",
+      "type": "wild",
+      "typeLabel": "Wild Tusker",
+      "status": "Living",
+      "statusDetail": "Monarch of the Minneriya & Kaudulla Gathering",
+      "statusType": "living",
+      "lifespan": "Estimated Age: ~50–55 Years (Living Wild Patriarch)",
+      "category": "legends",
+      "badge": "LIVING WILD GIANT • MONARCH OF THE GATHERING",
+      "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+      "role": "Dominant Bull of the Minneriya Reservoir Gathering",
+      "height": "10.2 ft (3.11 m)",
+      "tusks": "Magnificent sweeping ivory tusks measuring over 6 feet",
+      "image": "assets/images/mahasen-wild-tusker.jpg",
+      "title": "Mahasen of Minneriya: The Sovereign Bull of the Great Asian Gathering",
+      "summary": "Named after ancient King Mahasen who engineered the 4,670-acre Minneriya reservoir in the 3rd century, this magnificent wild tusker is the undisputed sovereign of the annual Minneriya Elephant Gathering. Possessing some of the longest and most symmetrical ivory tusks among wild Asian elephants, Mahasen commands deep respect among the wild matriarchal herds and draws wildlife researchers and naturalists from around the world.",
+      "facts": [
+        {
+          "label": "Wild Status",
+          "value": "Living Patriarch"
+        },
+        {
+          "label": "Tusk Length",
+          "value": "6.2 ft (1.89 m)"
+        },
+        {
+          "label": "Habitat",
+          "value": "Minneriya / Kaudulla"
+        },
+        {
+          "label": "Gathering",
+          "value": "Dominant Herd Bull"
+        }
+      ],
+      "dossierLink": "conservation-news.html#mahasen"
+    },
+    {
+      "id": "legend-galgamuwa-dala-poottuwa",
+      "name": "Galgamuwa Dala Poottuwa",
+      "sinhalaName": "ගල්ගමුවේ දළ පූට්ටුවා",
+      "type": "wild",
+      "typeLabel": "Wild Tusker",
+      "status": "Deceased",
+      "statusDetail": "Martyr of Anti-Poaching Movement (Nov 2017)",
+      "statusType": "deceased",
+      "lifespan": "c. 1967 – November 2017 (Age ~50)",
+      "category": "legends",
+      "badge": "DECEASED WILD MARTYR • CROSSED TUSKS",
+      "badgeClass": "bg-rose-950/80 text-rose-300 border-rose-500/30",
+      "role": "Iconic Wild Tusker of Herathgama & Galgamuwa Sanctum",
+      "height": "Approx. 9.2 ft (2.80 m)",
+      "tusks": "Rare overlapping crossed tusks (Dala Poottuwa)",
+      "image": "assets/images/sri-lanka-elephant-wild-herd.jpg",
+      "title": "Galgamuwa Dala Poottuwa: The Wild Crossed-Tusk King Whose Murder Awakened a Nation",
+      "summary": "A mythic wild tusker celebrated for his extraordinarily rare 'Dala Poottuwa' morphology—tusks that crossed over each other symmetrically in front of his trunk. Partially blind from shotgun pellet traps, he roamed the tank cascades peacefully until November 2017, when ivory poachers gunned him down. His death triggered massive nationwide protests, special task force anti-poaching operations, and strict penal revisions in Parliament protecting wild tuskers.",
+      "facts": [
+        {
+          "label": "Phenotype",
+          "value": "Crossed Ivory (Poottuwa)"
+        },
+        {
+          "label": "Habitat",
+          "value": "Galgamuwa-Herathgama"
+        },
+        {
+          "label": "Outcome",
+          "value": "STF Ivory Crackdown"
+        },
+        {
+          "label": "Legacy",
+          "value": "Wildlife Law Reform 2018"
+        }
+      ],
+      "dossierLink": "conservation-news.html#dala-poottuwa"
+    },
+    {
+      "id": "legend-nadungamuwa-raja",
+      "name": "Nadungamuwa Vijaya Raja",
+      "sinhalaName": "නැදුන්ගමුවේ විජය රාජා",
+      "type": "sacred",
+      "typeLabel": "Sacred Relic Tusker",
+      "status": "Deceased",
+      "statusDetail": "Memorialized National Treasure (2022)",
+      "statusType": "deceased",
+      "lifespan": "c. 1953 – March 7, 2022 (Age ~69)",
+      "category": "legends",
+      "badge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
+      "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+      "role": "Chief Relic Bearer of Kandy Esala Perahera (2006–2021)",
+      "height": "10.5 ft (3.2 m) — Tallest Tamed Tusker in Asia",
+      "tusks": "Pair of 7-foot forward-curving floor-touching tusks",
+      "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
+      "title": "Nadungamuwa Raja: The Gentle Titan Who Walked 90km for Sacred Duty",
+      "summary": "Revered as the tallest tamed tusker in Asia (10.5 ft). Gifted by a Mysore prince in 1953, he served as the casket bearer of the Sacred Tooth Relic for 15 consecutive seasons. He refused vehicular transport and walked 90 km from Gampaha to Kandy each August under armed military escorts. Declared a National Cultural Treasure by Presidential decree, he was posthumously honored with a state stamp and museum preservation.",
+      "facts": [
+        {
+          "label": "Height",
+          "value": "10.5 ft (3.20 m)"
+        },
+        {
+          "label": "Tusk Length",
+          "value": "7 ft (2.13 m)"
+        },
+        {
+          "label": "Pilgrimage",
+          "value": "90 km on foot"
+        },
+        {
+          "label": "State Honor",
+          "value": "National Treasure (2022)"
+        }
+      ],
+      "dossierLink": "heritage-and-culture.html#nadungamuwa-raja"
+    },
+    {
+      "id": "legend-maligawa-raja",
+      "name": "Maligawa Raja",
+      "sinhalaName": "මාලිගාවේ රාජා",
+      "type": "sacred",
+      "typeLabel": "Sacred Relic Tusker",
+      "status": "Deceased",
+      "statusDetail": "Declared National Cultural Treasure (1986)",
+      "statusType": "deceased",
+      "lifespan": "c. 1913 – July 16, 1988 (Age ~75)",
+      "category": "legends",
+      "badge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
+      "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+      "role": "Supreme Relic Bearer of Sri Dalada Maligawa (1937–1987)",
+      "height": "9 ft 3 in (2.82 m) with exceptional Sathdanta symmetry",
+      "tusks": "Pair of symmetrical 5 ft 8 in upward-swept ivory tusks",
+      "image": "assets/images/history-elephant.jpg",
+      "title": "Maligawa Raja: The 50-Year Sovereign of the Sacred Tooth Relic",
+      "summary": "Captured in Batticaloa in 1925 and gifted to the Temple of the Tooth in 1937, Raja carried the golden casket for 50 years without an incident. His poise amidst booming cannons and drumming became legend. The President proclaimed a national day of mourning upon his death in 1988, and his taxidermied remains are enshrined in Kandy's dedicated Raja Museum.",
+      "facts": [
+        {
+          "label": "Service",
+          "value": "50 Years (1937–1987)"
+        },
+        {
+          "label": "Origin",
+          "value": "Batticaloa Wilds (1925)"
+        },
+        {
+          "label": "Memorial",
+          "value": "Raja Museum, Kandy"
+        },
+        {
+          "label": "State Honor",
+          "value": "National Day of Mourning"
+        }
+      ],
+      "dossierLink": "heritage-and-culture.html#maligawa-raja"
+    },
+    {
+      "id": "legend-indi-raja",
+      "name": "Indi Raja",
+      "sinhalaName": "ඉන්දි රාජා",
+      "type": "sacred",
+      "typeLabel": "Sacred Relic Tusker",
+      "status": "Living",
+      "statusDetail": "Active Chief Relic Bearer of Sri Dalada Maligawa",
+      "statusType": "living",
+      "lifespan": "c. 1980 – Present (Age ~46 Years)",
+      "category": "legends",
+      "badge": "LIVING • REIGNING CHIEF RELIC BEARER",
+      "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+      "role": "Current Senior Tusker of the Temple of the Sacred Tooth Relic",
+      "height": "Approx. 9.6 ft (2.92 m)",
+      "tusks": "Impeccably balanced ivory tusks measuring ~6.2 ft",
+      "image": "assets/images/hero-elephant.jpg",
+      "title": "Indi Raja: The Reigning Sacred Tusker of the Senkadagala Kingdom",
+      "summary": "Gifted by Indian Prime Minister Rajiv Gandhi in 1987, Indi Raja has matured into the premier temple tusker of Sri Lanka. He carries the golden Karanduwa (relic casket) during the grand Kandy Esala Perahera. His dignified step, gentle disposition, and perfect tusk symmetry have earned him deep national affection.",
+      "facts": [
+        {
+          "label": "Status",
+          "value": "Living & Serving"
+        },
+        {
+          "label": "Gifted By",
+          "value": "Govt of India (1987)"
+        },
+        {
+          "label": "Sanctuary",
+          "value": "Sri Dalada Maligawa"
+        },
+        {
+          "label": "Role",
+          "value": "Chief Karanduwa Bearer"
+        }
+      ],
+      "dossierLink": "heritage-and-culture.html#sacred-tuskers"
+    },
+    {
+      "id": "legend-millangoda-raja",
+      "name": "Millangoda Raja",
+      "sinhalaName": "මිල්ලන්ගොඩ රාජා",
+      "type": "sacred",
+      "typeLabel": "Sacred Relic Tusker",
+      "status": "Deceased",
+      "statusDetail": "Possessor of the Longest Tusks in Asia (7.5 ft)",
+      "statusType": "deceased",
+      "lifespan": "1938 – July 30, 2011 (Age ~73)",
+      "category": "legends",
+      "badge": "DECEASED • LONGEST TUSKS IN ASIA",
+      "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+      "role": "Grand Tusker of Kegalle & Maligawa Relic Bearer",
+      "height": "9 ft 4 in (2.84 m)",
+      "tusks": "World-record 7 ft 6 in (2.3 m) tusks touching the ground",
+      "image": "assets/images/sri-lanka-elephant-male-portrait.jpg",
+      "title": "Millangoda Raja: The Kegalle Giant with Asia's Longest Tusks",
+      "summary": "Captured in Nawagaththegama in 1945, Millangoda Raja bore the longest recorded tusks of any living Asian elephant in modern history—measuring 7.5 feet (2.3 meters) each. He carried the Sacred Tooth Relic for decades and led the Kelaniya Duruthu Perahera. He was buried with Buddhist rites and military honors in Kegalle in 2011.",
+      "facts": [
+        {
+          "label": "Tusk Length",
+          "value": "7 ft 6 in (2.3 m)"
+        },
+        {
+          "label": "Captured",
+          "value": "Nawagaththegama (1945)"
+        },
+        {
+          "label": "Custody",
+          "value": "Millangoda Family, Kegalle"
+        },
+        {
+          "label": "Honor",
+          "value": "State Honors Burial"
+        }
+      ],
+      "dossierLink": "heritage-and-culture.html#sacred-tuskers"
+    },
+    {
+      "id": "legend-wasana-kataragama",
+      "name": "Wasana of Kataragama",
+      "sinhalaName": "කතරගම වාසනා",
+      "type": "sacred",
+      "typeLabel": "Sacred Relic Tusker",
+      "status": "Living",
+      "statusDetail": "Living Sacred Tusker of the Southern Realm",
+      "statusType": "living",
+      "lifespan": "c. 1985 – Present (Age ~41 Years)",
+      "category": "legends",
+      "badge": "LIVING • RUHUNU DEITY TUSKER",
+      "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+      "role": "Chief Tusker of Ruhunu Maha Kataragama Devalaya",
+      "height": "Approx. 9.5 ft (2.90 m)",
+      "tusks": "Heavy, robust forward-curving tusks measuring ~5.8 ft",
+      "image": "assets/images/sri-lanka-minneriya-herd.jpg",
+      "title": "Wasana of Kataragama: Guardian of the Menik Ganga Sacred Perahera",
+      "summary": "Revered in the deep south of Sri Lanka, Wasana carries the sacred casket of Lord Murugan/Kataragama Deviyo during the annual Esala festival, wading through the Menik River. Known for his disciplined demeanor and deep bond with his mahout, he is considered a living national treasure.",
+      "facts": [
+        {
+          "label": "Status",
+          "value": "Living & Serving"
+        },
+        {
+          "label": "Sanctuary",
+          "value": "Kataragama Devalaya"
+        },
+        {
+          "label": "Festival",
+          "value": "Menik Ganga Perahera"
+        },
+        {
+          "label": "Province",
+          "value": "Southern / Uva"
+        }
+      ],
+      "dossierLink": "heritage-and-culture.html#sacred-tuskers"
+    },
+    {
+      "id": "legend-heiyantuduwa-raja",
+      "name": "Heiyantuduwa Raja",
+      "sinhalaName": "හෙයියන්තුඩුවේ රාජා",
+      "type": "sacred",
+      "typeLabel": "Sacred Relic Tusker",
+      "status": "Deceased",
+      "statusDetail": "Preserved in Colombo National Museum",
+      "statusType": "deceased",
+      "lifespan": "1924 – November 6, 2002 (Age 78)",
+      "category": "legends",
+      "badge": "DECEASED • NATIONAL MUSEUM MONUMENT",
+      "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+      "role": "Kelaniya Duruthu & Kandy Esala Senior Relic Tusker",
+      "height": "9 ft 1 in (2.77 m)",
+      "tusks": "Graceful 7 ft 6 in inward curving ivory tusks",
+      "image": "assets/images/elephant-mist.jpg",
+      "title": "Heiyantuduwa Raja: The Kelaniya Duruthu Sovereign Whose Bones Educate Generations",
+      "summary": "Captured in 1925, Heiyantuduwa Raja served as Chief Relic Bearer of the Kelaniya Duruthu Perahera and Kandy. Known for his inward-curved 7.5-foot tusks, he lived to age 78. In a rare act of scientific foresight, his complete skeleton was donated to the state, where it stands fully articulated in the Colombo National Museum.",
+      "facts": [
+        {
+          "label": "Lifespan",
+          "value": "78 Years (1924–2002)"
+        },
+        {
+          "label": "Tusks",
+          "value": "7 ft 6 in inward arc"
+        },
+        {
+          "label": "Current Site",
+          "value": "Colombo National Museum"
+        },
+        {
+          "label": "Exhibit",
+          "value": "Complete Articulated Skeleton"
+        }
+      ],
+      "dossierLink": "heritage-and-culture.html#sacred-tuskers"
+    }
+  ]
+}
