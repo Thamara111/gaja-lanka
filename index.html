@@ -111,12 +111,50 @@
       <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Heritage &amp; Culture</a>
       <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Archive</a>
       <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Habitats &amp; Corridors</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Welfare &amp; Care</a>
+      
+      <!-- Welfare & Care with Dropdown -->
+      <div class="relative group/welfare inline-block">
+        <a  class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors flex items-center gap-1" data-path="welfare-and-care" href="welfare-and-care.html">
+          <span>Welfare &amp; Care</span>
+          <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/welfare:rotate-180">expand_more</span>
+        </a>
+        <div class="absolute left-0 top-full pt-1.5 w-72 opacity-0 pointer-events-none group-hover/welfare:opacity-100 group-hover/welfare:pointer-events-auto transition-all duration-200 z-50">
+          <div class="bg-surface-container-high/95 backdrop-blur-2xl rounded-2xl p-2 flex flex-col space-y-1 shadow-2xl">
+            <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="welfare-and-care.html">
+              <div class="flex items-center justify-between">
+                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Welfare &amp; Care Overview</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ETHOLOGY</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant/80">Wild ethology vs managed captive care</span>
+            </a>
+            <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="pinnawala.html">
+              <div class="flex items-center justify-between">
+                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Pinnawala Elephant Orphanage</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">1975</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant/80">Care, breeding &amp; Ma Oya bathing</span>
+            </a>
+            <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="udawalawe.html">
+              <div class="flex items-center justify-between">
+                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Udawalawe Elephant Transit Home</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ETH</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant/80">Wild calf rehabilitation &amp; release</span>
+            </a>
+            <div class="pt-1 mt-1 border-t border-outline-variant/10">
+              <a class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-secondary-fixed text-[12px] font-medium flex items-center justify-between " href="elephant-orphanages.html">
+                <span>Orphanages Hub (Two Paths)</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Data &amp; Analytics</a>
       <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Portal</a>
       <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="conservation-news" href="conservation-news.html">News</a>
     </nav>
-    
     <!-- Right Actions -->
     <div class="flex items-center gap-2 shrink-0">
       <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" data-path="data-and-analytics" href="data-and-analytics.html#repository">Open Data</a>
@@ -132,17 +170,41 @@
   <!-- Mobile Menu Drawer -->
   <div id="mobile-menu" class="hidden xl:hidden bg-surface-container-high/98 backdrop-blur-2xl px-6 py-4 transition-all">
     <nav class="flex flex-col space-y-1">
+      
       <a aria-current="page" class="px-3 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-body-sm flex items-center justify-between" data-path="home" href="index.html"><span>Home</span><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span></a>
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="species-profile" href="species-profile.html">Species Profile</a>
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Heritage &amp; Culture</a>
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Archive</a>
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Habitats &amp; Corridors</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Welfare &amp; Care</a>
+      
+      <!-- Mobile Submenu for Welfare & Care -->
+      <div class="space-y-1 bg-surface-container/60 rounded-xl p-2">
+        <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-body-sm flex items-center justify-between" href="welfare-and-care.html">
+          <span>Welfare &amp; Care</span>
+          <span class="text-[10px] text-secondary font-mono">Overview</span>
+        </a>
+        <div class="pl-3 space-y-1">
+          <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-[13px] flex items-center justify-between" href="pinnawala.html">
+            <span>Pinnawala Elephant Orphanage</span>
+            <span class="text-[10px] text-secondary font-mono">1975</span>
+          </a>
+          <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-[13px] flex items-center justify-between" href="udawalawe.html">
+            <span>Udawalawe Elephant Transit Home</span>
+            <span class="text-[10px] text-secondary font-mono">ETH</span>
+          </a>
+          <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-[13px] flex items-center justify-between" href="elephant-orphanages.html">
+            <span>Elephant Orphanages Hub</span>
+            <span class="text-[10px] text-secondary">Two Paths</span>
+          </a>
+        </div>
+      </div>
+
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Data &amp; Analytics</a>
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Portal</a>
       <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="conservation-news" href="conservation-news.html">News</a>
+  
     </nav>
-    <div class="mt-3 pt-3 flex items-center justify-between">
+    <div class="mt-3 pt-3 border-t border-outline-variant/10 flex items-center justify-between">
       <span class="text-[11px] uppercase tracking-wider text-secondary">Gaja Lanka 2026 Archive</span>
       <a class="text-xs font-semibold text-secondary-fixed hover:underline" href="data-and-analytics.html#repository">Datasets &amp; API &rarr;</a>
     </div>
@@ -191,7 +253,7 @@
             </p>
             <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white leading-none">
               THE WILD <br class="hidden sm:inline"/>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary-fixed to-primary-fixed">MONARCHS</span>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary-fixed to-primary-fixed italic font-normal">MONARCHS</span>
             </h1>
           </div>
           <p class="text-base sm:text-xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
@@ -794,6 +856,87 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURED SPECIAL CHAPTER: ELEPHANT ORPHANAGES IN SRI LANKA
+         Two Paths. One Future for Sri Lanka's Elephants.
+         ==================================================================== -->
+    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full" id="elephant-orphanages-spotlight">
+      <div class="bg-gradient-to-b from-surface-container/80 to-surface-container-low/90 backdrop-blur-2xl rounded-3xl p-8 sm:p-12 space-y-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div class="space-y-2 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              <span>Featured Institution Dossier</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-light text-primary uppercase tracking-tight">
+              Two Paths. <span class="font-normal italic text-secondary-fixed">One Future for Sri Lanka's Elephants.</span>
+            </h2>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Explore the institutions caring for orphaned elephants in Sri Lanka, from long-term care and captive breeding at Pinnawala to the rehabilitation of orphaned wild calves at Udawalawe.
+            </p>
+          </div>
+          <div>
+            <a href="elephant-orphanages.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold text-xs uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-all">
+              <span>Explore Orphanages Hub</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Pinnawala preview -->
+          <div class="bg-surface-container-high/60 rounded-2xl overflow-hidden flex flex-col justify-between group hover:bg-surface-container-high/90 transition-all">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="assets/images/pinnawala-river-bathing.jpg" alt="Pinnawala Elephant Orphanage herd in Ma Oya River" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute top-3 left-3 px-2.5 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] font-mono text-secondary-fixed font-semibold uppercase">
+                Est. 1975 &bull; Rambukkana
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-secondary font-bold">A Legacy of Care Since 1975</span>
+                <h3 class="text-xl font-bold text-primary group-hover:text-secondary-fixed transition-colors">Pinnawala Elephant Orphanage</h3>
+              </div>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Long-term captive management, veterinary attention, managed breeding, daily Ma Oya river bathing routines, and public education.
+              </p>
+              <div class="pt-2">
+                <a href="pinnawala.html" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-primary font-semibold">
+                  <span>Explore Pinnawala</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Udawalawe preview -->
+          <div class="bg-surface-container-high/60 rounded-2xl overflow-hidden flex flex-col justify-between group hover:bg-surface-container-high/90 transition-all">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="assets/images/udawalawe-transit-home.jpg" alt="Udawalawe Elephant Transit Home ranger feeding calf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute top-3 left-3 px-2.5 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] font-mono text-secondary-fixed font-semibold uppercase">
+                Est. 1995 &bull; DWC
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-secondary font-bold">A Journey Back to the Wild</span>
+                <h3 class="text-xl font-bold text-primary group-hover:text-secondary-fixed transition-colors">Udawalawe Elephant Transit Home</h3>
+              </div>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Specialized wild calf rescue, structured 5-stage rehabilitation, radio-collar field tracking, and monitored re-integration into natural habitats.
+              </p>
+              <div class="pt-2">
+                <a href="udawalawe.html" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-primary font-semibold">
+                  <span>Discover Udawalawe</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

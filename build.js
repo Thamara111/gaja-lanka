@@ -10,15 +10,74 @@ const NAV_ITEMS = [
   { path: 'heritage-and-culture', label: 'Heritage & Culture', href: 'heritage-and-culture.html' },
   { path: 'colonial-archive', label: 'Colonial Archive', href: 'colonial-archive.html' },
   { path: 'habitats-and-corridors', label: 'Habitats & Corridors', href: 'habitats-and-corridors.html' },
-  { path: 'welfare-and-care', label: 'Welfare & Care', href: 'welfare-and-care.html' },
+  {
+    path: 'welfare-and-care',
+    label: 'Welfare & Care',
+    href: 'welfare-and-care.html',
+    dropdown: [
+      { label: 'Welfare & Care Overview', href: 'welfare-and-care.html', sub: 'Wild ethology vs managed captive care', tag: 'ETHOLOGY' },
+      { label: 'Pinnawala Elephant Orphanage', href: 'pinnawala.html', sub: 'Care, breeding & Ma Oya bathing', tag: '1975' },
+      { label: 'Udawalawe Elephant Transit Home', href: 'udawalawe.html', sub: 'Wild calf rehabilitation & release', tag: 'ETH' }
+    ]
+  },
   { path: 'data-and-analytics', label: 'Data & Analytics', href: 'data-and-analytics.html' },
   { path: 'human-elephant-conflict', label: 'HEC Portal', href: 'human-elephant-conflict.html' },
   { path: 'conservation-news', label: 'News', href: 'conservation-news.html' }
 ];
 
-// Unified header: NO BORDERS, NO SHADOWS, SINGLE-LINE NAV LINKS (whitespace-nowrap)
+// Unified header: NO BORDERS, NO SHADOWS, WITH HOVERABLE WELFARE & CARE DROPDOWN
 function generateCleanHeader(activePath) {
+  const isWelfareClusterActive = ['welfare-and-care', 'elephant-orphanages', 'pinnawala', 'udawalawe'].includes(activePath);
+  const isWelfarePage = activePath === 'welfare-and-care';
+  const isPinnawalaActive = activePath === 'pinnawala';
+  const isUdawalaweActive = activePath === 'udawalawe';
+  const isOrphanageHub = activePath === 'elephant-orphanages';
+
   const desktopLinks = NAV_ITEMS.map(item => {
+    if (item.path === 'welfare-and-care') {
+      const btnClass = isWelfareClusterActive
+        ? 'px-2.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-[13px] whitespace-nowrap transition-colors flex items-center gap-1'
+        : 'px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors flex items-center gap-1';
+      return `
+      <div class="relative group/welfare inline-block">
+        <a ${isWelfareClusterActive ? 'aria-current="page"' : ''} class="${btnClass}" data-path="welfare-and-care" href="welfare-and-care.html">
+          <span>Welfare &amp; Care</span>
+          <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/welfare:rotate-180">expand_more</span>
+        </a>
+        <div class="absolute left-0 top-full pt-1.5 w-72 opacity-0 pointer-events-none group-hover/welfare:opacity-100 group-hover/welfare:pointer-events-auto transition-all duration-200 z-50">
+          <div class="bg-surface-container-high/95 backdrop-blur-2xl rounded-2xl p-2 flex flex-col space-y-1 shadow-2xl">
+            <a class="px-3 py-2 rounded-xl ${isWelfarePage ? 'bg-surface-container text-secondary-fixed' : 'hover:bg-surface-container text-on-surface-variant hover:text-primary'} transition-colors flex flex-col group/item" href="welfare-and-care.html">
+              <div class="flex items-center justify-between">
+                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Welfare &amp; Care Overview</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">${isWelfarePage ? 'ACTIVE' : 'ETHOLOGY'}</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant/80">Wild ethology vs managed captive care</span>
+            </a>
+            <a class="px-3 py-2 rounded-xl ${isPinnawalaActive ? 'bg-surface-container text-secondary-fixed' : 'hover:bg-surface-container text-on-surface-variant hover:text-primary'} transition-colors flex flex-col group/item" href="pinnawala.html">
+              <div class="flex items-center justify-between">
+                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Pinnawala Elephant Orphanage</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">${isPinnawalaActive ? 'ACTIVE' : '1975'}</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant/80">Care, breeding &amp; Ma Oya bathing</span>
+            </a>
+            <a class="px-3 py-2 rounded-xl ${isUdawalaweActive ? 'bg-surface-container text-secondary-fixed' : 'hover:bg-surface-container text-on-surface-variant hover:text-primary'} transition-colors flex flex-col group/item" href="udawalawe.html">
+              <div class="flex items-center justify-between">
+                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Udawalawe Elephant Transit Home</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">${isUdawalaweActive ? 'ACTIVE' : 'ETH'}</span>
+              </div>
+              <span class="text-[11px] text-on-surface-variant/80">Wild calf rehabilitation &amp; release</span>
+            </a>
+            <div class="pt-1 mt-1 border-t border-outline-variant/10">
+              <a class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-secondary-fixed text-[12px] font-medium flex items-center justify-between" href="elephant-orphanages.html">
+                <span>Orphanages Hub (Two Paths)</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }
+
     const isActive = item.path === activePath;
     if (isActive) {
       return `<a aria-current="page" class="px-2.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-[13px] whitespace-nowrap transition-colors" data-path="${item.path}" href="${item.href}">${item.label}</a>`;
@@ -28,6 +87,30 @@ function generateCleanHeader(activePath) {
   }).join('\n      ');
 
   const mobileLinks = NAV_ITEMS.map(item => {
+    if (item.path === 'welfare-and-care') {
+      return `
+      <div class="space-y-1 bg-surface-container/60 rounded-xl p-2">
+        <a class="px-3 py-1.5 rounded-lg ${isWelfarePage ? 'bg-secondary-container text-on-secondary-container font-semibold' : 'text-on-surface-variant hover:text-primary'} text-body-sm flex items-center justify-between" href="welfare-and-care.html">
+          <span>Welfare &amp; Care</span>
+          <span class="text-[10px] text-secondary font-mono">Overview</span>
+        </a>
+        <div class="pl-3 space-y-1">
+          <a class="px-3 py-1.5 rounded-lg ${isPinnawalaActive ? 'bg-secondary-container text-on-secondary-container font-semibold' : 'text-on-surface-variant hover:text-primary'} text-[13px] flex items-center justify-between" href="pinnawala.html">
+            <span>Pinnawala Elephant Orphanage</span>
+            <span class="text-[10px] text-secondary font-mono">1975</span>
+          </a>
+          <a class="px-3 py-1.5 rounded-lg ${isUdawalaweActive ? 'bg-secondary-container text-on-secondary-container font-semibold' : 'text-on-surface-variant hover:text-primary'} text-[13px] flex items-center justify-between" href="udawalawe.html">
+            <span>Udawalawe Elephant Transit Home</span>
+            <span class="text-[10px] text-secondary font-mono">ETH</span>
+          </a>
+          <a class="px-3 py-1.5 rounded-lg ${isOrphanageHub ? 'bg-secondary-container text-on-secondary-container font-semibold' : 'text-on-surface-variant hover:text-primary'} text-[13px] flex items-center justify-between" href="elephant-orphanages.html">
+            <span>Elephant Orphanages Hub</span>
+            <span class="text-[10px] text-secondary">Two Paths</span>
+          </a>
+        </div>
+      </div>`;
+    }
+
     const isActive = item.path === activePath;
     if (isActive) {
       return `<a aria-current="page" class="px-3 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-body-sm flex items-center justify-between" data-path="${item.path}" href="${item.href}"><span>${item.label}</span><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span></a>`;
@@ -321,6 +404,27 @@ const PAGES_CONFIG = [
     title: 'Welfare Beyond Captivity • Wild Ethology vs Managed Care | Gaja Lanka',
     description: 'Understanding the behavioral, physical, and ecological realities of free-ranging wild megafauna versus managed captive care and rehabilitation.',
     targetFiles: ['welfare-and-care.html', 'wild-domestic.html']
+  },
+  {
+    folder: 'elephant_orphanages_gaja_lanka',
+    activePath: 'elephant-orphanages',
+    title: 'Elephant Orphanages & Rehabilitation in Sri Lanka | Gaja Lanka',
+    description: 'Discover Sri Lanka\'s elephant care institutions: long-term care and captive breeding at Pinnawala, and wild calf rehabilitation and release at Udawalawe Transit Home.',
+    targetFiles: ['elephant-orphanages.html']
+  },
+  {
+    folder: 'pinnawala_gaja_lanka',
+    activePath: 'pinnawala',
+    title: 'Pinnawala Elephant Orphanage • A Living Symbol of Elephant Conservation | Gaja Lanka',
+    description: 'Explore Pinnawala Elephant Orphanage: history since 1975, daily Ma Oya river bathing schedule, elephant profiles, admission fees, and captive welfare standards.',
+    targetFiles: ['pinnawala.html', 'pinnawala-elephant-orphanage.html']
+  },
+  {
+    folder: 'udawalawe_gaja_lanka',
+    activePath: 'udawalawe',
+    title: 'Udawalawe Elephant Transit Home • A Journey From Rescue to the Wild | Gaja Lanka',
+    description: 'Explore Udawalawe Elephant Transit Home (ETH): orphaned wild calf rehabilitation, the Sandamali release milestone, radio telemetry monitoring, and the 5-stage return to nature.',
+    targetFiles: ['udawalawe.html', 'udawalawe-transit-home.html']
   }
 ];
 
@@ -447,7 +551,7 @@ ${generateCleanHeader('home')}
             </p>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl text-primary uppercase font-light tracking-tight leading-tight">
               CEYLON'S SACRED <br class="hidden sm:inline"/>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary-fixed to-primary-fixed font-normal">WILD MONARCHS</span>
+              <span class="font-normal italic text-secondary-fixed">WILD MONARCHS</span>
             </h1>
           </div>
           <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl leading-relaxed">

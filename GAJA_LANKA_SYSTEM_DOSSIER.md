@@ -135,6 +135,11 @@ The website comprises 9 primary chapters, each addressing a specialized dimensio
 ### 9. Live News Wire (`news.html`)
 - Real-time RSS integration broadcasting conservation dispatches, public wildlife advisories, veterinary rescues, and ministry press releases.
 
+### 10. Elephant Orphanages & Rehabilitation (`elephant-orphanages.html`, `pinnawala.html`, `udawalawe.html`)
+- **Hub Page (`elephant-orphanages.html`)**: Two paths, one future for Sri Lanka's elephants; comparative institutional analysis of Pinnawala vs. Udawalawe Transit Home.
+- **Pinnawala Elephant Orphanage (`pinnawala.html`)**: 1975 founding herd (Kumari, Neela, Kadira, Vijaya, Mathali), Sukumali 1984 first birth, 2021 twin birth milestone, daily Ma Oya river bathing timetable, verified herd cards, admission pricing matrix, park visitor rules, and volunteering.
+- **Udawalawe Elephant Transit Home (`udawalawe.html`)**: 1995 establishment by DWC, structured 5-stage rescue-to-release workflow, Dr. Suhada Jayawardana's account of Sandamali from Handapanagala rescue to wild mother with calf, milestones (1995, 1998, 2000, 2008), clinical milk nutrition, VHF/GPS radio-collar telemetry, and respectful visitor guidelines.
+
 ---
 
 ## 6. REAL INTERNET PHOTOGRAPHIC ASSETS (WIKIMEDIA COMMONS ARCHIVE)
@@ -164,6 +169,14 @@ High-resolution, verified field photographs of wild Sri Lankan elephants have be
 7. **`sri-lanka-tusker-nadungamuwa-raja.jpg`** (2.5 MB)
    - *Source*: Wikimedia Commons
    - *Subject*: Historic photograph of the revered Sri Lankan Tusker Nadungamuwa Raja.
+8. **`pinnawala-river-bathing.jpg`** (1.1 MB)
+   - *Subject*: The Pinnawala herd participating in their daily communal bath in the rocky Ma Oya river.
+9. **`udawalawe-transit-home.jpg`** (1.0 MB)
+   - *Subject*: Orphaned elephant calf being carefully fed warm milk by wildlife rangers at ETH Udawalawe.
+10. **`sandamali-wild-mother.jpg`** (1.0 MB)
+   - *Subject*: The rehabilitated elephant Sandamali thriving in the wild as an adult mother with her wild-born calf.
+11. **`pinnawala-twin-calves.jpg`** (1.1 MB)
+   - *Subject*: The historic twin elephant calves born at Pinnawala in August 2021 beside their mother.
 
 ---
 
@@ -175,6 +188,10 @@ f:/Elephants/
 │   ├── css/
 │   │   └── styles.css                     <- Full design system (OpenAI Sans, Fibonacci tokens, glassmorphism)
 │   ├── images/
+│   │   ├── pinnawala-river-bathing.jpg    <- Ma Oya herd bathing
+│   │   ├── udawalawe-transit-home.jpg     <- ETH milk feeding
+│   │   ├── sandamali-wild-mother.jpg      <- Sandamali and wild calf
+│   │   ├── pinnawala-twin-calves.jpg      <- 2021 historic twins
 │   │   ├── sri-lanka-elephant-wild-herd.jpg
 │   │   ├── sri-lanka-elephant-mother-calf.jpg
 │   │   ├── sri-lanka-elephant-male-portrait.jpg
@@ -195,6 +212,9 @@ f:/Elephants/
 ├── elephant_population_and_mortality_stats.csv <- 200-year historical CSV data
 ├── GAJA_LANKA_SYSTEM_DOSSIER.md           <- Downloadable System Documentation (This File)
 ├── index.html                             <- Primary Split Frosted Glass Landing Hub
+├── elephant-orphanages.html               <- Elephant Orphanages Hub (Two Paths, One Future)
+├── pinnawala.html                         <- Pinnawala Elephant Orphanage (Est. 1975)
+├── udawalawe.html                         <- Udawalawe Elephant Transit Home (Rewilding)
 ├── overview.html                          <- Taxonomy, anatomy, depigmentation
 ├── history.html                           <- 2,500-year chronicles & sacred tuskers
 ├── massacre.html                          <- British colonial slaughter records

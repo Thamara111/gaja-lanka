@@ -89,5 +89,54 @@
     "natural_and_other": 3.5
   },
   "news_api_endpoint": "news-feed.json",
-  "news_source_live_rss": "https://news.google.com/rss/search?q=sri+lanka+elephant&hl=en-US&gl=US&ceid=US:en"
+  "news_source_live_rss": "https://news.google.com/rss/search?q=sri+lanka+elephant&hl=en-US&gl=US&ceid=US:en",
+  "institutions": {
+    "pinnawala_elephant_orphanage": {
+      "name": "Pinnawala Elephant Orphanage",
+      "established_date": "1975-02-16",
+      "authority": "Department of Wildlife Conservation / National Zoological Gardens",
+      "location": "Pinnawala, Rambukkana, Sri Lanka",
+      "river": "Ma Oya",
+      "mission": "Long-term elephant care, veterinary support, managed breeding, and public education",
+      "founding_calves": ["Kumari", "Neela", "Kadira", "Vijaya", "Mathali"],
+      "first_captive_birth": { "name": "Sukumali", "year": 1984 },
+      "historic_milestones": [
+        { "year": 1975, "event": "Establishment with 5 orphaned calves" },
+        { "year": 1984, "event": "Birth of Sukumali, first captive-born calf" },
+        { "year": 2021, "event": "Birth of twin elephant calves to mother Surangi" }
+      ],
+      "daily_bathing_river": "Ma Oya",
+      "payment_currency": "LKR",
+      "admission": {
+        "local_child": 118,
+        "local_adult": 295,
+        "school_groups": 59,
+        "foreign_adult_usd": 17.70,
+        "foreign_child_usd": 8.85,
+        "saarc_adult_usd": 11.80,
+        "saarc_child_usd": 5.90,
+        "fruit_basket_lkr": 590
+      }
+    },
+    "udawalawe_elephant_transit_home": {
+      "name": "Elephant Transit Home (ETH)",
+      "established_year": 1995,
+      "authority": "Department of Wildlife Conservation (DWC)",
+      "location": "Udawalawe, near Udawalawe National Park, Sri Lanka",
+      "mission": "Specialized rehabilitation of orphaned wild calves for eventual release back into free-ranging populations",
+      "guiding_philosophy": "Provide the care elephants need, while preserving their opportunity to live as wild animals",
+      "rehabilitation_stages": [
+        "1. Rescue and assessment",
+        "2. Rehabilitation and nutrition",
+        "3. Growth and preparation",
+        "4. Release into a suitable habitat",
+        "5. Post-release monitoring"
+      ],
+      "notable_releases": [
+        { "year": 1998, "cohort": ["Anuradha", "Anusha", "Kandula", "Gamini"], "monitoring": "VHF radio collars" },
+        { "year": 2000, "cohort": ["Sandamali", "Mattali", "Komali", "Emily", "Isuru"], "monitoring": "Radio telemetry" },
+        { "year": 2008, "event": "Sandamali observed as wild mother with healthy calf by Dr. Suhada Jayawardana" }
+      ]
+    }
+  }
 }
