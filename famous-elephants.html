@@ -317,71 +317,83 @@
     </main>
 
   <!-- Global Footer -->
-  <!-- Unified Footer -->
-<footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl">
-  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
-    <div class="mb-space-xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg">
-        <div class="lg:col-span-2 space-y-space-sm">
-          <a href="index.html" class="flex items-center gap-space-sm text-decoration-none group">
+  <!-- Unified Global Footer -->
+  <footer class="w-full bg-surface-container-lowest text-on-surface mt-20">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
+      
+      <!-- Top Grid: Brand & Navigation Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+        
+        <!-- Brand Description -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3 no-underline group focus:outline-none w-fit">
             <img alt="GAJA LANKA Emblem" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClsl4rcueTeGbxSgDieYGr13SQdQQA-L6BH7paRzqaVc7KHvyxgiCtk9EXt1166hUK9ZTBTQTZlUcuzHZPuSxYDuYWGUX7bJqZA6bQUpr1N2tcKqSxIsr9K60MtsvhN5txDgGshinZyIh_Bt0C5abWbm0mJhdSjuOtdUtUC_r5DFrsrAebfO6NnRcf8zXkKlJXIdDy8bkH0_trDGuNqxRBfSYQK3hkxAk7va05KMgeRnr-mD-sk9co"/>
-            <span class="font-headline-sm text-headline-sm uppercase tracking-wider text-primary font-bold group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
+            <span class="text-base uppercase tracking-wider text-primary font-bold group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
           </a>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">The Legacy of Giants. The Future of Coexistence. Dedicated to evidence-based science, habitat preservation, and harmonious coexistence for <em>Elephas maximus maximus</em>.</p>
-          <div class="pt-space-xs">
-            <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-label-editorial text-label-editorial uppercase">
+          <p class="text-sm text-on-surface-variant max-w-md leading-relaxed">
+            The Legacy of Giants. The Future of Coexistence. Dedicated to evidence-based science, habitat preservation, and harmonious coexistence for <em>Elephas maximus maximus</em>.
+          </p>
+          <div class="pt-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/90 text-on-secondary-container text-[11px] font-semibold uppercase tracking-wider">
               <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              Telemetry Node Active &bull; Sri Lanka Wilds
+              <span>Telemetry Node Active &bull; Sri Lanka Wilds</span>
             </div>
           </div>
         </div>
         
+        <!-- Column 1: Dossiers -->
         <div>
-          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Dossiers</h4>
-          <ul class="space-y-space-xs">
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="species-profile" href="species-profile.html">Elephas m. maximus</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Sacred Tusker Heritage</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Eradication Ledger</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Captive vs Wild Welfare</a></li>
+          <h4 class="text-xs uppercase tracking-[0.14em] text-secondary font-semibold mb-4">Dossiers</h4>
+          <ul class="space-y-2.5 text-[13px]">
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="species-profile" href="species-profile.html">Elephas m. maximus</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Sacred Tusker Heritage</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Eradication Ledger</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Captive vs Wild Welfare</a></li>
           </ul>
         </div>
         
+        <!-- Column 2: Science & Datasets -->
         <div>
-          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Science &amp; Datasets</h4>
-          <ul class="space-y-space-xs">
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Population Telemetry</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Protected Sanctuary Corridors</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data.json" download="data.json">data.json (Spatial API)</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant_population_and_mortality_stats.csv" download>population_stats.csv</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Methodology Register</a></li>
+          <h4 class="text-xs uppercase tracking-[0.14em] text-secondary font-semibold mb-4">Science &amp; Datasets</h4>
+          <ul class="space-y-2.5 text-[13px]">
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Population Telemetry</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Protected Sanctuary Corridors</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data.json" download="data.json">data.json (Spatial API)</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant_population_and_mortality_stats.csv" download>population_stats.csv</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Methodology Register</a></li>
           </ul>
         </div>
         
+        <!-- Column 3: Conservation & Policy -->
         <div>
-          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Conservation &amp; Policy</h4>
-          <ul class="space-y-space-xs">
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Mitigation Matrix</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="conservation-news" href="conservation-news.html">Field Dispatches &amp; News</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="human-elephant-conflict.html">National Buffer Strategy</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="conservation-news.html">Ranger Telemetry Dispatch</a></li>
+          <h4 class="text-xs uppercase tracking-[0.14em] text-secondary font-semibold mb-4">Conservation &amp; Policy</h4>
+          <ul class="space-y-2.5 text-[13px]">
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Mitigation Matrix</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="conservation-news" href="conservation-news.html">Field Dispatches &amp; News</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="human-elephant-conflict.html">National Buffer Strategy</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="conservation-news.html">Ranger Telemetry Dispatch</a></li>
           </ul>
         </div>
       </div>
-    </div>
-    
-    <div class="space-y-space-sm pt-space-xs text-on-surface-variant">
-      <p class="font-body-sm text-body-sm leading-relaxed max-w-4xl text-outline">Scientific Notice: Scientific observations and population metrics should be interpreted in conjunction with indicated census years and peer-reviewed field methodologies. All spatial corridors reflect validated multi-seasonal telemetry tracking.</p>
-      <p class="font-label-editorial text-label-editorial uppercase tracking-wider text-outline">Photography and cartographic assets courtesy of the Department of Wildlife Conservation, Sri Lanka Wildlife Archives, and open scientific field collaborations.</p>
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-space-sm gap-space-sm mt-space-md">
-        <p class="font-body-sm text-body-sm">&copy; 2026 Gaja Lanka Digital Conservation Initiative. All rights reserved.</p>
-        <div class="flex items-center gap-space-md">
-          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Open Access Agreement</a>
-          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="species-profile.html">Taxonomic Protocol</a>
+      
+      <!-- Bottom Metadata & Links -->
+      <div class="space-y-3.5 text-xs text-on-surface-variant">
+        <p class="leading-relaxed max-w-4xl text-outline text-[12px]">
+          Scientific Notice: Scientific observations and population metrics should be interpreted in conjunction with indicated census years and peer-reviewed field methodologies. All spatial corridors reflect validated multi-seasonal telemetry tracking.
+        </p>
+        <p class="uppercase tracking-wider text-outline text-[11px]">
+          Photography and cartographic assets courtesy of the Department of Wildlife Conservation, Sri Lanka Wildlife Archives, and open scientific field collaborations.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-6 gap-4">
+          <p class="text-[12px] text-outline">&copy; 2026 Gaja Lanka Digital Conservation Initiative. All rights reserved.</p>
+          <div class="flex items-center gap-8">
+            <a class="text-[12px] text-outline hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Open Access Agreement</a>
+            <a class="text-[12px] text-outline hover:text-secondary-fixed transition-colors" href="species-profile.html">Taxonomic Protocol</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Scripts -->
   <script src="assets/js/dossier-data.js"></script>
