@@ -246,16 +246,18 @@
           </p>
 
           <div class="flex flex-wrap items-center gap-2 pt-2">
-            <span class="px-3 py-1 rounded-full bg-surface-container text-xs font-label-data text-secondary border border-white/5 font-semibold">10 Specimen Monographs</span>
-            <span class="px-3 py-1 rounded-full bg-emerald-950/80 text-emerald-300 text-xs font-label-data border border-emerald-800/40">2 Living Wild Monarchs</span>
-            <span class="px-3 py-1 rounded-full bg-rose-950/80 text-rose-300 text-xs font-label-data border border-rose-800/40">2 Fallen Wild Giants</span>
-            <span class="px-3 py-1 rounded-full bg-amber-950/80 text-amber-300 text-xs font-label-data border border-amber-800/40">6 Sacred Temple Sovereigns</span>
+            <span class="px-3 py-1 rounded-full bg-surface-container text-xs font-label-data text-secondary border border-white/5 font-semibold">68 Specimen Monographs</span>
+            <span class="px-3 py-1 rounded-full bg-emerald-950/80 text-emerald-300 text-xs font-label-data border border-emerald-800/40">5 Living Wild</span>
+            <span class="px-3 py-1 rounded-full bg-rose-950/80 text-rose-300 text-xs font-label-data border border-rose-800/40">18 Fallen Wild Giants</span>
+            <span class="px-3 py-1 rounded-full bg-amber-950/80 text-amber-300 text-xs font-label-data border border-amber-800/40">19 Sacred Sovereigns</span>
+            <span class="px-3 py-1 rounded-full bg-sky-950/80 text-sky-300 text-xs font-label-data border border-sky-800/40">12 Domestic Lineages</span>
+            <span class="px-3 py-1 rounded-full bg-purple-950/80 text-purple-300 text-xs font-label-data border border-purple-800/40">14 Orphanage Pioneers</span>
           </div>
         </div>
 
         <!-- Action Tools -->
         <div class="flex items-center gap-2 shrink-0">
-          <a href="famous-elephants.json" download="famous-elephants.json" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-secondary-fixed/15 text-secondary-fixed hover:bg-secondary-fixed/25 border border-secondary-fixed/30 transition-all font-label-data text-xs font-semibold cursor-pointer" title="Download Machine-Readable JSON Database">
+          <a href="gaja-lanka-elephants-merged-researched.json" download="gaja-lanka-elephants-merged-researched.json" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-secondary-fixed/15 text-secondary-fixed hover:bg-secondary-fixed/25 border border-secondary-fixed/30 transition-all font-label-data text-xs font-semibold cursor-pointer" title="Download Machine-Readable JSON Database">
             <span class="material-symbols-outlined text-[16px]">data_object</span>
             <span>Export JSON</span>
           </a>
@@ -274,473 +276,86 @@
     <!-- Interactive Pantheon Section -->
     <section class="space-y-6">
       
-      <!-- Filter Bar -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container/60 backdrop-blur-xl p-4 rounded-2xl border border-white/5">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
-          <span class="font-label-editorial text-xs uppercase tracking-widest text-secondary font-semibold">Filter Specimen Pantheon</span>
-        </div>
-
+      <!-- Filter Bar & Real-Time Search -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-surface-container/60 backdrop-blur-xl p-4 rounded-2xl border border-white/5">
         <div class="flex flex-wrap items-center gap-2" id="pantheon-filters">
           <button data-filter="all" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-secondary-fixed text-on-secondary-fixed transition-all cursor-pointer">
-            All Specimens (10)
+            All Specimens (68)
           </button>
           <button data-filter="wild-living" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-all cursor-pointer">
-            Living Wild Monarchs (2)
+            Living Wild (5)
           </button>
           <button data-filter="wild-deceased" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-all cursor-pointer">
-            Fallen Wild Giants (2)
+            Fallen Wild (18)
           </button>
           <button data-filter="sacred" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-all cursor-pointer">
-            Sacred Sovereigns (6)
+            Sacred Sovereigns (19)
+          </button>
+          <button data-filter="domestic" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-all cursor-pointer">
+            Domestic (12)
+          </button>
+          <button data-filter="orphanage" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-container text-on-surface hover:bg-surface-container-high transition-all cursor-pointer">
+            Orphanage (14)
           </button>
         </div>
+
+        <div class="flex items-center gap-3 w-full lg:w-auto">
+          <div class="relative w-full sm:w-72">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">search</span>
+            <input id="pantheon-search" type="search" placeholder="Search 68 elephants..." class="w-full pl-9 pr-3 py-1.5 rounded-xl bg-surface-container-high text-xs text-on-surface placeholder:text-on-surface-variant/60 border border-white/5 focus:outline-none focus:border-secondary transition-all" />
+          </div>
+          <span id="pantheon-counter" class="text-xs text-on-surface-variant font-label-data whitespace-nowrap hidden sm:inline">Showing 68</span>
+        </div>
       </div>
 
-      <!-- Gallery Grid of all 10 Famous Elephants -->
-      <div id="pantheon-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Specimen Card: Kawanthissa (Galgamuwa Tusker) -->
-        <div data-category="wild-deceased" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-rose-900/30 hover:border-rose-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/kavantissa-wild-tusker.jpg" alt="Kawanthissa (Galgamuwa Tusker)" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-950/90 text-rose-300 border-rose-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-              <span>DECEASED • RECENT TRAGEDY (OCT 2026)</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Wild Specimen
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>11 ft Tallest Wild Giant</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Kawanthissa
-              </h3>
-              <span class="text-xs text-secondary font-medium">කාවන්තිස්ස (ගල්ගමුවේ ඇතා)</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              Regarded by wildlife biologists, photographers, and rural communities as the tallest and most magnificent wild tusker roaming the island in modern decades. Kawanthissa possessed extraordinary physical stature, standing nearly 11 feet tall with heavy, outward-swept ivory tusks. He represented the pinnacle of dry-zone pachyderm genetics in the northwestern province.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('kawanthissa')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('kawanthissa')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Agbo of Thirappane (Kalawewa) -->
-        <div data-category="wild-living" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-emerald-900/30 hover:border-emerald-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/sri-lanka-elephant-udawalawe.jpg" alt="Agbo of Thirappane (Kalawewa)" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/90 text-emerald-300 border-emerald-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>LIVING WILD GIANT • VETERINARY RECOVERY</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Wild Specimen
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>Anuradhapura Wilds</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Agbo of Thirappane
-              </h3>
-              <span class="text-xs text-secondary font-medium">තිරප්පනේ අග්බෝ</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              Sri Lanka's most closely monitored living wild tusker. Agbo is a legendary solitary bull elephant of the ancient tank cascades of Anuradhapura who became a national hero in 2023 when he survived life-threatening gunshot injuries through an unprecedented multi-month veterinary rescue operation.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('agbo-thirappane')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('agbo-thirappane')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Mahasen of Minneriya -->
-        <div data-category="wild-living" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-emerald-900/30 hover:border-emerald-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/mahasen-wild-tusker.jpg" alt="Mahasen of Minneriya" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/90 text-emerald-300 border-emerald-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>LIVING WILD GIANT • MONARCH OF THE GATHERING</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Wild Specimen
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>Minneriya Gathering</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Mahasen of Minneriya
-              </h3>
-              <span class="text-xs text-secondary font-medium">මින්නේරියේ මහසෙන් ඇතා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              Named after the revered ancient monarch King Mahasen (who engineered the Great Minneriya Tank in 276–303 CE), this imposing wild patriarch is the crowning jewel of the annual Minneriya Elephant Gathering.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('mahasen')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('mahasen')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Galgamuwa Dala Poottuwa -->
-        <div data-category="wild-deceased" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-rose-900/30 hover:border-rose-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/sri-lanka-elephant-wild-herd.jpg" alt="Galgamuwa Dala Poottuwa" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-950/90 text-rose-300 border-rose-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-              <span>DECEASED WILD MARTYR • CROSSED TUSKS</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Wild Specimen
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>Crossed Ivory Legend</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Galgamuwa Dala Poottuwa
-              </h3>
-              <span class="text-xs text-secondary font-medium">ගල්ගමුවේ දළ පූට්ටුවා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              A mythic wild tusker celebrated for his extraordinarily rare 'Dala Poottuwa' morphology—tusks that crossed over each other symmetrically in front of his trunk. His brutal slaying by poachers in 2017 became the turning point in Sri Lankan wildlife law enforcement.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('dala-poottuwa')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('dala-poottuwa')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Nadungamuwa Vijaya Raja -->
-        <div data-category="sacred" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg" alt="Nadungamuwa Vijaya Raja" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 text-amber-300 border-amber-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>DECEASED • NATIONAL TREASURE (10.5 FT)</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Sacred Sovereign
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>10.5 ft Tallest in Asia</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Nadungamuwa Vijaya Raja
-              </h3>
-              <span class="text-xs text-secondary font-medium">නැදුන්ගමුවේ විජය රාජා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              Asia's tallest tamed tusker of the 21st century and an undisputed national hero. Declared a National Cultural Treasure by Presidential decree, Nadungamuwa Raja served as the Chief Relic Bearer of the Sacred Tooth Relic casket for 15 consecutive seasons.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('nadungamuwa-raja')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('nadungamuwa-raja')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Maligawa Raja -->
-        <div data-category="sacred" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/history-elephant.jpg" alt="Maligawa Raja" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 text-amber-300 border-amber-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>DECEASED • 50-YEAR SACRED SOVEREIGN</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Sacred Sovereign
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>50-Year Relic Bearer</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Maligawa Raja
-              </h3>
-              <span class="text-xs text-secondary font-medium">මාලිගාවේ රාජා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              The most famous sacred elephant in the modern history of Buddhism. Maligawa Raja served as the Chief Relic Bearer of the Temple of the Sacred Tooth Relic for an astounding 50 years without a single behavioral infraction.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('maligawa-raja')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('maligawa-raja')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Indi Raja -->
-        <div data-category="sacred" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/hero-elephant.jpg" alt="Indi Raja" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 text-amber-300 border-amber-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>LIVING • REIGNING CHIEF RELIC BEARER</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Sacred Sovereign
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>Gift of Rajiv Gandhi</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Indi Raja
-              </h3>
-              <span class="text-xs text-secondary font-medium">ඉන්දි රාජා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              The reigning supreme temple tusker of Sri Lanka. Indi Raja carries the golden Karanduwa in the Kandy Esala Perahera today, inheriting the mantle of Maligawa Raja and Nadungamuwa Raja.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('indi-raja')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('indi-raja')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Millangoda Raja -->
-        <div data-category="sacred" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/sri-lanka-elephant-male-portrait.jpg" alt="Millangoda Raja" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 text-amber-300 border-amber-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>DECEASED • LONGEST TUSKS IN ASIA</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Sacred Sovereign
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>7.5 ft Longest Tusks in Asia</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Millangoda Raja
-              </h3>
-              <span class="text-xs text-secondary font-medium">මිල්ලන්ගොඩ රාජා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              Famous throughout the zoological world for possessing the longest tusks recorded on any living Asian elephant in the 20th and 21st centuries, measuring an incredible 7.5 feet each.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('millangoda-raja')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('millangoda-raja')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Wasana of Kataragama -->
-        <div data-category="sacred" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/sri-lanka-minneriya-herd.jpg" alt="Wasana of Kataragama" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 text-amber-300 border-amber-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>LIVING • RUHUNU DEITY TUSKER</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Sacred Sovereign
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>Ruhunu Chief Tusker</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Wasana of Kataragama
-              </h3>
-              <span class="text-xs text-secondary font-medium">කතරගම වාසනා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              The beloved chief sacred tusker dedicated to the shrine of God Skanda-Murugan in the holy city of Kataragama.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('wasana-kataragama')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('wasana-kataragama')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specimen Card: Heiyantuduwa Raja -->
-        <div data-category="sacred" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl hover:-translate-y-1">
-          <!-- Full-Bleed Background Image -->
-          <img src="assets/images/elephant-mist.jpg" alt="Heiyantuduwa Raja" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
-          <!-- Cinematic Scrim Gradient Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
-
-          <!-- Top Status Pill -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 text-amber-300 border-amber-800/40 backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>DECEASED • NATIONAL MUSEUM MONUMENT</span>
-            </span>
-            <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/40 text-on-surface-variant backdrop-blur-sm border border-white/5">
-              Sacred Sovereign
-            </span>
-          </div>
-
-          <!-- Bottom Content Details -->
-          <div class="relative z-10 space-y-2.5 pt-20">
-            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-              <span>Kelaniya & Kandy Bearer</span>
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                Heiyantuduwa Raja
-              </h3>
-              <span class="text-xs text-secondary font-medium">හෙයියන්තුඩුවේ රාජා</span>
-            </div>
-            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-              A revered temple tusker whose owner took the visionary step of donating his entire skeleton to science, where it stands today as the premier zoological exhibit in the National Museum of Colombo.
-            </p>
-            <div class="pt-2 flex items-center justify-between gap-2">
-              <button onclick="selectAndScrollDossier('heiyantuduwa-raja')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                <span>Read Full Monograph</span>
-                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-              </button>
-              <button onclick="GajaDossierModal.open('heiyantuduwa-raja')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
-                <span class="material-symbols-outlined text-[16px]">visibility</span>
-              </button>
-            </div>
-          </div>
-        </div>
+      <!-- Gallery Grid of all 68 Famous Elephants -->
+      <div id="pantheon-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically by JavaScript from gaja-lanka-elephants-merged-researched.json -->
       </div>
     </section>
+
+    <!-- Deep-Dive Monograph Viewer Anchor Section -->
+    <section id="monograph-viewer" class="pt-10 space-y-6">
+      <div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-secondary text-2xl">menu_book</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-primary tracking-tight">In-Depth Scientific Monograph &amp; Biometrics Register</h2>
+            <p class="text-xs text-on-surface-variant">Validated DWC morphometrics, historical timelines, and forensic necropsy reports</p>
+          </div>
+        </div>
+        <span class="text-xs text-secondary-fixed font-label-data hidden md:inline">Click any elephant pill below to switch</span>
+      </div>
+
+      <!-- Specimen Selector Pills Rail -->
+      <div id="elephant-rail-container" class="space-y-3">
+        <div id="elephant-rail" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <!-- Rendered by JS from all 68 specimens -->
+        </div>
+      </div>
+
+      <!-- Main Dynamic Monograph Card -->
+      <div id="dossier-root" class="space-y-8">
+        <!-- Injected via JavaScript from gaja-lanka-elephants-merged-researched.json -->
+      </div>
+
+      <!-- Bottom Prev / Next Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-surface-container/60 backdrop-blur-md border border-white/5">
+        <button id="bottom-prev-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-data text-xs font-semibold transition-colors cursor-pointer">
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          <span id="bottom-prev-label">Previous Elephant</span>
+        </button>
+
+        <a href="conservation-news.html" class="inline-flex items-center gap-1.5 text-secondary hover:text-secondary-fixed font-label-data text-xs font-semibold">
+          <span>Go to Conservation News Wire</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+
+        <button id="bottom-next-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-data text-xs font-semibold transition-colors cursor-pointer">
+          <span id="bottom-next-label">Next Elephant</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </div></section>
 
   </main>
 
@@ -815,13 +430,208 @@
   <script src="assets/js/dossier-data.js"></script>
   <script src="assets/js/dossier-modal.js"></script>
   <script>
-    (function() {
-      if (typeof GAJA_LANKA_DOSSIERS === 'undefined') return;
+    (async function initFamousElephantsPage() {
+      // 1. Load Data from gaja-lanka-elephants-merged-researched.json with fallback
+      let data = null;
+      try {
+        const res = await fetch('gaja-lanka-elephants-merged-researched.json');
+        if (res.ok) {
+          data = await res.json();
+        }
+      } catch (e) {
+        console.warn('[FamousElephants] File protocol or fetch error, using local fallback:', e);
+      }
 
-      const keys = Object.keys(GAJA_LANKA_DOSSIERS);
+      // Fallback to global variables if fetch fails
+      if (!data || !data.specimens) {
+        if (typeof GAJA_LANKA_DOSSIERS !== 'undefined') {
+          const allList = typeof GAJA_LANKA_ALL_SPECIMENS !== 'undefined' ? GAJA_LANKA_ALL_SPECIMENS : Object.values(GAJA_LANKA_DOSSIERS);
+          data = {
+            specimens: allList,
+            specimensById: GAJA_LANKA_DOSSIERS,
+            categories: typeof GAJA_LANKA_CATEGORIES !== 'undefined' ? GAJA_LANKA_CATEGORIES : []
+          };
+        }
+      }
+
+      if (!data || !data.specimens) {
+        console.error('[FamousElephants] Failed to load elephant dataset.');
+        return;
+      }
+
+      const specimens = data.specimens;
+      const specimensById = data.specimensById || {};
+      if (Object.keys(specimensById).length === 0) {
+        specimens.forEach(s => { specimensById[s.id] = s; });
+      }
+
+      // Synchronize with GAJA_LANKA_DOSSIERS for modal controller
+      if (typeof window !== 'undefined') {
+        window.GAJA_LANKA_DOSSIERS = specimensById;
+      }
+
+      const keys = specimens.map(s => s.id);
+      const grid = document.getElementById('pantheon-grid');
       const rail = document.getElementById('elephant-rail');
       const root = document.getElementById('dossier-root');
+      const counterEl = document.getElementById('pantheon-counter');
+      const searchInput = document.getElementById('pantheon-search');
+      const filterPills = document.querySelectorAll('#pantheon-filters .filter-pill');
 
+      let currentCategory = 'all';
+      let searchQuery = '';
+
+      // Helper function to get Category theme classes
+      function getCategoryTheme(cat) {
+        switch(cat) {
+          case 'wild-living':
+            return {
+              border: 'border-emerald-900/30 hover:border-emerald-700/60',
+              pillBg: 'bg-emerald-950/90 text-emerald-300 border-emerald-800/40',
+              dot: 'bg-emerald-400 animate-pulse',
+              label: 'Wild Living',
+              labelBadge: 'text-emerald-300 border-emerald-700/30'
+            };
+          case 'wild-deceased':
+            return {
+              border: 'border-rose-900/30 hover:border-rose-700/60',
+              pillBg: 'bg-rose-950/90 text-rose-300 border-rose-800/40',
+              dot: 'bg-rose-400',
+              label: 'Wild Fallen',
+              labelBadge: 'text-rose-300 border-rose-700/30'
+            };
+          case 'sacred':
+            return {
+              border: 'border-amber-900/30 hover:border-amber-700/60',
+              pillBg: 'bg-amber-950/90 text-amber-300 border-amber-800/40',
+              dot: 'bg-amber-400',
+              label: 'Sacred',
+              labelBadge: 'text-amber-300 border-amber-700/30'
+            };
+          case 'domestic':
+            return {
+              border: 'border-sky-900/30 hover:border-sky-700/60',
+              pillBg: 'bg-sky-950/90 text-sky-300 border-sky-800/40',
+              dot: 'bg-sky-400',
+              label: 'Domestic',
+              labelBadge: 'text-sky-300 border-sky-700/30'
+            };
+          case 'orphanage':
+          default:
+            return {
+              border: 'border-purple-900/30 hover:border-purple-700/60',
+              pillBg: 'bg-purple-950/90 text-purple-300 border-purple-800/40',
+              dot: 'bg-purple-400',
+              label: 'Orphanage',
+              labelBadge: 'text-purple-300 border-purple-700/30'
+            };
+        }
+      }
+
+      // Render all 68 Pantheon Cards
+      function renderCards() {
+        if (!grid) return;
+        grid.innerHTML = specimens.map(s => {
+          const theme = getCategoryTheme(s.category);
+          const meta = s.cardMetadata || {};
+          const statusBadge = meta.statusBadge || s.badge || s.status || 'RECORDED SPECIMEN';
+          const statBadge = meta.statBadge || s.height || s.tuskLength || s.range || 'Sri Lanka';
+          const excerpt = meta.excerpt || s.overview || '';
+          const nameShort = s.name.split(' (')[0];
+          const sinhalaShort = s.sinhalaName ? s.sinhalaName.split(' (')[0] : '';
+
+          return `
+            <div data-category="${s.category}" data-id="${s.id}" data-search="${(s.name + ' ' + (s.sinhalaName||'') + ' ' + (s.range||'') + ' ' + s.category).toLowerCase()}" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border ${theme.border} shadow-xl hover:-translate-y-1">
+              <img src="${s.image}" alt="${s.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
+
+              <!-- Top Status Pill -->
+              <div class="relative z-10 flex items-center justify-between gap-1">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full ${theme.pillBg} backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap overflow-hidden text-ellipsis max-w-[70%]">
+                  <span class="w-1.5 h-1.5 rounded-full shrink-0 ${theme.dot}"></span>
+                  <span class="truncate">${statusBadge}</span>
+                </span>
+                <span class="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/50 ${theme.labelBadge} font-semibold border backdrop-blur-sm whitespace-nowrap">
+                  ${theme.label}
+                </span>
+              </div>
+
+              <!-- Bottom Content Details -->
+              <div class="relative z-10 space-y-2.5 pt-20">
+                <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
+                  <span>${statBadge}</span>
+                </div>
+                <div class="flex items-baseline justify-between gap-2">
+                  <h3 class="text-lg font-bold text-white group-hover:text-secondary-fixed transition-colors">
+                    ${nameShort}
+                  </h3>
+                  <span class="text-xs text-secondary font-medium shrink-0">${sinhalaShort}</span>
+                </div>
+                <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
+                  ${excerpt}
+                </p>
+                <div class="pt-2 flex items-center justify-between gap-2">
+                  <button onclick="selectAndScrollDossier('${s.id}')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
+                    <span>Read Monograph</span>
+                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+                  </button>
+                  <button onclick="GajaDossierModal.open('${s.id}')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Filter and Search Cards
+      function filterCards() {
+        const cards = document.querySelectorAll('#pantheon-grid .famous-card');
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          const searchData = card.getAttribute('data-search') || '';
+          const matchesCat = (currentCategory === 'all' || cardCat === currentCategory);
+          const matchesSearch = !searchQuery || searchData.includes(searchQuery);
+
+          if (matchesCat && matchesSearch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (counterEl) {
+          counterEl.textContent = `Showing ${visibleCount} of ${specimens.length}`;
+        }
+      }
+
+      // Wire Filter Pills
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          filterPills.forEach(p => {
+            p.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
+            p.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
+          });
+          pill.classList.remove('bg-surface-container', 'text-on-surface', 'font-medium');
+          pill.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
+
+          currentCategory = pill.getAttribute('data-filter') || 'all';
+          filterCards();
+        });
+      });
+
+      // Wire Live Search
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = (e.target.value || '').trim().toLowerCase();
+          filterCards();
+        });
+      }
+
+      // Active Dossier ID Resolver
       function getActiveId() {
         let id = null;
         try {
@@ -836,23 +646,26 @@
         if (!id && window.location.hash) {
           id = window.location.hash.replace('#', '').trim();
         }
-        if (!id || !GAJA_LANKA_DOSSIERS[id]) {
-          id = 'kawanthissa';
+        if (!id || !specimensById[id]) {
+          id = 'agbo-thirappane';
         }
         return id;
       }
 
       let activeId = getActiveId();
 
+      // Render Horizontal Rail of all 68 Elephants
       function renderRail() {
+        if (!rail) return;
         rail.innerHTML = keys.map(k => {
-          const d = GAJA_LANKA_DOSSIERS[k];
+          const d = specimensById[k];
+          if (!d) return '';
           const isActive = k === activeId;
-          const isWild = d.type === 'wild';
+          const theme = getCategoryTheme(d.category);
           return `
-            <button onclick="switchDossier('${k}')" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl transition-all font-label-data text-xs cursor-pointer ${
+            <button onclick="switchDossier('${k}')" id="rail-pill-${k}" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl transition-all font-label-data text-xs cursor-pointer ${
               isActive 
-                ? 'bg-secondary-fixed text-on-secondary-fixed font-bold shadow-lg' 
+                ? 'bg-secondary-fixed text-on-secondary-fixed font-bold shadow-lg scale-105' 
                 : 'bg-surface-container text-on-surface hover:bg-surface-container-high'
             }">
               <img src="${d.image}" alt="${d.name}" class="w-6 h-6 rounded-full object-cover">
@@ -860,17 +673,27 @@
               <span class="text-[9px] px-1.5 py-0.2 rounded ${
                 isActive 
                   ? 'bg-on-secondary-fixed/20 text-on-secondary-fixed' 
-                  : (isWild ? 'bg-emerald-950 text-emerald-300' : 'bg-amber-950 text-amber-300')
+                  : 'bg-black/40 text-on-surface-variant'
               }">
-                ${isWild ? 'Wild' : 'Sacred'}
+                ${theme.label}
               </span>
             </button>
           `;
         }).join('');
+
+        // Smooth scroll rail into active pill
+        setTimeout(() => {
+          const activePill = document.getElementById(`rail-pill-${activeId}`);
+          if (activePill && rail) {
+            activePill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
+        }, 100);
       }
 
+      // Render In-Depth Monograph
       function renderMonograph(id) {
-        const d = GAJA_LANKA_DOSSIERS[id];
+        if (!root) return;
+        const d = specimensById[id];
         if (!d) return;
 
         document.title = `${d.name} • Most Famous Elephants of Sri Lanka | Gaja Lanka`;
@@ -962,6 +785,8 @@
           </div>
         ` : '';
 
+        const theme = getCategoryTheme(d.category);
+
         root.innerHTML = `
           <!-- Hero Section -->
           <div class="bg-surface-container rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
@@ -971,17 +796,17 @@
               
               <!-- Badges -->
               <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-lg backdrop-blur-md font-label-editorial text-xs uppercase tracking-wider font-semibold ${d.badgeClass || 'bg-primary/80 text-on-primary'} border">
+                <span class="px-3 py-1.5 rounded-lg backdrop-blur-md font-label-editorial text-xs uppercase tracking-wider font-semibold ${theme.pillBg} border">
                   ${d.badge || d.status}
                 </span>
                 <span class="px-3 py-1.5 rounded-lg backdrop-blur-md font-label-data text-xs bg-surface-container/90 text-on-surface border border-white/10">
-                  ${d.typeLabel || (d.type === 'wild' ? 'Wild Bull Tusker' : 'Sacred Sovereign')}
+                  ${theme.label}
                 </span>
               </div>
 
               <!-- Action Bar in Hero -->
               <div class="absolute top-4 right-4 flex items-center gap-2">
-                <a href="famous-elephants.json" target="_blank" class="px-3 py-1.5 rounded-lg bg-surface-container/90 backdrop-blur-md text-xs font-semibold text-secondary hover:text-white transition-colors border border-white/10 flex items-center gap-1.5 cursor-pointer" title="View Machine-Readable Monograph Record">
+                <a href="gaja-lanka-elephants-merged-researched.json" target="_blank" class="px-3 py-1.5 rounded-lg bg-surface-container/90 backdrop-blur-md text-xs font-semibold text-secondary hover:text-white transition-colors border border-white/10 flex items-center gap-1.5 cursor-pointer" title="View Machine-Readable Monograph Record">
                   <span class="material-symbols-outlined text-[15px]">code</span>
                   <span>JSON Record</span>
                 </a>
@@ -1054,15 +879,24 @@
         const prevIdx = (currentIdx - 1 + keys.length) % keys.length;
         const nextIdx = (currentIdx + 1) % keys.length;
 
-        document.getElementById('bottom-prev-label').textContent = `← ${GAJA_LANKA_DOSSIERS[keys[prevIdx]].name.split(' (')[0]}`;
-        document.getElementById('bottom-next-label').textContent = `${GAJA_LANKA_DOSSIERS[keys[nextIdx]].name.split(' (')[0]} →`;
+        const prevLabel = document.getElementById('bottom-prev-label');
+        const nextLabel = document.getElementById('bottom-next-label');
+        const prevBtn = document.getElementById('bottom-prev-btn');
+        const nextBtn = document.getElementById('bottom-next-btn');
+
+        if (prevLabel && specimensById[keys[prevIdx]]) {
+          prevLabel.textContent = `← ${specimensById[keys[prevIdx]].name.split(' (')[0]}`;
+        }
+        if (nextLabel && specimensById[keys[nextIdx]]) {
+          nextLabel.textContent = `${specimensById[keys[nextIdx]].name.split(' (')[0]} →`;
+        }
         
-        document.getElementById('bottom-prev-btn').onclick = () => switchDossier(keys[prevIdx]);
-        document.getElementById('bottom-next-btn').onclick = () => switchDossier(keys[nextIdx]);
+        if (prevBtn) prevBtn.onclick = () => switchDossier(keys[prevIdx]);
+        if (nextBtn) nextBtn.onclick = () => switchDossier(keys[nextIdx]);
       }
 
       window.switchDossier = function(id) {
-        if (!GAJA_LANKA_DOSSIERS[id]) return;
+        if (!specimensById[id]) return;
         activeId = id;
         try {
           history.replaceState(null, '', `?id=${id}`);
@@ -1090,8 +924,10 @@
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(url).then(() => {
             const btnText = document.getElementById('copy-btn-text');
-            btnText.textContent = 'Copied!';
-            setTimeout(() => { btnText.textContent = 'Share Page'; }, 2000);
+            if (btnText) {
+              btnText.textContent = 'Copied!';
+              setTimeout(() => { btnText.textContent = 'Share Page'; }, 2000);
+            }
           }).catch(() => {
             prompt('Copy link:', url);
           });
@@ -1102,38 +938,15 @@
 
       window.addEventListener('hashchange', () => {
         const newId = getActiveId();
-        if (newId && newId !== activeId && GAJA_LANKA_DOSSIERS[newId]) {
+        if (newId && newId !== activeId && specimensById[newId]) {
           activeId = newId;
           renderRail();
           renderMonograph(activeId);
         }
       });
 
-      // Filter Logic for Pantheon Grid
-      const filterPills = document.querySelectorAll('#pantheon-filters .filter-pill');
-      const cards = document.querySelectorAll('#pantheon-grid .famous-card');
-
-      filterPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          filterPills.forEach(p => {
-            p.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
-            p.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
-          });
-          pill.classList.remove('bg-surface-container', 'text-on-surface', 'font-medium');
-          pill.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
-
-          const category = pill.getAttribute('data-filter');
-          cards.forEach(card => {
-            if (category === 'all' || card.getAttribute('data-category') === category) {
-              card.classList.remove('hidden');
-            } else {
-              card.classList.add('hidden');
-            }
-          });
-        });
-      });
-
-      // Initial Render
+      // Initial Renders
+      renderCards();
       renderRail();
       renderMonograph(activeId);
 

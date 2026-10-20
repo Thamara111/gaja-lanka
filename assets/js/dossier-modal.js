@@ -107,7 +107,7 @@
   function renderDossierContent(d) {
     const permalinkBtn = document.getElementById('modal-permalink-btn');
     if (permalinkBtn) {
-      permalinkBtn.href = `dossier.html?id=${d.id}`;
+      permalinkBtn.href = `famous-elephants.html?id=${d.id}`;
       permalinkBtn.onclick = (e) => e.stopPropagation();
     }
 
@@ -269,7 +269,7 @@
             <p class="font-body-sm text-xs text-on-surface-variant">Access the complete monograph with downloadable citation and maps on the dedicated dossier page.</p>
           </div>
         </div>
-        <a href="dossier.html?id=${d.id}" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-data text-xs font-semibold hover:bg-primary-hover transition-colors whitespace-nowrap">
+        <a href="famous-elephants.html?id=${d.id}" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-data text-xs font-semibold hover:bg-primary-hover transition-colors whitespace-nowrap">
           Open Standalone Monograph &rarr;
         </a>
       </div>
