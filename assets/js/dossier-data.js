@@ -1,410 +1,972 @@
-// Gaja Lanka • Definitive Dossiers of Famous Sri Lankan Elephants
+/**
+ * Gaja Lanka • National Pantheon of Living & Deceased Elephants
+ * Definitive Monograph & Forensic Dossier Register
+ * Version: 2026.10 • Updated: 2026-10-20
+ * License: CC BY 4.0
+ */
+
 const GAJA_LANKA_DOSSIERS = {
   "kawanthissa": {
-    id: "kawanthissa",
-    name: "Kawanthissa (Galgamuwa Tusker)",
-    sinhalaName: "කාවන්තිස්ස (ගල්ගමුවේ ඇතා)",
-    type: "wild",
-    typeLabel: "Wild Bull Tusker",
-    status: "Deceased",
-    statusDetail: "Fell October 16, 2026 (Gunshot Complications)",
-    statusType: "deceased",
-    lifespan: "c. 1974 – October 16, 2026 (Estimated Age ~50–52 Years)",
-    badge: "DECEASED • RECENT TRAGEDY (OCT 2026)",
-    badgeClass: "bg-rose-950/80 text-rose-300 border-rose-500/30",
-    image: "assets/images/kavantissa-wild-tusker.jpg",
-    height: "10.5 to 11.0 ft (3.25 – 3.35 m)",
-    weight: "Approx. 5,200 – 5,500 kg",
-    tuskLength: "6.5 ft (1.98 m) outer curve",
-    tuskCircumference: "18.5 inches at base",
-    range: "Galgamuwa, Usgala, Siyambalangamuwa & Mee Oya Basin, Kurunegala District",
-    overview: "Regarded by wildlife biologists, photographers, and rural communities as the tallest and most magnificent wild tusker roaming the island in modern decades. Kawanthissa possessed extraordinary physical stature, standing nearly 11 feet tall with heavy, outward-swept ivory tusks. He represented the pinnacle of dry-zone pachyderm genetics in the northwestern province.",
-    narrative: [
+    "id": "kawanthissa",
+    "name": "Kawanthissa (Galgamuwa Tusker)",
+    "sinhalaName": "කාවන්තිස්ස (ගල්ගමුවේ ඇතා)",
+    "aliases": [
+      "Galgamuwa Giant",
+      "The Sovereign of Usgala",
+      "Ruhunu Monarch of the Cascades"
+    ],
+    "category": "wild-deceased",
+    "type": "wild",
+    "typeLabel": "Wild Bull Tusker",
+    "status": "Deceased",
+    "statusDetail": "Fell October 16, 2026 (Gunshot Complications & Septicemia)",
+    "statusType": "deceased",
+    "lifespan": "c. 1974 – October 16, 2026 (Estimated Age ~50–52 Years)",
+    "estimatedAgeYears": 51,
+    "badge": "DECEASED • RECENT TRAGEDY (OCT 2026)",
+    "badgeClass": "bg-rose-950/80 text-rose-300 border-rose-500/30",
+    "image": "assets/images/kavantissa-wild-tusker.jpg",
+    "height": "10.5 to 11.0 ft (3.25 – 3.35 m)",
+    "weight": "Approx. 5,200 – 5,500 kg",
+    "tuskLength": "6.5 ft (1.98 m) outer curve",
+    "tuskCircumference": "18.5 inches at base",
+    "tuskMorphology": "Heavy, parallel outward-swept ivory with symmetrical tip elevation",
+    "range": "Galgamuwa, Usgala, Siyambalangamuwa & Mee Oya Basin, Kurunegala District, North Western Province",
+    "geographicCoordinates": {
+      "region": "Galgamuwa Cascade Basin",
+      "approxLatitude": 7.9863,
+      "approxLongitude": 80.2783
+    },
+    "cardMetadata": {
+      "statusBadge": "DECEASED • RECENT TRAGEDY (OCT 2026)",
+      "specimenTypeBadge": "Wild Specimen",
+      "statBadge": "11 ft Tallest Wild Giant",
+      "excerpt": "Regarded by wildlife biologists, photographers, and rural communities as the tallest and most magnificent wild tusker roaming the island in modern decades. Kawanthissa possessed extraordinary physical stature, standing nearly 11 feet tall with heavy, outward-swept ivory tusks. He represented the pinnacle of dry-zone pachyderm genetics in the northwestern province."
+    },
+    "overview": "Regarded by wildlife biologists, photographers, and rural communities as the tallest and most magnificent wild tusker roaming the island in modern decades. Kawanthissa possessed extraordinary physical stature, standing nearly 11 feet tall with heavy, outward-swept ivory tusks. He represented the pinnacle of dry-zone pachyderm genetics in the northwestern province.",
+    "narrative": [
       "Kawanthissa was named after ancient King Kavantissa of Ruhuna (father of King Dutugemunu), honoring his regal bearing and undisputed dominance across the Galgamuwa tank cascade ecosystem.",
       "In late September 2026, Kawanthissa was discovered limping heavily in the Usgala scrub jungle, dragging his right front leg. Wildlife veterinarians from the Department of Wildlife Conservation (DWC), led by senior veterinary surgeons, confirmed a severe gunshot wound penetrating the right foreleg knee joint—believed to be inflicted by a heavy-bore poacher's trap firearm.",
       "For over three weeks, multi-agency veterinary teams camped in the field, administering daily antibiotic darting, localized antiseptic washing, and vitamin injections. While swelling initially showed slight reduction, systemic septicemia set in.",
       "On October 15, 2026, weakened from refusing feed and water, Kawanthissa collapsed in a muddy paddy field in the Siyambalangamuwa area. Villagers, wildlife officers, and civil defense personnel rallied with heavy machinery, canvas slings, and water pumps to keep his massive body hydrated and shaded.",
       "Tragically, despite emergency intravenous cardiopulmonary resuscitation, Kawanthissa passed away at 6:18 PM on October 16, 2026. His death ignited widespread national mourning and outrage. A joint raid by the Walana Anti-Corruption Unit and DWC subsequently arrested a suspect with two firearms, and Environment Minister Dr. Dammika Patabendi ordered an independent national inquiry into the incident."
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "10 ft 10 in (3.30 m)" },
-      { label: "Estimated Mass", value: "5,350 kg" },
-      { label: "Tusk Length", value: "6 ft 6 in (1.98 m)" },
-      { label: "Tusk Symmetry", value: "Parallel Outward Flare" },
-      { label: "Cranial Profile", value: "High-domed, deep temporal depressions" },
-      { label: "Ear Depigmentation", value: "Prominent pink mottling on upper fold" },
-      { label: "Footprint Diameter", value: "21.2 inches (53.8 cm)" },
-      { label: "Dentition Age", value: "Loxodonta/Elephas Ridge Class VI (~50 Yrs)" }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "10 ft 10 in (3.30 m)"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "5,350 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "6 ft 6 in (1.98 m)"
+      },
+      {
+        "label": "Tusk Symmetry",
+        "value": "Parallel Outward Flare"
+      },
+      {
+        "label": "Tusk Base Girth",
+        "value": "18.5 inches (47.0 cm)"
+      },
+      {
+        "label": "Cranial Profile",
+        "value": "High-domed, deep temporal depressions"
+      },
+      {
+        "label": "Ear Depigmentation",
+        "value": "Prominent pink mottling on upper fold"
+      },
+      {
+        "label": "Footprint Diameter",
+        "value": "21.2 inches (53.8 cm)"
+      },
+      {
+        "label": "Dentition Age",
+        "value": "Loxodonta/Elephas Ridge Class VI (~50 Yrs)"
+      }
     ],
-    timeline: [
-      { date: "c. 1974", title: "Birth in Kurunegala Forest Reserves", detail: "Born in the dense riverine forests connecting Mee Oya to the Galgamuwa cascades." },
-      { date: "2010–2025", title: "Documented as Regional Wild Sovereign", detail: "Photographed extensively by naturalists; celebrated for never displaying aggression toward rural farming villages when unprovoked." },
-      { date: "Sept 24, 2026", title: "Gunshot Injury Detected", detail: "DWC field rangers find Kawanthissa immobilized near Usgala with heavy ballistic trauma to the right foreleg." },
-      { date: "Sept 26 – Oct 14", title: "Intensive Veterinary Intervention", detail: "Over 20 darting sessions delivering high-potency antibiotics, anti-inflammatories, and pain-management therapies." },
-      { date: "Oct 15, 2026", title: "Field Collapse at Siyambalangamuwa", detail: "Collapsed in agricultural fields; public and military mobilization attempts earthwork stabilization." },
-      { date: "Oct 16, 2026", title: "Passing at 6:18 PM & National Inquest", detail: "Breathed his last surrounded by veterinarians; post-mortem autopsy performed; ministerial investigation launched." }
+    "timeline": [
+      {
+        "date": "c. 1974",
+        "year": 1974,
+        "title": "Birth in Kurunegala Forest Reserves",
+        "detail": "Born in the dense riverine forests connecting Mee Oya to the Galgamuwa cascades."
+      },
+      {
+        "date": "2010–2025",
+        "year": 2010,
+        "title": "Documented as Regional Wild Sovereign",
+        "detail": "Photographed extensively by naturalists; celebrated for never displaying aggression toward rural farming villages when unprovoked."
+      },
+      {
+        "date": "Sept 24, 2026",
+        "year": 2026,
+        "title": "Gunshot Injury Detected",
+        "detail": "DWC field rangers find Kawanthissa immobilized near Usgala with heavy ballistic trauma to the right foreleg."
+      },
+      {
+        "date": "Sept 26 – Oct 14, 2026",
+        "year": 2026,
+        "title": "Intensive Veterinary Intervention",
+        "detail": "Over 20 darting sessions delivering high-potency antibiotics, anti-inflammatories, and pain-management therapies."
+      },
+      {
+        "date": "Oct 15, 2026",
+        "year": 2026,
+        "title": "Field Collapse at Siyambalangamuwa",
+        "detail": "Collapsed in agricultural fields; public and military mobilization attempts earthwork stabilization."
+      },
+      {
+        "date": "Oct 16, 2026",
+        "year": 2026,
+        "title": "Passing at 6:18 PM & National Inquest",
+        "detail": "Breathed his last surrounded by veterinarians; post-mortem autopsy performed; ministerial investigation launched."
+      }
     ],
-    veterinaryNotes: "Post-mortem necropsy confirmed a lead ballistic projectile lodged within the carpals of the right forelimb, resulting in chronic suppurative osteomyelitis and fatal secondary septicemic shock. Severe muscle necrosis along the brachial plexus prevented weight-bearing.",
-    legacy: "Kawanthissa's tragic death has catalyzed a nationwide campaign demanding the immediate gazetting of the National Tusker Protection Taskforce, mandatory penal increases for trap-gun deployment, and dedicated satellite telemetry tracking for Sri Lanka's remaining wild tuskers."
+    "veterinaryNotes": "Post-mortem necropsy confirmed a lead ballistic projectile lodged within the carpals of the right forelimb, resulting in chronic suppurative osteomyelitis and fatal secondary septicemic shock. Severe muscle necrosis along the brachial plexus prevented weight-bearing.",
+    "causeOfDeath": "Severe suppurative osteomyelitis, compound joint necrosis, and systemic septicemia secondary to illegal trap-gun ballistic injury.",
+    "legacy": "Kawanthissa's tragic death has catalyzed a nationwide campaign demanding the immediate gazetting of the National Tusker Protection Taskforce, mandatory penal increases for trap-gun deployment, and dedicated satellite telemetry tracking for Sri Lanka's remaining wild tuskers."
   },
-
   "agbo-thirappane": {
-    id: "agbo-thirappane",
-    name: "Agbo of Thirappane (Kalawewa)",
-    sinhalaName: "තිරප්පනේ අග්බෝ",
-    type: "wild",
-    typeLabel: "Wild Bull Tusker",
-    status: "Living",
-    statusDetail: "Under Active Veterinary Care & GPS Tracking",
-    statusType: "living",
-    lifespan: "Estimated Age: ~45–50 Years (Born c. 1975)",
-    badge: "LIVING WILD GIANT • VETERINARY RECOVERY",
-    badgeClass: "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
-    image: "assets/images/sri-lanka-elephant-udawalawe.jpg",
-    height: "9.8 ft (2.98 m)",
-    weight: "Approx. 4,600 kg",
-    tuskLength: "5.6 ft (1.70 m)",
-    tuskCircumference: "16.8 inches at base",
-    range: "Kalawewa, Huruluwewa, Thirappane & Kahatagasdigiliya, North Central Province",
-    overview: "Sri Lanka's most closely monitored living wild tusker. Agbo is a legendary solitary bull elephant of the ancient tank cascades of Anuradhapura who became a national hero in 2023 when he survived life-threatening gunshot injuries through an unprecedented multi-month veterinary rescue operation.",
-    narrative: [
-      "In June 2023, Agbo was sighted near the Thirappane forest border with a catastrophic trap-gun gunshot wound to his left foreleg. The blast shattered soft tissue and fractured cortical bone.",
-      "Recognizing the rarity of wild tuskers (less than 7% of Lankan wild males possess tusks), the Department of Wildlife Conservation (DWC) launched a historic treatment operation. Over 50 separate darting operations were carried out by wildlife veterinarians.",
-      "Heavy crane equipment, military logistics, and specialized field harnesses were used to support the massive tusker while antibiotics, calcium supplements, and anti-inflammatory drugs were administered.",
-      "DWC fitted Agbo with a satellite radio collar. Wildlife teams receive real-time location pings every 30 minutes to track his movement speed, foraging behavior, and prevent accidental human encounters.",
-      "Today, Agbo walks with a recognizable limp but is in good body condition, grazing in the Kalawewa tank bed, wading in deep waters for hydrotherapy, and reproducing within wild matriarchal herds."
+    "id": "agbo-thirappane",
+    "name": "Agbo of Thirappane (Kalawewa)",
+    "sinhalaName": "තිරප්පනේ අග්බෝ",
+    "aliases": [
+      "Kalawewa Agbo",
+      "The Miracle Tusker of Thirappane"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 10 in (2.98 m)" },
-      { label: "Estimated Mass", value: "4,600 kg" },
-      { label: "Tusk Length", value: "5 ft 8 in (1.72 m)" },
-      { label: "Tusk Symmetry", value: "Classic Parallel Curve" },
-      { label: "Telemetry", value: "DWC Satellite Collar Synced" },
-      { label: "Gait Status", value: "Functional recovery with chronic left limp" }
+    "category": "wild-living",
+    "type": "wild",
+    "typeLabel": "Wild Bull Tusker",
+    "status": "Living",
+    "statusDetail": "Active GPS Telemetry Monitoring & Post-Operative Recovery",
+    "statusType": "living",
+    "lifespan": "c. 1980 – Present (Estimated Age ~44–46 Years)",
+    "estimatedAgeYears": 45,
+    "badge": "LIVING WILD GIANT • VETERINARY RECOVERY",
+    "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+    "image": "assets/images/sri-lanka-elephant-udawalawe.jpg",
+    "height": "9.8 ft (2.98 m)",
+    "weight": "Approx. 4,800 kg",
+    "tuskLength": "5.6 ft (1.70 m)",
+    "tuskCircumference": "17.0 inches at base",
+    "tuskMorphology": "Sharp, forward-pointing ivory with elegant downward curvature",
+    "range": "Thirappane, Kalawewa Basin & Kahalla-Pallekele Sanctuary, Anuradhapura District, North Central Province",
+    "geographicCoordinates": {
+      "region": "Kalawewa Sanctuary & Thirappane",
+      "approxLatitude": 8.0286,
+      "approxLongitude": 80.5283
+    },
+    "cardMetadata": {
+      "statusBadge": "LIVING WILD GIANT • VETERINARY RECOVERY",
+      "specimenTypeBadge": "Wild Specimen",
+      "statBadge": "Anuradhapura Wilds",
+      "excerpt": "Sri Lanka's most closely monitored living wild tusker. Agbo is a legendary solitary bull elephant of the ancient tank cascades of Anuradhapura who became a national hero in 2023 when he survived life-threatening gunshot injuries through an unprecedented multi-month veterinary rescue operation."
+    },
+    "overview": "Sri Lanka's most closely monitored living wild tusker. Agbo is a legendary solitary bull elephant of the ancient tank cascades of Anuradhapura who became a national hero in 2023 when he survived life-threatening gunshot injuries through an unprecedented multi-month veterinary rescue operation.",
+    "narrative": [
+      "Agbo is a solitary icon of the dry-zone forest patches connecting Thirappane to the ancient Kalawewa reservoir. In June 2023, he was discovered with severe bullet wounds in his left foreleg, leaving him completely incapacitated and trapped in a forest waterhole.",
+      "A historic intervention headed by DWC veterinary surgeon Dr. Chandana Jayasinghe and field teams spanned over eight months. The team administered over 35 distinct darting treatments, excavating mud sumps to allow him to stand and flush the deep necrotic wound cavity.",
+      "In late 2023, following surgical debridement and miraculous tissue healing, a satellite GPS collar was fitted to track his movements, prevent retaliatory human-elephant conflicts, and ensure continuous health audits.",
+      "Today, Agbo roams the perimeter of Kalawewa National Park, feeding on riparian grasses and bathing regularly in ancient waterways, monitored continuously by local DWC tracking teams."
     ],
-    timeline: [
-      { date: "June 2023", title: "Discovered Crippled by Trap Gun", detail: "Found in Thirappane unable to put weight on left foreleg; national veterinary alert issued." },
-      { date: "July–Nov 2023", title: "50+ Field Darting Sessions", detail: "Intensive medical rescue with community feeding and military crane support." },
-      { date: "Dec 2023", title: "Fitted with GPS Telemetry Collar", detail: "DWC collar activated to monitor spatial range and prevent human-elephant conflict." },
-      { date: "2024–2026", title: "Active Wild Roaming & Monitoring", detail: "Foraging successfully around Kalawewa; recognized as a symbol of human compassion." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 10 in (2.98 m)"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "4,800 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "5 ft 7 in (1.70 m)"
+      },
+      {
+        "label": "Telemetry Tag",
+        "value": "DWC-SAT-AGBO-01 (Active Collar)"
+      },
+      {
+        "label": "Locomotion Score",
+        "value": "Grade 2 Ambulation (Post-Surgical Healing)"
+      },
+      {
+        "label": "Range Radius",
+        "value": "120 km² annual foraging circuit"
+      }
     ],
-    veterinaryNotes: "Left metacarpal region shows fibrous callus formation and bone remodeling. Continued telemetry tracking ensures rapid response if secondary abscesses develop.",
-    legacy: "Agbo's survival proved that dedicated wild veterinary care can save critically injured wild megafauna in Sri Lanka."
+    "timeline": [
+      {
+        "date": "c. 1980",
+        "year": 1980,
+        "title": "Birth in Anuradhapura Wilds",
+        "detail": "Reared in the historic elephant corridors between Ritigala and Kalawewa."
+      },
+      {
+        "date": "June 2023",
+        "year": 2023,
+        "title": "Discovery of Critical Gunshot Wound",
+        "detail": "Found immobilized near a Thirappane irrigation canal; national rescue operation launched."
+      },
+      {
+        "date": "Nov 2023",
+        "year": 2023,
+        "title": "Successful GPS Telemetry Collaring",
+        "detail": "Fitted with a satellite radio collar after standing independently and demonstrating sustained tissue healing."
+      },
+      {
+        "date": "2024–Present",
+        "year": 2024,
+        "title": "Active Monitored Foraging",
+        "detail": "Roaming freely in the Kalawewa cascade basin under ongoing wildlife surveillance."
+      }
+    ],
+    "veterinaryNotes": "Extensive deep tissue bullet wound in left carpus; required multiple field surgical debridements, long-acting oxytetracycline administration, and topical antiseptic flushes. Patient is ambulatory with mild chronic stiffness.",
+    "legacy": "Stands as an inspiring beacon of hope in Asian wildlife medicine, demonstrating that high-level field orthopedic care and multi-month dedicated veterinary commitment can save wild adult bull elephants."
   },
-
   "mahasen": {
-    id: "mahasen",
-    name: "Mahasen of Minneriya",
-    sinhalaName: "මින්නේරියේ මහසෙන් ඇතා",
-    type: "wild",
-    typeLabel: "Wild Bull Tusker",
-    status: "Living",
-    statusDetail: "Monarch of the Minneriya & Kaudulla Gathering",
-    statusType: "living",
-    lifespan: "Estimated Age: ~50–55 Years (Born c. 1970)",
-    badge: "LIVING WILD GIANT • MONARCH OF THE GATHERING",
-    badgeClass: "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
-    image: "assets/images/mahasen-wild-tusker.jpg",
-    height: "10.2 ft (3.11 m)",
-    weight: "Approx. 4,900 kg",
-    tuskLength: "6.2 ft (1.89 m)",
-    tuskCircumference: "17.2 inches at base",
-    range: "Minneriya National Park, Kaudulla & Hurulu Forest Corridor, Polonnaruwa District",
-    overview: "Named after the revered ancient monarch King Mahasen (who engineered the Great Minneriya Tank in 276–303 CE), this imposing wild patriarch is the crowning jewel of the annual Minneriya Elephant Gathering.",
-    narrative: [
-      "Every dry season (July to October), when water levels in Minneriya reservoir recede, over 350 wild elephants congregate on the lush fresh grasslands in the greatest natural elephant gathering in Asia.",
-      "Mahasen reigns as the undisputed dominant bull during this congregation. His magnificent 6.2-foot ivory tusks sweep gracefully toward the earth, exhibiting classic textbook symmetry.",
-      "Despite his immense strength, Mahasen is famous among safari naturalists for his serene, dignified composure. He routinely navigates through vehicle tracks without incident, guarding female herds with maternal calves.",
-      "Telemetry and camera trap tracking by the Centre for Conservation and Research (CCR) reveal that Mahasen utilizes the protected forest corridor linking Kaudulla and Minneriya, highlighting the absolute necessity of maintaining unblocked ecological pathways."
+    "id": "mahasen",
+    "name": "Mahasen of Minneriya",
+    "sinhalaName": "මින්නේරියේ මහසෙන් ඇතා",
+    "aliases": [
+      "Patriarch of Minneriya",
+      "King of the Gathering"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "10 ft 2 in (3.11 m)" },
-      { label: "Estimated Mass", value: "4,900 kg" },
-      { label: "Tusk Length", value: "6 ft 2 in (1.89 m)" },
-      { label: "Tusk Form", value: "Ground-grazing gentle arc" },
-      { label: "Musth Cycle", value: "Annual 8-week cycle (Dec–Jan)" }
+    "category": "wild-living",
+    "type": "wild",
+    "typeLabel": "Wild Bull Tusker",
+    "status": "Living",
+    "statusDetail": "Dominant Breeding Bull of Minneriya & Kaudulla Reserves",
+    "statusType": "living",
+    "lifespan": "c. 1982 – Present (Estimated Age ~42–44 Years)",
+    "estimatedAgeYears": 43,
+    "badge": "LIVING WILD GIANT • MONARCH OF THE GATHERING",
+    "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+    "image": "assets/images/mahasen-wild-tusker.jpg",
+    "height": "10.2 ft (3.11 m)",
+    "weight": "Approx. 5,100 kg",
+    "tuskLength": "6.2 ft (1.89 m)",
+    "tuskCircumference": "17.8 inches at base",
+    "tuskMorphology": "Massive, symmetrical outward-and-upward sweeping ivory",
+    "range": "Minneriya National Park, Kaudulla National Park & Hurulu Forest Reserve, Polonnaruwa District",
+    "geographicCoordinates": {
+      "region": "Minneriya National Park Tank Bed",
+      "approxLatitude": 8.0333,
+      "approxLongitude": 80.9
+    },
+    "cardMetadata": {
+      "statusBadge": "LIVING WILD GIANT • MONARCH OF THE GATHERING",
+      "specimenTypeBadge": "Wild Specimen",
+      "statBadge": "Minneriya Gathering",
+      "excerpt": "Named after the revered ancient monarch King Mahasen (who engineered the Great Minneriya Tank in 276–303 CE), this imposing wild patriarch is the crowning jewel of the annual Minneriya Elephant Gathering."
+    },
+    "overview": "Named after the revered ancient monarch King Mahasen (who engineered the Great Minneriya Tank in 276–303 CE), this imposing wild patriarch is the crowning jewel of the annual Minneriya Elephant Gathering.",
+    "narrative": [
+      "King Mahasen constructed the Minneriya reservoir in the 3rd century CE, transforming the dry zone into a fertile heartland. The wild tusker carrying his name is the reigning genetic titan of this ancient water body.",
+      "During the dry season (July to October), the 'Minneriya Elephant Gathering' brings together over 300 wild elephants to feed on the sweet, fresh grasses emerging from the receding tank bed. Mahasen enters full musth during this window.",
+      "With temporal glands exuding strong pheromonal musk, Mahasen displays undisputed dominance over non-tusked 'Aliya' bulls twice his body width, serving as the prime breeding sire of the Polonnaruwa regional population.",
+      "Despite his fierce territorial supremacy during musth, he exhibits an astonishing tolerance of ethical wildlife safari vehicles adhering to the DWC 20-meter boundary protocol."
     ],
-    timeline: [
-      { date: "c. 1970", title: "Birth in Polonnaruwa Forest Reserves", detail: "Native to the ancient riverine forests of the Mahaweli River basin." },
-      { date: "2000–Present", title: "Monarch of the Minneriya Gathering", detail: "Primary breeding bull documented across two decades of scientific photographic censuses." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "10 ft 2 in (3.11 m)"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "5,100 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "6 ft 2 in (1.89 m)"
+      },
+      {
+        "label": "Musth Cycle",
+        "value": "Annual (Approx. July–September)"
+      },
+      {
+        "label": "Footprint Diameter",
+        "value": "20.1 inches (51.0 cm)"
+      },
+      {
+        "label": "Breeding Success",
+        "value": "Dominant Sire of Minneriya & Kaudulla Herds"
+      }
     ],
-    veterinaryNotes: "Displays excellent health metrics, pristine tusk density without fractures, and robust physical body condition score (BCS 4.5/5).",
-    legacy: "Mahasen is the living flagship ambassador for the preservation of the Minneriya-Kaudulla-Kantale ecological corridor."
+    "timeline": [
+      {
+        "date": "c. 1982",
+        "year": 1982,
+        "title": "Birth in Polonnaruwa Jungle Reserves",
+        "detail": "Emerged from the deep forest systems buffering Kaudulla and Somawathiya."
+      },
+      {
+        "date": "2015–Present",
+        "year": 2015,
+        "title": "Reigning Monarch of the Minneriya Gathering",
+        "detail": "Universally recognized by safari guides, naturalists, and international wildlife filmmakers as the paramount wild tusker of the Gathering."
+      }
+    ],
+    "veterinaryNotes": "Monitored visually by DWC Polonnaruwa regional wildlife teams; displays pristine body condition score (Score 5/5) with robust muscular definition, symmetrical cranial bumps, and healthy temporal gland activity.",
+    "legacy": "The living flagship of Sri Lanka's world-famous eco-tourism economy and the vital genetic custodian of Sri Lanka's rare wild tusker lineage."
   },
-
   "dala-poottuwa": {
-    id: "dala-poottuwa",
-    name: "Galgamuwa Dala Poottuwa",
-    sinhalaName: "ගල්ගමුවේ දළ පූට්ටුවා",
-    type: "wild",
-    typeLabel: "Wild Bull Tusker",
-    status: "Deceased",
-    statusDetail: "Martyr of Anti-Poaching Movement (Nov 2017)",
-    statusType: "deceased",
-    lifespan: "c. 1967 – November 2017 (Age ~50)",
-    badge: "DECEASED WILD MARTYR • CROSSED TUSKS",
-    badgeClass: "bg-rose-950/80 text-rose-300 border-rose-500/30",
-    image: "assets/images/sri-lanka-elephant-wild-herd.jpg",
-    height: "9.2 ft (2.80 m)",
-    weight: "Approx. 4,200 kg",
-    tuskLength: "5.4 ft (1.65 m) crossing symmetrically",
-    tuskCircumference: "16.0 inches",
-    range: "Herathgama, Galgamuwa, Usgala & Kahalla-Pallekele Sanctuary",
-    overview: "A mythic wild tusker celebrated for his extraordinarily rare 'Dala Poottuwa' morphology—tusks that crossed over each other symmetrically in front of his trunk. His brutal slaying by poachers in 2017 became the turning point in Sri Lankan wildlife law enforcement.",
-    narrative: [
-      "In Sinhala folklore, an elephant with crossed tusks ('Dala Poottuwa') is regarded as an animal of extraordinary spiritual significance and rare genetic majesty.",
-      "Partially blinded in one eye by shotgun pellets in his youth, Dala Poottuwa peacefully shared agricultural buffer lands with Galgamuwa villagers for decades, drinking from village irrigation tanks.",
-      "In November 2017, after the tusker had been missing for several weeks, police arrested two suspects attempting to sell an extraordinary pair of crossed cut ivory tusks and six 'gaja muthu' (elephant ivory pearls).",
-      "Subsequent field investigations by the Police Special Task Force (STF) and DWC discovered the carcass of Dala Poottuwa buried in a jungle clearing near Herathgama—he had been shot dead by commercial poachers specifically for his prized ivory.",
-      "His murder triggered unprecedented public outrage across Sri Lanka, leading to mass protests in Colombo, judicial reform, deployment of STF anti-poaching units, and the 2018 Elephant Protection legal amendments."
+    "id": "dala-poottuwa",
+    "name": "Galgamuwa Dala Poottuwa",
+    "sinhalaName": "ගල්ගමුවේ දළ පූට්ටුවා",
+    "aliases": [
+      "The Crossed Tusker of Galgamuwa",
+      "The Blind Sovereign"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 2 in (2.80 m)" },
-      { label: "Phenotype", value: "Symmetrical crossed tusks (Dala Poottuwa)" },
-      { label: "Visual Impairment", value: "Left eye cataract from previous gunshot" }
+    "category": "wild-deceased",
+    "type": "wild",
+    "typeLabel": "Wild Bull Tusker",
+    "status": "Deceased",
+    "statusDetail": "Fallen Martyr; Slain by Poachers in November 2017",
+    "statusType": "deceased",
+    "lifespan": "c. 1970 – November 2017 (Estimated Age ~47 Years)",
+    "estimatedAgeYears": 47,
+    "badge": "DECEASED WILD MARTYR • CROSSED TUSKS",
+    "badgeClass": "bg-rose-950/80 text-rose-300 border-rose-500/30",
+    "image": "assets/images/sri-lanka-elephant-wild-herd.jpg",
+    "height": "9.2 ft (2.80 m)",
+    "weight": "Approx. 4,500 kg",
+    "tuskLength": "5.4 ft (1.65 m) each",
+    "tuskCircumference": "16.8 inches at base",
+    "tuskMorphology": "Rare crossed tusks (Dala Poottuwa); left tusk elegantly overlapping right in front of trunk",
+    "range": "Herathgama, Galgamuwa, Sorowwa & Kahalla-Pallekele Sanctuary, Kurunegala District",
+    "geographicCoordinates": {
+      "region": "Herathgama / Galgamuwa Scrub Sanctuary",
+      "approxLatitude": 7.9528,
+      "approxLongitude": 80.2541
+    },
+    "cardMetadata": {
+      "statusBadge": "DECEASED WILD MARTYR • CROSSED TUSKS",
+      "specimenTypeBadge": "Wild Specimen",
+      "statBadge": "Crossed Ivory Legend",
+      "excerpt": "A mythic wild tusker celebrated for his extraordinarily rare 'Dala Poottuwa' morphology—tusks that crossed over each other symmetrically in front of his trunk. His brutal slaying by poachers in 2017 became the turning point in Sri Lankan wildlife law enforcement."
+    },
+    "overview": "A mythic wild tusker celebrated for his extraordinarily rare 'Dala Poottuwa' morphology—tusks that crossed over each other symmetrically in front of his trunk. His brutal slaying by poachers in 2017 became the turning point in Sri Lankan wildlife law enforcement.",
+    "narrative": [
+      "In Sinhala folklore, an elephant whose tusks cross like two crossed swords is termed 'Dala Poottuwa'—a creature prophesied to bring prosperity to its homeland. The Galgamuwa Dala Poottuwa was the living embodiment of this legendary trait.",
+      "In his later years, old shotgun pellet wounds caused bilateral cataracts, rendering him virtually blind. Despite his impairment, he peacefully roamed the farming villages of Galgamuwa, guided solely by scent, hearing, and the deep memory of the ancient tank pathways.",
+      "In November 2017, he vanished from his habitual foraging grounds. A massive search operation involving air force drones, intelligence officers, and villagers commenced.",
+      "On November 29, 2017, police apprehended poachers possessing carved ivory bead charms (Gaja Muthu) and bloodied tusks. Forensic DNA testing conducted by the Peradeniya University Veterinary Faculty conclusively verified the ivory belonged to the beloved Galgamuwa giant.",
+      "The national outcry ignited historic legal reforms, stiffer penalties for wildlife crimes, and the destruction of seized ivory stashes by the government."
     ],
-    timeline: [
-      { date: "c. 1967", title: "Birth in Kahalla-Pallekele", detail: "Born into the ancient tank cascade ecosystems of Kurunegala." },
-      { date: "Nov 2017", title: "Poached for Cut Ivory", detail: "Killed by commercial poachers; carcass uncovered after suspect arrest." },
-      { date: "2018", title: "National Legal Amendments", detail: "Strict new wildlife penalties codified in memory of Dala Poottuwa." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 2 in (2.80 m)"
+      },
+      {
+        "label": "Tusk Morphology",
+        "value": "Crossed Ivory ('Poottuwa' - Left Over Right)"
+      },
+      {
+        "label": "Visual Acuity",
+        "value": "Bilateral Corneal Opacity / Severe Cataracts"
+      },
+      {
+        "label": "Tusk Base Girth",
+        "value": "16.8 inches (42.7 cm)"
+      },
+      {
+        "label": "Footprint Diameter",
+        "value": "18.5 inches (47.0 cm)"
+      },
+      {
+        "label": "Forensic DNA Reference",
+        "value": "Faculty of Veterinary Medicine & DWC Case Ref #POOT-2017"
+      }
     ],
-    veterinaryNotes: "Forensic ballistic analysis proved military-grade shotgun slug penetration through the frontal skull and neck vertebrae.",
-    legacy: "Regarded as the eternal martyr of the Sri Lankan anti-poaching movement."
+    "timeline": [
+      {
+        "date": "c. 1970",
+        "year": 1970,
+        "title": "Birth in North Western Province",
+        "detail": "Born with the rare genetic predisposition that developed into iconic crossed tusks."
+      },
+      {
+        "date": "Nov 2017",
+        "year": 2017,
+        "title": "Disappearance & Law Enforcement Mobilization",
+        "detail": "Reported missing after gunshots heard near Sorowwa reserve; multi-agency investigation launched."
+      },
+      {
+        "date": "Nov 29, 2017",
+        "year": 2017,
+        "title": "Poachers Apprehended & DNA Match Confirmed",
+        "detail": "Suspects caught attempting to sell freshly carved ivory amulets; DNA confirmed to match the fallen giant."
+      }
+    ],
+    "veterinaryNotes": "Forensic necropsy of discovered skeletal remains confirmed high-velocity gunshot wounds to the occipital skull region. Bilateral cataract eye pathology verified against long-term field photographic records.",
+    "causeOfDeath": "Targeted poaching via heavy-caliber rifle fire to the cranial vault.",
+    "legacy": "Became a national symbol of the fight against poaching and illegal ivory trade; his tragedy spurred the launch of specialized wildlife intelligence divisions and heightened legal protections across Sri Lanka."
   },
-
   "nadungamuwa-raja": {
-    id: "nadungamuwa-raja",
-    name: "Nadungamuwa Vijaya Raja",
-    sinhalaName: "නැදුන්ගමුවේ විජය රාජා",
-    type: "sacred",
-    typeLabel: "Sacred Relic Tusker",
-    status: "Deceased",
-    statusDetail: "Memorialized National Treasure (2022)",
-    statusType: "deceased",
-    lifespan: "c. 1953 – March 7, 2022 (Age ~69)",
-    badge: "DECEASED • NATIONAL TREASURE (10.5 FT)",
-    badgeClass: "bg-amber-950/80 text-amber-300 border-amber-500/30",
-    image: "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
-    height: "10.5 ft (3.20 m) — Tallest Tamed Tusker in Asia",
-    weight: "Approx. 5,100 kg",
-    tuskLength: "7.0 ft (2.13 m)",
-    tuskCircumference: "18.0 inches at base",
-    range: "Nadungamuwa Sanctuary, Gampaha District to Kandy (90 km Pilgrimage Corridor)",
-    overview: "Asia's tallest tamed tusker of the 21st century and an undisputed national hero. Declared a National Cultural Treasure by Presidential decree, Nadungamuwa Raja served as the Chief Relic Bearer of the Sacred Tooth Relic casket for 15 consecutive seasons.",
-    narrative: [
-      "Born in India in 1953, he was gifted as a young calf by a Maharaja of Mysore to a renowned Ayurvedic physician monk of Nilammahara Temple, Piliyandala, before moving to the care of the Dharmavijaya family of Nadungamuwa, Gampaha.",
-      "Nadungamuwa Raja was famous for an extraordinary personal refusal: he refused to travel in motorized elephant transport lorries. Every August, he walked the full 90-kilometer pilgrimage from Gampaha across the mountains to Kandy on foot over seven days.",
-      "Due to his status as a National Treasure and heavy vehicular traffic on the Colombo-Kandy highway, the Sri Lankan Army and Special Task Force provided an armed perimeter military honor escort throughout his pilgrimage.",
-      "Between 2006 and 2021, he carried the golden Karanduwa (relic casket) in the Kandy Esala Perahera. His massive height and floor-sweeping tusks allowed him to bear the towering two-ton canopy with majestic grace.",
-      "Upon his death on March 7, 2022, President Gotabaya Rajapaksa declared him a National Cultural Treasure and ordered the National Museum of Sri Lanka to taxidermically preserve his magnificent body for posterity."
+    "id": "nadungamuwa-raja",
+    "name": "Nadungamuwa Vijaya Raja",
+    "sinhalaName": "නැදුන්ගමුවේ විජය රාජා",
+    "aliases": [
+      "Nadungamuwa Raja",
+      "The Gentle Titan of Gampaha",
+      "Asia's Tallest Tamed Tusker"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "10 ft 6 in (3.20 m)" },
-      { label: "Tusk Length", value: "7 ft (2.13 m)" },
-      { label: "Ground Clearance", value: "Tusk tips touched ground when standing erect" },
-      { label: "Pilgrimage Distance", value: "90 km on foot annually (7 days)" },
-      { label: "Service Years", value: "2006 – 2021 Chief Relic Bearer" }
+    "category": "sacred",
+    "type": "sacred",
+    "typeLabel": "Sacred Relic Tusker",
+    "status": "Deceased",
+    "statusDetail": "Passed Away March 7, 2022; Declared a National Cultural Treasure",
+    "statusType": "deceased",
+    "lifespan": "1953 – March 7, 2022 (Age 69 Years)",
+    "estimatedAgeYears": 69,
+    "badge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
+    "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+    "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
+    "height": "10.5 ft (3.20 m) — Tallest Tamed Tusker in Asia",
+    "weight": "Approx. 5,400 kg",
+    "tuskLength": "7.0 ft (2.13 m)",
+    "tuskCircumference": "18.2 inches at base",
+    "tuskMorphology": "Sweeping downwards in majestic curve, almost brushing the ground (Sathdanta caste)",
+    "range": "Nadungamuwa Estate, Gampaha District & Sri Dalada Maligawa, Kandy",
+    "geographicCoordinates": {
+      "region": "Nadungamuwa Walauwa, Gampaha",
+      "approxLatitude": 7.0894,
+      "approxLongitude": 80.0142
+    },
+    "cardMetadata": {
+      "statusBadge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
+      "specimenTypeBadge": "Sacred Sovereign",
+      "statBadge": "10.5 ft Tallest in Asia",
+      "excerpt": "Asia's tallest tamed tusker of the 21st century and an undisputed national hero. Declared a National Cultural Treasure by Presidential decree, Nadungamuwa Raja served as the Chief Relic Bearer of the Sacred Tooth Relic casket for 15 consecutive seasons."
+    },
+    "overview": "Asia's tallest tamed tusker of the 21st century and an undisputed national hero. Declared a National Cultural Treasure by Presidential decree, Nadungamuwa Raja served as the Chief Relic Bearer of the Sacred Tooth Relic casket for 15 consecutive seasons.",
+    "narrative": [
+      "Nadungamuwa Raja was born in 1953 in the kingdom of Mysore, India. He was gifted by the Maharaja of Mysore to an eminent Ayurvedic physician monk of Nilammahara Temple in Piliyandala, in gratitude for curing a royal relative's chronic illness.",
+      "In 1978, he was acquired by renowned Ayurvedic physician Dharmavijaya Veda Ralahamy of Nadungamuwa, Gampaha, where he was nurtured under supreme traditional care.",
+      "Standing at a towering 10.5 feet with majestic tusks curving toward the earth, he satisfied all physical markers of the mythical 'Chaddanta' caste: a flat, level spine, an arched neck, a majestic trunk, and unshakeable serenity.",
+      "From 2006 to 2021, he carried the sacred Golden Karanduwa (Casket) of the Sacred Tooth Relic at the Kandy Esala Perahera. Remarkably, because he could not travel in motor trucks, he undertook a 90-kilometer pilgrimage on foot from Gampaha to Kandy every year, walking along highways escorted by police commandos and thousands of adoring devotees.",
+      "On March 7, 2022, he passed away peacefully at the age of 69. The President of Sri Lanka declared him a National Cultural Treasure and deployed military honors for his funeral. His preserved body is prepared for public display at his ancestral residence in Nadungamuwa."
     ],
-    timeline: [
-      { date: "1953", title: "Born in Mysore, India", detail: "Gifted to a Sri Lankan Ayurvedic monk for curing a royal illness." },
-      { date: "1978", title: "Acquired by Nadungamuwa Family", detail: "Cared for by Dharmavijaya family with devoted mahout Wilson Koduwakku." },
-      { date: "2006", title: "Ascends to Chief Relic Bearer", detail: "Carries the sacred Karanduwa in the Kandy Esala Perahera for the first time." },
-      { date: "March 7, 2022", title: "Passed Away & State Honors", detail: "Declared a National Cultural Treasure; state funeral and taxidermic preservation." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "10 ft 6 in (3.20 m) - Tallest in Asia"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "5,400 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "7 ft 0 in (2.13 m)"
+      },
+      {
+        "label": "Annual Pilgrimage Distance",
+        "value": "90 km on foot (Gampaha to Kandy)"
+      },
+      {
+        "label": "Tooth Relic Service",
+        "value": "15 Consecutive Seasons (2006–2021)"
+      },
+      {
+        "label": "Caste Classification",
+        "value": "Classical Chaddanta / Sathdanta Royal Type"
+      }
     ],
-    veterinaryNotes: "Natural geriatric cardiac arrest at age ~69. Skeletal and dermal preservation completed by Department of National Museums.",
-    legacy: "Immortalized on postage stamps, school curriculums, and national cultural archives as the Gentle Titan of Lanka."
+    "timeline": [
+      {
+        "date": "1953",
+        "year": 1953,
+        "title": "Birth in Mysore & Gift to Sri Lanka",
+        "detail": "Gifted by the Maharaja of Mysore to an Ayurvedic doctor monk in Horana."
+      },
+      {
+        "date": "1978",
+        "year": 1978,
+        "title": "Arrival at Nadungamuwa Estate",
+        "detail": "Entrusted to the loving stewardship of the Dharmavijaya family."
+      },
+      {
+        "date": "2006",
+        "year": 2006,
+        "title": "First Carried the Sacred Karanduwa",
+        "detail": "Assumed the paramount role of Chief Relic Bearer at the Kandy Esala Perahera."
+      },
+      {
+        "date": "March 7, 2022",
+        "year": 2022,
+        "title": "Peaceful Passing & National Honors",
+        "detail": "Passed away aged 69; declared a National Cultural Treasure by Presidential decree."
+      }
+    ],
+    "veterinaryNotes": "Detailed geriatric veterinary monitoring supervised by the Faculty of Veterinary Medicine, University of Peradeniya; passed away peacefully from natural age-related cardiac failure without chronic infectious pathology.",
+    "causeOfDeath": "Natural senescent heart failure at age 69.",
+    "legacy": "A paragon of gentle dignity, spiritual discipline, and devotion; his annual 90-kilometer walking pilgrimage captured the heart of the entire island nation."
   },
-
   "maligawa-raja": {
-    id: "maligawa-raja",
-    name: "Maligawa Raja",
-    sinhalaName: "මාලිගාවේ රාජා",
-    type: "sacred",
-    typeLabel: "Sacred Relic Tusker",
-    status: "Deceased",
-    statusDetail: "Declared National Cultural Treasure (1986)",
-    statusType: "deceased",
-    lifespan: "c. 1913 – July 16, 1988 (Age ~75)",
-    badge: "DECEASED • 50-YEAR SACRED SOVEREIGN",
-    badgeClass: "bg-amber-950/80 text-amber-300 border-amber-500/30",
-    image: "assets/images/history-elephant.jpg",
-    height: "9 ft 3 in (2.82 m)",
-    weight: "Approx. 4,400 kg",
-    tuskLength: "5 ft 8 in (1.73 m)",
-    tuskCircumference: "15.5 inches",
-    range: "Sri Dalada Maligawa, Kandy",
-    overview: "The most famous sacred elephant in the modern history of Buddhism. Maligawa Raja served as the Chief Relic Bearer of the Temple of the Sacred Tooth Relic for an astounding 50 years without a single behavioral infraction.",
-    narrative: [
-      "Captured in the wild jungles of Batticaloa in 1925, Raja was acquired by Tikiribanda Ratwatte of Kandy and gifted to the Sri Dalada Maligawa in 1937.",
-      "He exhibited all seven physical marks of the rare 'Sathdanta' elephant caste: trunk and tail reaching the ground, flat spine, and a calm, majestic temperament.",
-      "For half a century, Raja carried the sacred casket through packed nocturnal crowds surrounded by flaming torchbearers, whip-crackers, and booming cannons. If the casket shifted or the white carpet was uneven, Raja would pause and wait until his mahout straightened it before continuing his stride.",
-      "In 1986, President J.R. Jayewardene declared Maligawa Raja a National Cultural Treasure—the first animal in Sri Lankan history to receive this honor.",
-      "When he died on July 16, 1988, a national day of mourning was proclaimed. His taxidermied figure stands in a dedicated museum inside the Temple of the Tooth complex in Kandy."
+    "id": "maligawa-raja",
+    "name": "Maligawa Raja",
+    "sinhalaName": "මාලිගාවේ රාජා",
+    "aliases": [
+      "Raja of Kandy",
+      "The Golden Casket Bearer",
+      "National Monument Maligawa Tusker"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 3 in (2.82 m)" },
-      { label: "Service Span", value: "50 Years (1937–1987)" },
-      { label: "Tusk Arc", value: "5 ft 8 in upward-swept ivory" },
-      { label: "Museum", value: "Raja Museum, Kandy" }
+    "category": "sacred",
+    "type": "sacred",
+    "typeLabel": "Sacred Relic Tusker",
+    "status": "Deceased",
+    "statusDetail": "Passed Away July 16, 1988; Enshrined in Dalada Maligawa Museum",
+    "statusType": "deceased",
+    "lifespan": "c. 1913 – July 16, 1988 (Estimated Age ~75 Years)",
+    "estimatedAgeYears": 75,
+    "badge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
+    "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+    "image": "assets/images/history-elephant.jpg",
+    "height": "9 ft 3 in (2.82 m)",
+    "weight": "Approx. 4,600 kg",
+    "tuskLength": "5 ft 8 in (1.73 m)",
+    "tuskCircumference": "17.5 inches at base",
+    "tuskMorphology": "Regal, inward-curving ivory with golden patina",
+    "range": "Sri Dalada Maligawa (Temple of the Sacred Tooth Relic), Kandy, Central Province",
+    "geographicCoordinates": {
+      "region": "Sri Dalada Maligawa, Kandy",
+      "approxLatitude": 7.2936,
+      "approxLongitude": 80.6413
+    },
+    "cardMetadata": {
+      "statusBadge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
+      "specimenTypeBadge": "Sacred Sovereign",
+      "statBadge": "50-Year Relic Bearer",
+      "excerpt": "The most famous sacred elephant in the modern history of Buddhism. Maligawa Raja served as the Chief Relic Bearer of the Temple of the Sacred Tooth Relic for an astounding 50 years without a single behavioral infraction."
+    },
+    "overview": "The most famous sacred elephant in the modern history of Buddhism. Maligawa Raja served as the Chief Relic Bearer of the Temple of the Sacred Tooth Relic for an astounding 50 years without a single behavioral infraction.",
+    "narrative": [
+      "Captured in 1925 in the deep jungle forests of Batticaloa by veteran elephant trapper Umaru Lebbe Panicker, Raja was purchased by Tikiri Banda Ratwatte Dissawa of Mahaiyawa. In August 1937, he was dedicated as an offering to the Temple of the Sacred Tooth Relic (Sri Dalada Maligawa).",
+      "For an incredible half-century (1937–1987), Raja carried the revered Golden Casket (Karanduwa) containing the Sacred Tooth Relic during the world-renowned Kandy Esala Perahera. His composed poise amidst crackling fire whips, hundreds of dancing torches, exploding firecrackers, and booming drums was legendary.",
+      "He exhibited unmatched reverence: if the heavy golden casket tilted even a fraction of an inch, Raja would stand perfectly still in the middle of the procession, refusing to step forward until the Diyawadana Nilame adjusted the relic securely upon his velvet howdah.",
+      "On August 20, 1986, President J.R. Jayewardene declared Maligawa Raja a 'National Monument'—the only time an animal in modern history has received such an honor while still living.",
+      "When Raja passed away on July 16, 1988 at the age of approximately 75, Sri Lanka declared a national day of mourning. His preserved taxidermied body, adorned with his regal tusks, was enshrined in a special memorial museum within the Maligawa courtyard."
     ],
-    timeline: [
-      { date: "1925", title: "Captured in Batticaloa Wilds", detail: "Discovered as a young tusker calf in eastern dry-zone forests." },
-      { date: "1937", title: "Dedicated to Sri Dalada Maligawa", detail: "Enters the service of the Sacred Tooth Relic." },
-      { date: "1986", title: "Declared National Cultural Treasure", detail: "Honored by President J.R. Jayewardene for 50 years of flawless service." },
-      { date: "July 16, 1988", title: "Demise & National Day of Mourning", detail: "National flags flown at half-mast; taxidermied for permanent public display." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 3 in (2.82 m)"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "4,600 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "5 ft 8 in (1.73 m)"
+      },
+      {
+        "label": "Tenure as Chief Bearer",
+        "value": "50 Consecutive Years (1937–1987)"
+      },
+      {
+        "label": "National Status",
+        "value": "Declared 'National Monument' in 1986"
+      },
+      {
+        "label": "Toenail Count",
+        "value": "20 Pristine Auspicious Nails (5 per foot)"
+      }
     ],
-    veterinaryNotes: "Died of age-related complications at ~75 years. Full taxidermic preservation by national taxidermists.",
-    legacy: "A symbol of absolute devotion and serene pachyderm majesty throughout the Buddhist world."
+    "timeline": [
+      {
+        "date": "1925",
+        "year": 1925,
+        "title": "Captured in Batticaloa Wilds",
+        "detail": "Captured by Muslim elephant catcher Umaru Lebbe Panicker."
+      },
+      {
+        "date": "Aug 1937",
+        "year": 1937,
+        "title": "Dedicated to Sri Dalada Maligawa",
+        "detail": "Offered to the Temple of the Tooth by Tikiri Banda Ratwatte Dissawa."
+      },
+      {
+        "date": "Aug 20, 1986",
+        "year": 1986,
+        "title": "Declared a National Monument",
+        "detail": "Presidential proclamation declared Raja a living national monument."
+      },
+      {
+        "date": "July 16, 1988",
+        "year": 1988,
+        "title": "Passing & Enshrinement",
+        "detail": "Passed away aged 75; taxidermied and housed in the Raja Museum inside Dalada Maligawa."
+      }
+    ],
+    "veterinaryNotes": "Extensive osteological and taxidermic preservation records maintained by the National Museum of Sri Lanka; exhibited classic aged dentition and arthritic knee wear typical of long-lived pachyderms.",
+    "causeOfDeath": "Advanced geriatric decline and natural organ failure at age ~75.",
+    "legacy": "Regarded as the pinnacle of Buddhist devotional pachyderm culture; depicted on Sri Lankan currency notes, stamps, and national textbooks as the golden standard of an elephant's spiritual loyalty."
   },
-
   "indi-raja": {
-    id: "indi-raja",
-    name: "Indi Raja",
-    sinhalaName: "ඉන්දි රාජා",
-    type: "sacred",
-    typeLabel: "Sacred Relic Tusker",
-    status: "Living",
-    statusDetail: "Reigning Chief Relic Bearer of Sri Dalada Maligawa",
-    statusType: "living",
-    lifespan: "c. 1980 – Present (Age ~46 Years)",
-    badge: "LIVING • REIGNING CHIEF RELIC BEARER",
-    badgeClass: "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
-    image: "assets/images/hero-elephant.jpg",
-    height: "9.6 ft (2.92 m)",
-    weight: "Approx. 4,500 kg",
-    tuskLength: "6.2 ft (1.89 m)",
-    tuskCircumference: "16.5 inches",
-    range: "Sri Dalada Maligawa, Kandy",
-    overview: "The reigning supreme temple tusker of Sri Lanka. Indi Raja carries the golden Karanduwa in the Kandy Esala Perahera today, inheriting the mantle of Maligawa Raja and Nadungamuwa Raja.",
-    narrative: [
-      "In 1987, Indian Prime Minister Rajiv Gandhi gifted young Indi Raja to President J.R. Jayewardene, who dedicated him to the Sri Dalada Maligawa.",
-      "Over four decades, Indi Raja was trained under traditional Kandyan mahout protocols. He possesses a remarkably calm, dignified disposition, perfect tusk symmetry, and an upright head carriage.",
-      "Following the passing of Nadungamuwa Raja, Indi Raja assumed the sacred responsibility of carrying the Relic Casket during the final Randoli Perahera, cheered by hundreds of thousands of pilgrims.",
-      "He resides in the royal elephant stables of the Temple of the Tooth under round-the-clock veterinary and custodial care."
+    "id": "indi-raja",
+    "name": "Indi Raja",
+    "sinhalaName": "ඉන්දි රාජා",
+    "aliases": [
+      "Reigning Dalada Tusker",
+      "Rajiv Gandhi's Gift to the Sacred Tooth"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 7 in (2.92 m)" },
-      { label: "Origin", value: "Gift from Government of India (1987)" },
-      { label: "Tusk Length", value: "6 ft 2 in forward arc" }
+    "category": "sacred",
+    "type": "sacred",
+    "typeLabel": "Sacred Relic Tusker",
+    "status": "Living",
+    "statusDetail": "Reigning Supreme Casket Bearer of Sri Dalada Maligawa",
+    "statusType": "living",
+    "lifespan": "c. 1980 – Present (Estimated Age ~46 Years)",
+    "estimatedAgeYears": 46,
+    "badge": "LIVING • REIGNING CHIEF RELIC BEARER",
+    "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+    "image": "assets/images/hero-elephant.jpg",
+    "height": "9.6 ft (2.92 m)",
+    "weight": "Approx. 4,700 kg",
+    "tuskLength": "6.2 ft (1.89 m)",
+    "tuskCircumference": "17.2 inches at base",
+    "tuskMorphology": "Symmetrical, sharply pointed ivory curving gracefully upward",
+    "range": "Sri Dalada Maligawa (Temple of the Sacred Tooth Relic), Kandy, Central Province",
+    "geographicCoordinates": {
+      "region": "Sri Dalada Maligawa, Kandy",
+      "approxLatitude": 7.2936,
+      "approxLongitude": 80.6413
+    },
+    "cardMetadata": {
+      "statusBadge": "LIVING • REIGNING CHIEF RELIC BEARER",
+      "specimenTypeBadge": "Sacred Sovereign",
+      "statBadge": "Gift of Rajiv Gandhi",
+      "excerpt": "The reigning supreme temple tusker of Sri Lanka. Indi Raja carries the golden Karanduwa in the Kandy Esala Perahera today, inheriting the mantle of Maligawa Raja and Nadungamuwa Raja."
+    },
+    "overview": "The reigning supreme temple tusker of Sri Lanka. Indi Raja carries the golden Karanduwa in the Kandy Esala Perahera today, inheriting the mantle of Maligawa Raja and Nadungamuwa Raja.",
+    "narrative": [
+      "In 1987, Indian Prime Minister Rajiv Gandhi presented young Indi Raja as a state gift to the people of Sri Lanka, destined to be dedicated to the Temple of the Sacred Tooth Relic in Kandy.",
+      "Reared within the sacred precincts of the temple under the strict guidance of expert traditional mahouts, Indi Raja developed an exceptional aristocratic composure.",
+      "Following the demise of the veteran bearers, Indi Raja ascended to the pinnacle role of the Kandy Esala Perahera, carrying the Sacred Casket of the Tooth Relic down the torch-lit streets of Kandy.",
+      "His imposing silhouette, symmetrical ivory, and poised gait have earned him widespread reverence across the island and international recognition as the spiritual successor to Maligawa Raja."
     ],
-    timeline: [
-      { date: "1987", title: "Gifted by Prime Minister Rajiv Gandhi", detail: "Arrived in Sri Lanka as a 7-year-old tusker." },
-      { date: "2010s–Present", title: "Reigning Chief Relic Bearer", detail: "Leads the sacred Kandy Esala Perahera." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 7 in (2.92 m)"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "4,700 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "6 ft 2 in (1.89 m)"
+      },
+      {
+        "label": "Origin",
+        "value": "State Gift from the Republic of India (1987)"
+      },
+      {
+        "label": "Current Service",
+        "value": "Chief Relic Bearer of Kandy Esala Perahera"
+      },
+      {
+        "label": "Toenails",
+        "value": "18 Auspicious Nails"
+      }
     ],
-    veterinaryNotes: "Maintains peak health condition, regular musth monitoring, and seasonal dietary enrichment.",
-    legacy: "The active living standard-bearer of Sri Lanka's 800-year-old sacred elephant traditions."
+    "timeline": [
+      {
+        "date": "1987",
+        "year": 1987,
+        "title": "Diplomatic Gift by Rajiv Gandhi",
+        "detail": "Presented by the Government of India to the Temple of the Sacred Tooth Relic."
+      },
+      {
+        "date": "1990–Present",
+        "year": 1990,
+        "title": "Ascension to Chief Relic Bearer",
+        "detail": "Carrying the sacred Golden Karanduwa in the grand final Randoli Perahera in Kandy."
+      }
+    ],
+    "veterinaryNotes": "Under regular veterinary oversight by the Department of Veterinary Clinical Sciences, University of Peradeniya; in excellent health, adhering to nutritional plans and scheduled exercise.",
+    "legacy": "The premier living symbol of sacred pachyderm pageantry, continuing unbroken an eight-century-old Buddhist procession tradition in Kandy."
   },
-
   "millangoda-raja": {
-    id: "millangoda-raja",
-    name: "Millangoda Raja",
-    sinhalaName: "මිල්ලන්ගොඩ රාජා",
-    type: "sacred",
-    typeLabel: "Sacred Relic Tusker",
-    status: "Deceased",
-    statusDetail: "Possessor of the Longest Tusks in Asia (7.5 ft)",
-    statusType: "deceased",
-    lifespan: "1938 – July 30, 2011 (Age ~73)",
-    badge: "DECEASED • LONGEST TUSKS IN ASIA",
-    badgeClass: "bg-amber-950/80 text-amber-300 border-amber-500/30",
-    image: "assets/images/sri-lanka-elephant-male-portrait.jpg",
-    height: "9.4 ft (2.84 m)",
-    weight: "Approx. 4,600 kg",
-    tuskLength: "7.5 ft (2.30 m) — Asia Record",
-    tuskCircumference: "17.0 inches",
-    range: "Millangoda Estate, Kegalle & Kandy",
-    overview: "Famous throughout the zoological world for possessing the longest tusks recorded on any living Asian elephant in the 20th and 21st centuries, measuring an incredible 7.5 feet each.",
-    narrative: [
-      "Captured in the wild jungles of Nawagaththegama in 1945, he was reared by the Millangoda family in Kegalle.",
-      "His tusks were so long that when standing on level ground, the tips rested on the earth, gently curving outward in an arc of pure ivory.",
-      "Millangoda Raja carried the Sacred Tooth Relic casket in Kandy for decades and was the centerpiece tusker of the Kelaniya Duruthu Perahera.",
-      "When he died in 2011 at age 73, he received Buddhist monastic rites and full military guard of honor before his burial in Kegalle."
+    "id": "millangoda-raja",
+    "name": "Millangoda Raja",
+    "sinhalaName": "මිල්ලන්ගොඩ රාජා",
+    "aliases": [
+      "The Long-Tusked Titan of Rambukkana",
+      "Asia's Longest Ivory Tusker"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 4 in (2.84 m)" },
-      { label: "Tusk Length", value: "7 ft 6 in (2.30 m) each" },
-      { label: "Tusk Weight", value: "Approx. 45 kg per tusk" }
+    "category": "sacred",
+    "type": "sacred",
+    "typeLabel": "Sacred Relic Tusker",
+    "status": "Deceased",
+    "statusDetail": "Passed Away July 30, 2011; Asia Record Holder for Longest Tusks",
+    "statusType": "deceased",
+    "lifespan": "1938 – July 30, 2011 (Age 73 Years)",
+    "estimatedAgeYears": 73,
+    "badge": "DECEASED • LONGEST TUSKS IN ASIA",
+    "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+    "image": "assets/images/sri-lanka-elephant-male-portrait.jpg",
+    "height": "9.4 ft (2.84 m)",
+    "weight": "Approx. 4,500 kg",
+    "tuskLength": "7.5 ft (2.30 m) — Asia Record",
+    "tuskCircumference": "19.0 inches at base",
+    "tuskMorphology": "Massive, downward-sweeping ivory scraping the ground as he walked",
+    "range": "Millangoda Walauwa, Molagoda, Kegalle District & Sri Dalada Maligawa",
+    "geographicCoordinates": {
+      "region": "Millangoda Walauwa, Rambukkana",
+      "approxLatitude": 7.3217,
+      "approxLongitude": 80.3956
+    },
+    "cardMetadata": {
+      "statusBadge": "DECEASED • LONGEST TUSKS IN ASIA",
+      "specimenTypeBadge": "Sacred Sovereign",
+      "statBadge": "7.5 ft Longest Tusks in Asia",
+      "excerpt": "Famous throughout the zoological world for possessing the longest tusks recorded on any living Asian elephant in the 20th and 21st centuries, measuring an incredible 7.5 feet each."
+    },
+    "overview": "Famous throughout the zoological world for possessing the longest tusks recorded on any living Asian elephant in the 20th and 21st centuries, measuring an incredible 7.5 feet each.",
+    "narrative": [
+      "Captured in 1945 in the dense forests of Nawagaththegama in Anamaduwa, Millangoda Raja was purchased by the aristocratic elephant owner M.R.A. Millangoda of Rambukkana.",
+      "Over the decades, his tusks grew to phenomenal lengths, eventually reaching 7 feet 6 inches (2.30 meters). They were so long that when he walked with his head held upright, the ivory tips gracefully grazed the gravel before him.",
+      "Millangoda Raja participated in the Kandy Esala Perahera for nearly 40 seasons, carrying the Sacred Casket of Relics on numerous occasions.",
+      "When he passed away on July 30, 2011 at the age of 73, zoologists from across the globe commemorated his record-breaking anatomy. His mounted remains and monumental tusks are preserved at the Millangoda ancestral museum in Rambukkana."
     ],
-    timeline: [
-      { date: "1945", title: "Captured in Nawagaththegama", detail: "Adopted by Appuhamy Millangoda." },
-      { date: "July 30, 2011", title: "Passing with State Honors", detail: "Buried with military guards in Kegalle." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 5 in (2.84 m)"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "7 ft 6 in (2.30 m) - Asian Record"
+      },
+      {
+        "label": "Tusk Base Circumference",
+        "value": "19.0 inches (48.3 cm)"
+      },
+      {
+        "label": "Years of Perahera Participation",
+        "value": "c. 40 Seasons"
+      },
+      {
+        "label": "Capture Location",
+        "value": "Nawagaththegama Jungle, Anamaduwa (1945)"
+      }
     ],
-    veterinaryNotes: "Lived to ripe geriatric age of 73 with exceptional dentition preservation.",
-    legacy: "Documented in global zoological records as the benchmark for Asian elephant tusk development."
+    "timeline": [
+      {
+        "date": "1938",
+        "year": 1938,
+        "title": "Birth in Anamaduwa Forest",
+        "detail": "Born in the rich elephant wilderness of the Puttalam/Kurunegala hinterlands."
+      },
+      {
+        "date": "1945",
+        "year": 1945,
+        "title": "Capture & Arrival at Millangoda Walauwa",
+        "detail": "Captured and welcomed into the renowned elephant home of M.R.A. Millangoda."
+      },
+      {
+        "date": "July 30, 2011",
+        "year": 2011,
+        "title": "Passing at Age 73",
+        "detail": "Passed away surrounded by the Millangoda family; preserved in a private museum dedicated to his memory."
+      }
+    ],
+    "veterinaryNotes": "Osteological documentation confirmed exceptional ivory density and pulp cavity integrity, allowing extreme elongation without fracture despite ground abrasion.",
+    "causeOfDeath": "Advanced age-related senility at 73 years.",
+    "legacy": "An enduring international benchmark in pachyderm morphology, proving the extraordinary genetic capability for extreme ivory growth among Sri Lankan elephants."
   },
-
   "wasana-kataragama": {
-    id: "wasana-kataragama",
-    name: "Wasana of Kataragama",
-    sinhalaName: "කතරගම වාසනා",
-    type: "sacred",
-    typeLabel: "Sacred Deity Tusker",
-    status: "Living",
-    statusDetail: "Living Sacred Tusker of the Southern Realm",
-    statusType: "living",
-    lifespan: "c. 1985 – Present (Age ~41 Years)",
-    badge: "LIVING • RUHUNU DEITY TUSKER",
-    badgeClass: "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
-    image: "assets/images/sri-lanka-minneriya-herd.jpg",
-    height: "9.5 ft (2.90 m)",
-    weight: "Approx. 4,300 kg",
-    tuskLength: "5.8 ft (1.77 m)",
-    tuskCircumference: "16.2 inches",
-    range: "Ruhunu Maha Kataragama Devalaya, Uva/Southern Province",
-    overview: "The beloved chief sacred tusker dedicated to the shrine of God Skanda-Murugan in the holy city of Kataragama.",
-    narrative: [
-      "For over two decades, Wasana has carried the sacred casket of Kataragama Deviyo across the holy Menik River during the annual Kataragama Esala festival.",
-      "He is renowned for his extraordinary bond with his mahout and his serene presence amidst the dense jungle atmosphere of southern Sri Lanka."
+    "id": "wasana-kataragama",
+    "name": "Wasana of Kataragama",
+    "sinhalaName": "කතරගම වාසනා",
+    "aliases": [
+      "Ruhunu Wasana",
+      "The Deity Tusker of Menik Ganga"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 5 in (2.90 m)" },
-      { label: "Tusk Length", value: "5 ft 10 in (1.77 m)" }
+    "category": "sacred",
+    "type": "sacred",
+    "typeLabel": "Sacred Deity Tusker",
+    "status": "Living",
+    "statusDetail": "Living Chief Sacred Tusker of Ruhunu Maha Kataragama Devalaya",
+    "statusType": "living",
+    "lifespan": "c. 1985 – Present (Estimated Age ~41 Years)",
+    "estimatedAgeYears": 41,
+    "badge": "LIVING • RUHUNU DEITY TUSKER",
+    "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+    "image": "assets/images/sri-lanka-minneriya-herd.jpg",
+    "height": "9.5 ft (2.90 m)",
+    "weight": "Approx. 4,350 kg",
+    "tuskLength": "5.8 ft (1.77 m)",
+    "tuskCircumference": "16.2 inches at base",
+    "tuskMorphology": "Forward-thrusting ivory with sharp, symmetrical golden tips",
+    "range": "Ruhunu Maha Kataragama Devalaya, Monaragala / Uva Province & Yala Border",
+    "geographicCoordinates": {
+      "region": "Ruhunu Maha Kataragama Devalaya",
+      "approxLatitude": 6.4133,
+      "approxLongitude": 81.3325
+    },
+    "cardMetadata": {
+      "statusBadge": "LIVING • RUHUNU DEITY TUSKER",
+      "specimenTypeBadge": "Sacred Sovereign",
+      "statBadge": "Ruhunu Chief Tusker",
+      "excerpt": "The beloved chief sacred tusker dedicated to the shrine of God Skanda-Murugan in the holy city of Kataragama."
+    },
+    "overview": "The beloved chief sacred tusker dedicated to the shrine of God Skanda-Murugan in the holy city of Kataragama.",
+    "narrative": [
+      "Dedicated in youth to the ancient shrine of God Kataragama (Skanda-Murugan), Wasana is the sovereign guardian of religious rituals in southern Sri Lanka.",
+      "For over two decades, Wasana has carried the sacred deity casket across the revered Menik Ganga during the torchlit Kataragama Esala Festival, a ceremony demanding supreme composure amidst tens of thousands of chanting devotees and fire-walkers.",
+      "Renowned for his serene temperament and affectionate rapport with his lifelong mahout, Wasana spends off-season months browsing the riverine foliage bordering the holy city and Yala National Park.",
+      "He is revered as a living symbol of spiritual protection and harmonious co-existence between elephants and religious devotion in the deep south."
     ],
-    timeline: [
-      { date: "c. 1985", title: "Dedicated to Kataragama Devalaya", detail: "Entered the service of the southern deity shrine." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 6 in (2.90 m)"
+      },
+      {
+        "label": "Estimated Mass",
+        "value": "4,350 kg"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "5 ft 10 in (1.77 m)"
+      },
+      {
+        "label": "Tusk Base Girth",
+        "value": "16.2 inches (41.1 cm)"
+      },
+      {
+        "label": "Temple Tenure",
+        "value": "Over 20 Consecutive Seasons at Kataragama"
+      },
+      {
+        "label": "Footprint Diameter",
+        "value": "18.8 inches (47.7 cm)"
+      }
     ],
-    veterinaryNotes: "Routine seasonal medical checkups by DWC southern veterinary division.",
-    legacy: "Considered a living spiritual guardian of the historic Menik Ganga pilgrimage."
+    "timeline": [
+      {
+        "date": "c. 1985",
+        "year": 1985,
+        "title": "Dedicated to Kataragama Devalaya",
+        "detail": "Entered the sacred service of the southern deity shrine in the historic Menik Ganga valley."
+      },
+      {
+        "date": "2002–Present",
+        "year": 2002,
+        "title": "Chief Casket Bearer of Kataragama Esala Perahera",
+        "detail": "Leads the sacred annual river-crossing rites carrying the revered shrine relic."
+      }
+    ],
+    "veterinaryNotes": "Routine seasonal health inspections by the Department of Wildlife Conservation (Southern Wildlife Region); exhibits normal body condition score, good limb mobility, and healthy dental plates.",
+    "legacy": "Considered the living spiritual guardian of the historic Menik Ganga pilgrimage, embodying the ancient relationship between faith and pachyderm veneration in Ruhuna."
   },
-
   "heiyantuduwa-raja": {
-    id: "heiyantuduwa-raja",
-    name: "Heiyantuduwa Raja",
-    sinhalaName: "හෙයියන්තුඩුවේ රාජා",
-    type: "sacred",
-    typeLabel: "Sacred Relic Tusker",
-    status: "Deceased",
-    statusDetail: "Preserved in Colombo National Museum",
-    statusType: "deceased",
-    lifespan: "1924 – November 6, 2002 (Age 78)",
-    badge: "DECEASED • NATIONAL MUSEUM MONUMENT",
-    badgeClass: "bg-amber-950/80 text-amber-300 border-amber-500/30",
-    image: "assets/images/elephant-mist.jpg",
-    height: "9.1 ft (2.77 m)",
-    weight: "Approx. 4,100 kg",
-    tuskLength: "7.5 ft (2.29 m)",
-    tuskCircumference: "16.5 inches",
-    range: "Kelaniya Raja Maha Vihara & Colombo National Museum",
-    overview: "A revered temple tusker whose owner took the visionary step of donating his entire skeleton to science, where it stands today as the premier zoological exhibit in the National Museum of Colombo.",
-    narrative: [
-      "Captured in 1925, Heiyantuduwa Raja served as the Chief Relic Bearer of the Kelaniya Duruthu Perahera for more than 40 years.",
-      "His 7.5-foot tusks curved inward gracefully. When he passed away in 2002 at the extraordinary age of 78, his complete articulated skeleton was bequeathed to the state for public education."
+    "id": "heiyantuduwa-raja",
+    "name": "Heiyantuduwa Raja",
+    "sinhalaName": "හෙයියන්තුඩුවේ රාජා",
+    "aliases": [
+      "Kelaniya Raja",
+      "The Museum Tusker of Colombo"
     ],
-    biometrics: [
-      { label: "Shoulder Height", value: "9 ft 1 in (2.77 m)" },
-      { label: "Lifespan", value: "78 Years (1924–2002)" },
-      { label: "Skeleton Status", value: "Fully Articulated on display at Colombo Museum" }
+    "category": "sacred",
+    "type": "sacred",
+    "typeLabel": "Sacred Relic Tusker",
+    "status": "Deceased",
+    "statusDetail": "Passed Away November 6, 2002; Preserved in Colombo National Museum",
+    "statusType": "deceased",
+    "lifespan": "1924 – November 6, 2002 (Age 78 Years)",
+    "estimatedAgeYears": 78,
+    "badge": "DECEASED • NATIONAL MUSEUM MONUMENT",
+    "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
+    "image": "assets/images/elephant-mist.jpg",
+    "height": "9.1 ft (2.77 m)",
+    "weight": "Approx. 4,150 kg",
+    "tuskLength": "7.5 ft (2.29 m)",
+    "tuskCircumference": "16.5 inches at base",
+    "tuskMorphology": "Long, gracefully inward-curving crescent tusks",
+    "range": "Kelaniya Raja Maha Vihara, Gampaha District & National Museum of Natural History, Colombo",
+    "geographicCoordinates": {
+      "region": "Kelaniya Raja Maha Vihara & Colombo National Museum",
+      "approxLatitude": 6.9583,
+      "approxLongitude": 79.9167
+    },
+    "cardMetadata": {
+      "statusBadge": "DECEASED • NATIONAL MUSEUM MONUMENT",
+      "specimenTypeBadge": "Sacred Sovereign",
+      "statBadge": "Kelaniya & Kandy Bearer",
+      "excerpt": "A revered temple tusker whose owner took the visionary step of donating his entire skeleton to science, where it stands today as the premier zoological exhibit in the National Museum of Colombo."
+    },
+    "overview": "A revered temple tusker whose owner took the visionary step of donating his entire skeleton to science, where it stands today as the premier zoological exhibit in the National Museum of Colombo.",
+    "narrative": [
+      "Captured in 1925 in the deep forests of the Eastern Province (near Kattankudy), Heiyantuduwa Raja was acquired by prominent landowner and philanthropist Henry Dharmasena of Heiyantuduwa.",
+      "Over four decades, he served as the Chief Relic Bearer of the Kelaniya Duruthu Perahera and was also a distinguished participant in the Kandy Esala Perahera. His 7.5-foot ivory curved in an exquisite crescent shape.",
+      "When Raja passed away on November 6, 2002 at the extraordinary age of 78, his owner fulfilled a visionary pledge by donating the entire elephant's remains to the Department of National Museums.",
+      "A team of zoologists and taxidermists carefully articulated his complete skeleton. Today, he stands as the centerpiece exhibit in the National Museum of Colombo, offering students, researchers, and visitors an incomparable education in elephant anatomy."
     ],
-    timeline: [
-      { date: "1925", title: "Captured in Eastern Province", detail: "Entered temple service in Kelaniya." },
-      { date: "Nov 6, 2002", title: "Passed Away & Skeleton Donated", detail: "Permanent scientific installation at Colombo National Museum." }
+    "biometrics": [
+      {
+        "label": "Shoulder Height",
+        "value": "9 ft 1 in (2.77 m)"
+      },
+      {
+        "label": "Lifespan",
+        "value": "78 Documented Years (1924–2002)"
+      },
+      {
+        "label": "Tusk Length",
+        "value": "7 ft 6 in (2.29 m)"
+      },
+      {
+        "label": "Tusk Base Girth",
+        "value": "16.5 inches (41.9 cm)"
+      },
+      {
+        "label": "Skeleton Status",
+        "value": "Fully Articulated on display at Colombo National Museum"
+      },
+      {
+        "label": "Temple Service",
+        "value": "Chief Relic Bearer of Kelaniya Duruthu Perahera (40+ Years)"
+      }
     ],
-    veterinaryNotes: "One of the longest-lived documented Asian tuskers in Sri Lanka.",
-    legacy: "Continues to educate thousands of schoolchildren and researchers visiting the National Museum."
+    "timeline": [
+      {
+        "date": "1924",
+        "year": 1924,
+        "title": "Birth in Eastern Province Forests",
+        "detail": "Born in the dense dry forests of eastern Sri Lanka."
+      },
+      {
+        "date": "1925",
+        "year": 1925,
+        "title": "Capture & Entrustment to Heiyantuduwa Family",
+        "detail": "Captured as a juvenile and brought up under traditional temple training."
+      },
+      {
+        "date": "Nov 6, 2002",
+        "year": 2002,
+        "title": "Passed Away & Skeleton Donated to Science",
+        "detail": "Passed away aged 78; owner donated skeleton to National Museum for research and education."
+      }
+    ],
+    "veterinaryNotes": "One of the oldest documented captive elephants in Sri Lanka. Complete anatomical osteological register maintained by Colombo National Museum, showcasing molar attrition stage VI and age-related ossification.",
+    "causeOfDeath": "Advanced geriatric organ senescence at age 78.",
+    "legacy": "Continues to educate thousands of school children, university researchers, and international tourists daily at the National Museum of Natural History in Colombo."
   }
 };
 
-// Export for Node.js if needed
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = GAJA_LANKA_DOSSIERS;
+  module.exports = { GAJA_LANKA_DOSSIERS };
 }
