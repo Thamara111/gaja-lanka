@@ -136,123 +136,95 @@
 <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
 
 <!-- Unified Fixed Header with Elephant Orphanages Dropdown -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-xl">
-  <div class="h-16 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
-    <!-- Brand Emblem -->
-    <a href="index.html" class="flex items-center gap-2.5 shrink-0 group text-decoration-none">
-      <img alt="GAJA LANKA Emblem" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClsl4rcueTeGbxSgDieYGr13SQdQQA-L6BH7paRzqaVc7KHvyxgiCtk9EXt1166hUK9ZTBTQTZlUcuzHZPuSxYDuYWGUX7bJqZA6bQUpr1N2tcKqSxIsr9K60MtsvhN5txDgGshinZyIh_Bt0C5abWbm0mJhdSjuOtdUtUC_r5DFrsrAebfO6NnRcf8zXkKlJXIdDy8bkH0_trDGuNqxRBfSYQK3hkxAk7va05KMgeRnr-mD-sk9co"/>
-      <div class="flex flex-col">
-        <div class="flex items-center gap-1.5">
-          <span class="font-bold text-sm sm:text-base uppercase tracking-wider text-primary group-hover:text-secondary-fixed transition-colors whitespace-nowrap">Gaja Lanka</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+  <!-- Unified Global Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-2xl transition-all">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a class="flex items-center gap-3 shrink-0 group focus:outline-none" href="index.html">
+        <img alt="Gaja Lanka" class="h-9 w-auto transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClsl4rcueTeGbxSgDieYGr13SQdQQA-L6BH7paRzqaVc7KHvyxgiCtk9EXt1166hUK9ZTBTQTZlUcuzHZPuSxYDuYWGUX7bJqZA6bQUpr1N2tcKqSxIsr9K60MtsvhN5txDgGshinZyIh_Bt0C5abWbm0mJhdSjuOtdUtUC_r5DFrsrAebfO6NnRcf8zXkKlJXIdDy8bkH0_trDGuNqxRBfSYQK3hkxAk7va05KMgeRnr-mD-sk9co"/>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-base text-primary font-bold tracking-tight leading-none group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
+          <span class="font-label-data text-[10px] text-on-surface-variant tracking-wider uppercase leading-tight mt-0.5">National Elephant Observatory</span>
         </div>
-        <span class="text-[9px] text-secondary tracking-[0.14em] uppercase font-semibold whitespace-nowrap hidden sm:block">Ceylon Elephant Conservation</span>
-      </div>
-    </a>
-    
-    <!-- Desktop Navigation: Strictly 1 line, no wrapping -->
-    <nav class="hidden xl:flex items-center gap-1 shrink-0" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded-lg">
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="home" href="index.html">Home</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="species-profile" href="species-profile.html">Species Profile</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Heritage &amp; Culture</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Archive</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Habitats &amp; Corridors</a>
-      
-      <!-- Welfare & Care with Dropdown -->
-      <div class="relative group/welfare inline-block">
-        <a aria-current="page" class="px-2.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-[13px] whitespace-nowrap transition-colors flex items-center gap-1" data-path="welfare-and-care" href="welfare-and-care.html">
-          <span>Welfare &amp; Care</span>
-          <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/welfare:rotate-180">expand_more</span>
-        </a>
-        <div class="absolute left-0 top-full pt-1.5 w-72 opacity-0 pointer-events-none group-hover/welfare:opacity-100 group-hover/welfare:pointer-events-auto transition-all duration-200 z-50">
-          <div class="bg-surface-container-high/95 backdrop-blur-2xl rounded-2xl p-2 flex flex-col space-y-1 shadow-2xl">
-            <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="welfare-and-care.html">
-              <div class="flex items-center justify-between">
-                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Welfare &amp; Care Overview</span>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ETHOLOGY</span>
-              </div>
-              <span class="text-[11px] text-on-surface-variant/80">Wild ethology vs managed captive care</span>
-            </a>
-            <a class="px-3 py-2 rounded-xl bg-surface-container text-secondary-fixed transition-colors flex flex-col group/item" href="pinnawala.html">
-              <div class="flex items-center justify-between">
-                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Pinnawala Elephant Orphanage</span>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ACTIVE</span>
-              </div>
-              <span class="text-[11px] text-on-surface-variant/80">Care, breeding &amp; Ma Oya bathing</span>
-            </a>
-            <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="udawalawe.html">
-              <div class="flex items-center justify-between">
-                <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Udawalawe Elephant Transit Home</span>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ETH</span>
-              </div>
-              <span class="text-[11px] text-on-surface-variant/80">Wild calf rehabilitation &amp; release</span>
-            </a>
-            <div class="pt-1 mt-1 border-t border-outline-variant/10">
-              <a class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-secondary-fixed text-[12px] font-medium flex items-center justify-between " href="elephant-orphanages.html">
-                <span>Orphanages Hub (Two Paths)</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+
+      <!-- Desktop Navigation Bar -->
+      <nav class="hidden xl:flex items-center gap-1 shrink-0">
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="index.html">Home</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="species-profile.html">Species Profile</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="heritage-and-culture.html">Culture</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="colonial-archive.html">Colonial Archive</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="habitats-and-corridors.html">Habitats</a>
+        
+        <!-- Welfare & Care Dropdown -->
+        <div class="relative group/welfare inline-block">
+          <a aria-current="page" class="px-2.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-[13px] whitespace-nowrap transition-colors flex items-center gap-1" href="welfare-and-care.html">
+            <span>Welfare &amp; Care</span>
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover/welfare:rotate-180">expand_more</span>
+          </a>
+          <div class="absolute left-0 top-full pt-1.5 w-72 opacity-0 pointer-events-none group-hover/welfare:opacity-100 group-hover/welfare:pointer-events-auto transition-all duration-200 z-50">
+            <div class="bg-surface-container-high/95 backdrop-blur-2xl rounded-2xl p-2 flex flex-col space-y-1 shadow-2xl border border-white/10">
+              <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="welfare-and-care.html">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Welfare &amp; Care Overview</span>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ETHOLOGY</span>
+                </div>
+                <span class="text-[11px] text-on-surface-variant/80">Wild ethology vs managed captive care</span>
               </a>
+              <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="pinnawala.html">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Pinnawala Elephant Orphanage</span>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">1975</span>
+                </div>
+                <span class="text-[11px] text-on-surface-variant/80">Care, breeding &amp; Ma Oya bathing</span>
+              </a>
+              <a class="px-3 py-2 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex flex-col group/item" href="udawalawe.html">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold text-primary group-hover/item:text-secondary-fixed transition-colors">Udawalawe Elephant Transit Home</span>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-secondary font-mono">ETH</span>
+                </div>
+                <span class="text-[11px] text-on-surface-variant/80">Wild calf rehabilitation &amp; release</span>
+              </a>
+              <div class="pt-1 mt-1 border-t border-outline-variant/10">
+                <a class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-secondary-fixed text-[12px] font-medium flex items-center justify-between" href="elephant-orphanages.html">
+                  <span>Orphanages Hub (Two Paths)</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Data &amp; Analytics</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Portal</a>
-      <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" data-path="conservation-news" href="conservation-news.html">News</a>
-    </nav>
-    <!-- Right Actions -->
-    <div class="flex items-center gap-2 shrink-0">
-      <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" data-path="data-and-analytics" href="data-and-analytics.html#repository">Open Data</a>
-      <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface cursor-pointer rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">
-        <span class="material-symbols-outlined text-[22px]">menu</span>
-      </button>
-    </div>
-  </div>
-  
-  <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu" class="hidden xl:hidden bg-surface-container-high/98 backdrop-blur-2xl px-6 py-4 transition-all">
-    <nav class="flex flex-col space-y-1">
-      
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="home" href="index.html">Home</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="species-profile" href="species-profile.html">Species Profile</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Heritage &amp; Culture</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Archive</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Habitats &amp; Corridors</a>
-      
-      <!-- Mobile Submenu for Welfare & Care -->
-      <div class="space-y-1 bg-surface-container/60 rounded-xl p-2">
-        <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-body-sm flex items-center justify-between" href="welfare-and-care.html">
-          <span>Welfare &amp; Care</span>
-          <span class="text-[10px] text-secondary font-mono">Overview</span>
-        </a>
-        <div class="pl-3 space-y-1">
-          <a class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-[13px] flex items-center justify-between" href="pinnawala.html">
-            <span>Pinnawala Elephant Orphanage</span>
-            <span class="text-[10px] text-secondary font-mono">1975</span>
-          </a>
-          <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-[13px] flex items-center justify-between" href="udawalawe.html">
-            <span>Udawalawe Elephant Transit Home</span>
-            <span class="text-[10px] text-secondary font-mono">ETH</span>
-          </a>
-          <a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary text-[13px] flex items-center justify-between" href="elephant-orphanages.html">
-            <span>Elephant Orphanages Hub</span>
-            <span class="text-[10px] text-secondary">Two Paths</span>
-          </a>
-        </div>
-      </div>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="data-and-analytics.html">Data &amp; Analytics</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="human-elephant-conflict.html">HEC Portal</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="famous-elephants.html">Famous Elephants</a>
+        <a class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-[13px] font-medium whitespace-nowrap transition-colors" href="conservation-news.html">News</a>
+      </nav>
 
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Data &amp; Analytics</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Portal</a>
-      <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" data-path="conservation-news" href="conservation-news.html">News</a>
-  
-    </nav>
-    <div class="mt-3 pt-3 border-t border-outline-variant/10 flex items-center justify-between">
-      <span class="text-[11px] uppercase tracking-wider text-secondary">Gaja Lanka 2026 Archive</span>
-      <a class="text-xs font-semibold text-secondary-fixed hover:underline" href="data-and-analytics.html#repository">Datasets &amp; API &rarr;</a>
+      <!-- Right Action Tools -->
+      <div class="flex items-center gap-2 shrink-0">
+        <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" href="data-and-analytics.html#repository">Open Data</a>
+        <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface cursor-pointer rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">
+          <span class="material-symbols-outlined text-[22px]">menu</span>
+        </button>
+      </div>
     </div>
-  </div>
-</header>
+    
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-surface-container-high/98 backdrop-blur-2xl px-6 py-4 transition-all border-b border-white/5">
+      <nav class="flex flex-col space-y-1">
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="index.html">Home</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="species-profile.html">Species Profile</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="heritage-and-culture.html">Heritage &amp; Culture</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="colonial-archive.html">Colonial Archive</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="habitats-and-corridors.html">Habitats &amp; Corridors</a>
+        <a aria-current="page" class="px-3 py-2 rounded-lg bg-secondary-container text-on-secondary-container font-semibold text-body-sm" href="welfare-and-care.html">Welfare &amp; Care</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="data-and-analytics.html">Data &amp; Analytics</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="human-elephant-conflict.html">HEC Portal</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="famous-elephants.html">Famous Elephants</a>
+        <a class="px-3 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-body-sm transition-colors" href="conservation-news.html">News</a>
+      </nav>
+    </div>
+  </header>
 
 <main class="w-full pt-20 bg-surface">
   <div class="flex flex-col w-full">
@@ -1014,57 +986,66 @@
 </div>
 
 <!-- Unified Clean Footer -->
-<footer class="w-full bg-surface-container-lowest text-on-surface mt-16">
-  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="bg-surface-container/60 backdrop-blur-xl rounded-2xl p-8 mb-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-        <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 text-decoration-none group">
+<!-- Unified Footer -->
+<footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
+    <div class="mb-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg">
+        <div class="lg:col-span-2 space-y-space-sm">
+          <a href="index.html" class="flex items-center gap-space-sm text-decoration-none group">
             <img alt="GAJA LANKA Emblem" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClsl4rcueTeGbxSgDieYGr13SQdQQA-L6BH7paRzqaVc7KHvyxgiCtk9EXt1166hUK9ZTBTQTZlUcuzHZPuSxYDuYWGUX7bJqZA6bQUpr1N2tcKqSxIsr9K60MtsvhN5txDgGshinZyIh_Bt0C5abWbm0mJhdSjuOtdUtUC_r5DFrsrAebfO6NnRcf8zXkKlJXIdDy8bkH0_trDGuNqxRBfSYQK3hkxAk7va05KMgeRnr-mD-sk9co"/>
-            <span class="text-lg uppercase tracking-wider text-primary font-bold group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
+            <span class="font-headline-sm text-headline-sm uppercase tracking-wider text-primary font-bold group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
           </a>
-          <p class="text-sm text-on-surface-variant max-w-md">The Legacy of Giants. The Future of Coexistence. Dedicated to evidence-based science, habitat preservation, and harmonious coexistence for <em>Elephas maximus maximus</em>.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">The Legacy of Giants. The Future of Coexistence. Dedicated to evidence-based science, habitat preservation, and harmonious coexistence for <em>Elephas maximus maximus</em>.</p>
+          <div class="pt-space-xs">
+            <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-label-editorial text-label-editorial uppercase">
+              <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              Telemetry Node Active &bull; Sri Lanka Wilds
+            </div>
+          </div>
         </div>
         
         <div>
-          <h4 class="text-xs tracking-[0.14em] uppercase text-secondary mb-4 font-semibold">Institutions &amp; Care</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant-orphanages.html">Elephant Orphanages Hub</a></li>
-            <li><a class="text-secondary-fixed font-semibold" href="pinnawala.html">Pinnawala Elephant Orphanage</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="udawalawe.html">Udawalawe Transit Home (ETH)</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="welfare-and-care.html">Wild vs Captive Ethology</a></li>
+          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Dossiers</h4>
+          <ul class="space-y-space-xs">
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="species-profile" href="species-profile.html">Elephas m. maximus</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Sacred Tusker Heritage</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Eradication Ledger</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Captive vs Wild Welfare</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="text-xs tracking-[0.14em] uppercase text-secondary mb-4 font-semibold">Science &amp; Datasets</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html">Population Telemetry</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="habitats-and-corridors.html">Protected Sanctuary Corridors</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data.json" download="data.json">data.json (Spatial API)</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant_population_and_mortality_stats.csv" download>population_stats.csv</a></li>
+          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Science &amp; Datasets</h4>
+          <ul class="space-y-space-xs">
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Population Telemetry</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Protected Sanctuary Corridors</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data.json" download="data.json">data.json (Spatial API)</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant_population_and_mortality_stats.csv" download>population_stats.csv</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Methodology Register</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="text-xs tracking-[0.14em] uppercase text-secondary mb-4 font-semibold">Conservation &amp; Policy</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="human-elephant-conflict.html">HEC Mitigation Matrix</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="conservation-news.html">Field Dispatches &amp; News</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="species-profile.html">Species Profile Monograph</a></li>
-            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="colonial-archive.html">Colonial Eradication Ledger</a></li>
+          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Conservation &amp; Policy</h4>
+          <ul class="space-y-space-xs">
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Mitigation Matrix</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="conservation-news" href="conservation-news.html">Field Dispatches &amp; News</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="human-elephant-conflict.html">National Buffer Strategy</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="conservation-news.html">Ranger Telemetry Dispatch</a></li>
           </ul>
         </div>
       </div>
     </div>
     
-    <div class="space-y-2 pt-2 text-on-surface-variant text-xs">
-      <p class="text-outline">Notice: Timetables, visitor schedules, and ticket pricing reflect institutional reference data and should be verified with the Department of National Zoological Gardens prior to travel.</p>
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-4 gap-2">
-        <p>&copy; 2026 Gaja Lanka Digital Conservation Initiative. All rights reserved.</p>
-        <div class="flex items-center gap-4">
-          <a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Open Access Agreement</a>
-          <a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="species-profile.html">Taxonomic Protocol</a>
+    <div class="space-y-space-sm pt-space-xs text-on-surface-variant">
+      <p class="font-body-sm text-body-sm leading-relaxed max-w-4xl text-outline">Scientific Notice: Scientific observations and population metrics should be interpreted in conjunction with indicated census years and peer-reviewed field methodologies. All spatial corridors reflect validated multi-seasonal telemetry tracking.</p>
+      <p class="font-label-editorial text-label-editorial uppercase tracking-wider text-outline">Photography and cartographic assets courtesy of the Department of Wildlife Conservation, Sri Lanka Wildlife Archives, and open scientific field collaborations.</p>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-space-sm gap-space-sm mt-space-md">
+        <p class="font-body-sm text-body-sm">&copy; 2026 Gaja Lanka Digital Conservation Initiative. All rights reserved.</p>
+        <div class="flex items-center gap-space-md">
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Open Access Agreement</a>
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="species-profile.html">Taxonomic Protocol</a>
         </div>
       </div>
     </div>
