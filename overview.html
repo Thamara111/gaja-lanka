@@ -308,78 +308,87 @@
 <!-- Visualizer Container -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
 <!-- Left/Center Image Stage with Hotspots -->
-<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-sm relative overflow-hidden flex flex-col items-center justify-center min-h-[460px] ">
-<div class="relative w-full h-[480px] rounded-lg overflow-hidden flex items-center justify-center">
-<img class="w-full h-full object-cover rounded-lg" data-alt="Detailed anatomical side profile of a majestic mature Sri Lankan elephant bull standing amidst dry zone scrub forest in Wilpattu National Park. High resolution dramatic cinematic lighting highlighting textured leathery skin, pink depigmentation on ears and forehead, powerful muscular trunk, and immense pillar legs. Deep forest greens, moody twilight tones, taxonomic documentary photography." src="assets/images/sri-lanka-elephant-male-portrait.jpg"/>
-<!-- Overlay gradient for contrast -->
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/30 pointer-events-none"></div>
-<!-- Hotspot: Trunk -->
-<button aria-label="View Trunk Anatomy" class="anatomy-hotspot absolute top-[48%] left-[22%] group flex items-center justify-center w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed  transition-transform hover:scale-125 focus:outline-none" id="hotspot-trunk" onclick="updateAnatomy('trunk')" type="button">
-<span class="material-symbols-outlined text-[16px] font-bold">touch_app</span>
-<span class="absolute left-10 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md px-2 py-1 rounded text-label-editorial text-secondary hidden md:block">01 • Trunk</span>
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-3 sm:p-4 relative overflow-hidden flex flex-col items-center justify-between min-h-[460px] border border-white/5">
+<div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden flex items-center justify-center bg-black/40">
+<img id="anatomy-specimen-img" class="w-full h-full object-cover object-center rounded-xl" data-alt="Taxonomic full body lateral profile of a majestic mature Sri Lankan elephant bull (Elephas maximus maximus) standing amidst wet and dry zone forest in Sri Lanka. Complete anatomical view showing the twin-domed cranium, pink depigmented pinnae ear, long prehensile muscular proboscis trunk, thick leathery cutis flank, and massive pillar limbs with cushioned sole pads." src="assets/images/sri-lanka-elephant-full-body-anatomy.jpg"/>
+<!-- Subtle edge gradient for contrast -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-surface-container-lowest/20 pointer-events-none rounded-xl"></div>
+
+<!-- Hotspot: 01 • Trunk -->
+<button aria-label="View Trunk Anatomy" class="anatomy-hotspot absolute top-[56%] left-[21%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed transition-all duration-300 hover:scale-125 focus:outline-none z-20 cursor-pointer shadow-lg" id="hotspot-trunk" onclick="updateAnatomy('trunk')" type="button">
+<span class="material-symbols-outlined text-[17px] font-bold">touch_app</span>
+<span class="absolute left-11 whitespace-nowrap bg-surface-container-high/95 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wider uppercase text-secondary shadow-lg hidden sm:block border border-white/5 pointer-events-none">01 &bull; Trunk</span>
 </button>
-<!-- Hotspot: Ears -->
-<button aria-label="View Ear Anatomy" class="anatomy-hotspot absolute top-[28%] left-[44%] group flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-transform hover:scale-125 focus:outline-none" id="hotspot-ears" onclick="updateAnatomy('ears')" type="button">
-<span class="material-symbols-outlined text-[16px]">thermostat</span>
-<span class="absolute left-10 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md px-2 py-1 rounded text-label-editorial text-secondary hidden md:block">02 • Pinnae</span>
+
+<!-- Hotspot: 02 • Pinnae -->
+<button aria-label="View Ear Anatomy" class="anatomy-hotspot absolute top-[26%] left-[38%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all duration-300 hover:scale-125 focus:outline-none z-20 cursor-pointer shadow-lg" id="hotspot-ears" onclick="updateAnatomy('ears')" type="button">
+<span class="material-symbols-outlined text-[17px]">thermostat</span>
+<span class="absolute left-11 whitespace-nowrap bg-surface-container-high/95 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wider uppercase text-secondary shadow-lg hidden sm:block border border-white/5 pointer-events-none">02 &bull; Pinnae</span>
 </button>
-<!-- Hotspot: Brain & Cranium -->
-<button aria-label="View Cranial Anatomy" class="anatomy-hotspot absolute top-[20%] left-[36%] group flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-transform hover:scale-125 focus:outline-none" id="hotspot-brain" onclick="updateAnatomy('brain')" type="button">
-<span class="material-symbols-outlined text-[16px]">psychology</span>
-<span class="absolute left-10 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md px-2 py-1 rounded text-label-editorial text-secondary hidden md:block">03 • Cranium</span>
+
+<!-- Hotspot: 03 • Cranium -->
+<button aria-label="View Cranial Anatomy" class="anatomy-hotspot absolute top-[20%] left-[28%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all duration-300 hover:scale-125 focus:outline-none z-20 cursor-pointer shadow-lg" id="hotspot-brain" onclick="updateAnatomy('brain')" type="button">
+<span class="material-symbols-outlined text-[17px]">psychology</span>
+<span class="absolute left-11 whitespace-nowrap bg-surface-container-high/95 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wider uppercase text-secondary shadow-lg hidden sm:block border border-white/5 pointer-events-none">03 &bull; Cranium</span>
 </button>
-<!-- Hotspot: Skin / Melanin -->
-<button aria-label="View Dermal Anatomy" class="anatomy-hotspot absolute top-[42%] left-[60%] group flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-transform hover:scale-125 focus:outline-none" id="hotspot-skin" onclick="updateAnatomy('skin')" type="button">
-<span class="material-symbols-outlined text-[16px]">grain</span>
-<span class="absolute left-10 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md px-2 py-1 rounded text-label-editorial text-secondary hidden md:block">04 • Cutis</span>
+
+<!-- Hotspot: 04 • Cutis -->
+<button aria-label="View Dermal Anatomy" class="anatomy-hotspot absolute top-[36%] left-[58%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all duration-300 hover:scale-125 focus:outline-none z-20 cursor-pointer shadow-lg" id="hotspot-skin" onclick="updateAnatomy('skin')" type="button">
+<span class="material-symbols-outlined text-[17px]">grain</span>
+<span class="absolute left-11 whitespace-nowrap bg-surface-container-high/95 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wider uppercase text-secondary shadow-lg hidden sm:block border border-white/5 pointer-events-none">04 &bull; Cutis</span>
 </button>
-<!-- Hotspot: Pillar Limbs & Foot -->
-<button aria-label="View Limb Anatomy" class="anatomy-hotspot absolute top-[78%] left-[45%] group flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-transform hover:scale-125 focus:outline-none" id="hotspot-limbs" onclick="updateAnatomy('limbs')" type="button">
-<span class="material-symbols-outlined text-[16px]">footprint</span>
-<span class="absolute left-10 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md px-2 py-1 rounded text-label-editorial text-secondary hidden md:block">05 • Sole Pad</span>
+
+<!-- Hotspot: 05 • Sole Pad -->
+<button aria-label="View Limb Anatomy" class="anatomy-hotspot absolute top-[87%] left-[44%] -translate-x-1/2 -translate-y-1/2 group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all duration-300 hover:scale-125 focus:outline-none z-20 cursor-pointer shadow-lg" id="hotspot-limbs" onclick="updateAnatomy('limbs')" type="button">
+<span class="material-symbols-outlined text-[17px]">footprint</span>
+<span class="absolute left-11 whitespace-nowrap bg-surface-container-high/95 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wider uppercase text-secondary shadow-lg hidden sm:block border border-white/5 pointer-events-none">05 &bull; Sole Pad</span>
 </button>
 </div>
+
 <!-- System Status Bar -->
-<div class="w-full mt-space-sm flex items-center justify-between text-on-surface-variant px-space-xs">
-<div class="flex items-center gap-space-xs">
+<div class="w-full mt-3 flex items-center justify-between text-on-surface-variant px-2 text-xs">
+<div class="flex items-center gap-2">
 <span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
-<span class="font-label-data text-label-data">Active Specimen • Linnaean Holotype Ref #LK-902</span>
+<span class="font-label-data text-xs text-on-surface">Active Specimen &bull; Full Body Linnaean Holotype #LK-902</span>
 </div>
-<span class="font-label-editorial text-label-editorial uppercase tracking-wider text-secondary">Interactive Mode Enabled</span>
+<span class="font-label-editorial text-[11px] uppercase tracking-wider text-secondary font-semibold">Interactive Mode Enabled</span>
 </div>
 </div>
+
 <!-- Right Panel: Dynamic Anatomy Dossier -->
-<div class="lg:col-span-4 bg-surface-container rounded-xl p-space-lg flex flex-col justify-between h-full ">
-<div class="flex flex-col gap-space-sm" id="anatomy-content">
-<div class="inline-flex items-center gap-space-xs text-secondary">
-<span class="font-label-editorial text-label-editorial uppercase tracking-widest" id="anatomy-tag">Specimen Region 01</span>
+<div class="lg:col-span-4 bg-surface-container rounded-2xl p-6 flex flex-col justify-between h-full border border-white/5">
+<div class="flex flex-col gap-3" id="anatomy-content">
+<div class="inline-flex items-center gap-2 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-editorial text-xs uppercase tracking-widest font-semibold" id="anatomy-tag">Specimen Region 01</span>
 </div>
-<h3 class="font-headline-lg text-headline-lg text-primary" id="anatomy-title">Trunk &amp; Proboscis</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="anatomy-desc">
+<h3 class="font-headline-lg text-2xl text-primary font-bold" id="anatomy-title">Trunk &amp; Proboscis</h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed" id="anatomy-desc">
             The proboscis is an evolutionary fusion of the upper lip and nose, containing over 40,000 distinct fascicles of muscle without any bone. It functions simultaneously as an ultra-sensitive olfactory organ capable of detecting water miles away, a delicate manipulative finger for pluckable vegetation, a trumpet for acoustic infrasonic resonance, and a siphon capable of retaining 8.5 liters of liquid.
           </p>
-<div class="bg-surface-container-low rounded-lg p-space-md space-y-space-xs mt-space-xs">
-<div class="flex justify-between items-center text-body-sm">
-<span class="text-on-surface-variant font-label-data text-label-data">Neuromuscular Units</span>
-<span class="font-headline-sm text-headline-sm text-primary font-mono" id="anatomy-stat-1">&gt; 40,000</span>
+<div class="bg-surface-container-low rounded-xl p-4 space-y-2.5 mt-2">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant font-label-data">Neuromuscular Units</span>
+<span class="font-headline-sm text-sm text-primary font-mono font-bold" id="anatomy-stat-1">&gt; 40,000</span>
 </div>
-<div class="flex justify-between items-center text-body-sm">
-<span class="text-on-surface-variant font-label-data text-label-data">Liquid Capacity</span>
-<span class="font-headline-sm text-headline-sm text-primary font-mono" id="anatomy-stat-2">8.5 Liters</span>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant font-label-data">Liquid Capacity</span>
+<span class="font-headline-sm text-sm text-primary font-mono font-bold" id="anatomy-stat-2">8.5 Liters</span>
 </div>
-<div class="flex justify-between items-center text-body-sm">
-<span class="text-on-surface-variant font-label-data text-label-data">Functional Modality</span>
-<span class="font-headline-sm text-headline-sm text-secondary font-mono" id="anatomy-stat-3">Sensory &amp; Grasping</span>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant font-label-data">Functional Modality</span>
+<span class="font-headline-sm text-sm text-secondary font-mono font-bold" id="anatomy-stat-3">Sensory &amp; Grasping</span>
 </div>
 </div>
 </div>
-<div class="grid grid-cols-5 gap-1 pt-space-md mt-space-md">
-<button class="py-2 text-center rounded bg-surface-container-high hover:bg-secondary-container transition-colors text-label-editorial uppercase" onclick="updateAnatomy('trunk')">01</button>
-<button class="py-2 text-center rounded bg-surface-container-high hover:bg-secondary-container transition-colors text-label-editorial uppercase" onclick="updateAnatomy('ears')">02</button>
-<button class="py-2 text-center rounded bg-surface-container-high hover:bg-secondary-container transition-colors text-label-editorial uppercase" onclick="updateAnatomy('brain')">03</button>
-<button class="py-2 text-center rounded bg-surface-container-high hover:bg-secondary-container transition-colors text-label-editorial uppercase" onclick="updateAnatomy('skin')">04</button>
-<button class="py-2 text-center rounded bg-surface-container-high hover:bg-secondary-container transition-colors text-label-editorial uppercase" onclick="updateAnatomy('limbs')">05</button>
-</div>
+
+<!-- Numbered Selector Tabs -->
+<div class="grid grid-cols-5 gap-2 pt-4 mt-4 border-t border-white/5">
+<button class="anatomy-tab-btn py-2 text-center rounded-lg bg-secondary-container text-on-secondary-container font-semibold transition-all text-xs uppercase cursor-pointer" id="tab-trunk" onclick="updateAnatomy('trunk')">01</button>
+<button class="anatomy-tab-btn py-2 text-center rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all text-xs uppercase cursor-pointer" id="tab-ears" onclick="updateAnatomy('ears')">02</button>
+<button class="anatomy-tab-btn py-2 text-center rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all text-xs uppercase cursor-pointer" id="tab-brain" onclick="updateAnatomy('brain')">03</button>
+<button class="anatomy-tab-btn py-2 text-center rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all text-xs uppercase cursor-pointer" id="tab-skin" onclick="updateAnatomy('skin')">04</button>
+<button class="anatomy-tab-btn py-2 text-center rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all text-xs uppercase cursor-pointer" id="tab-limbs" onclick="updateAnatomy('limbs')">05</button>
 </div>
 </div>
 </section>
@@ -708,76 +717,90 @@
     // Reset styles on hotspots
     const hotspots = document.querySelectorAll(".anatomy-hotspot");
     hotspots.forEach(el => {
-      el.classList.remove("bg-secondary-fixed", "text-on-secondary-fixed", "");
+      el.classList.remove("bg-secondary-fixed", "text-on-secondary-fixed", "scale-110");
       el.classList.add("bg-surface-container-high", "text-secondary");
     });
 
     const activeHotspot = document.getElementById(`hotspot-${key}`);
     if (activeHotspot) {
-      activeHotspot.classList.add("bg-secondary-fixed", "text-on-secondary-fixed", "");
+      activeHotspot.classList.add("bg-secondary-fixed", "text-on-secondary-fixed", "scale-110");
       activeHotspot.classList.remove("bg-surface-container-high", "text-secondary");
     }
+
+    // Synchronize bottom numbered selector tabs
+    const tabs = document.querySelectorAll(".anatomy-tab-btn");
+    tabs.forEach(t => {
+      t.classList.remove("bg-secondary-container", "text-on-secondary-container", "font-semibold");
+      t.classList.add("bg-surface-container-high", "text-on-surface-variant");
+    });
+    const activeTab = document.getElementById(`tab-${key}`);
+    if (activeTab) {
+      activeTab.classList.remove("bg-surface-container-high", "text-on-surface-variant");
+      activeTab.classList.add("bg-secondary-container", "text-on-secondary-container", "font-semibold");
+    }
   }
-</script></main><!-- Unified Footer -->
-<footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl">
-  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
-    <div class="mb-space-xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg">
-        <div class="lg:col-span-2 space-y-space-sm">
-          <a href="index.html" class="flex items-center gap-space-sm text-decoration-none group">
+</script></main>
+
+<!-- Unified Global Footer -->
+<footer class="w-full bg-surface-container-lowest text-on-surface mt-20">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
+    <div class="mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3 no-underline group focus:outline-none w-fit">
             <img alt="GAJA LANKA Emblem" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClsl4rcueTeGbxSgDieYGr13SQdQQA-L6BH7paRzqaVc7KHvyxgiCtk9EXt1166hUK9ZTBTQTZlUcuzHZPuSxYDuYWGUX7bJqZA6bQUpr1N2tcKqSxIsr9K60MtsvhN5txDgGshinZyIh_Bt0C5abWbm0mJhdSjuOtdUtUC_r5DFrsrAebfO6NnRcf8zXkKlJXIdDy8bkH0_trDGuNqxRBfSYQK3hkxAk7va05KMgeRnr-mD-sk9co"/>
-            <span class="font-headline-sm text-headline-sm uppercase tracking-wider text-primary font-bold group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
+            <span class="text-base uppercase tracking-wider text-primary font-bold group-hover:text-secondary-fixed transition-colors">Gaja Lanka</span>
           </a>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">The Legacy of Giants. The Future of Coexistence. Dedicated to evidence-based science, habitat preservation, and harmonious coexistence for <em>Elephas maximus maximus</em>.</p>
-          <div class="pt-space-xs">
-            <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-label-editorial text-label-editorial uppercase">
+          <p class="text-sm text-on-surface-variant max-w-md leading-relaxed">The Legacy of Giants. The Future of Coexistence. Dedicated to evidence-based science, habitat preservation, and harmonious coexistence for <em>Elephas maximus maximus</em>.</p>
+          <div class="pt-2">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/90 text-on-secondary-container text-[11px] font-semibold uppercase tracking-wider">
               <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              Telemetry Node Active &bull; Sri Lanka Wilds
+              <span>Telemetry Node Active &bull; Sri Lanka Wilds</span>
             </div>
           </div>
         </div>
         
         <div>
-          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Dossiers</h4>
-          <ul class="space-y-space-xs">
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="species-profile" href="species-profile.html">Elephas m. maximus</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Sacred Tusker Heritage</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Eradication Ledger</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Captive vs Wild Welfare</a></li>
+          <h4 class="text-xs uppercase tracking-[0.14em] text-secondary font-semibold mb-4">Dossiers</h4>
+          <ul class="space-y-2.5 text-[13px]">
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="species-profile" href="species-profile.html">Elephas m. maximus</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="heritage-and-culture" href="heritage-and-culture.html">Sacred Tusker Heritage</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="colonial-archive" href="colonial-archive.html">Colonial Eradication Ledger</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="welfare-and-care" href="welfare-and-care.html">Captive vs Wild Welfare</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Science &amp; Datasets</h4>
-          <ul class="space-y-space-xs">
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Population Telemetry</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Protected Sanctuary Corridors</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data.json" download="data.json">data.json (Spatial API)</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant_population_and_mortality_stats.csv" download>population_stats.csv</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Methodology Register</a></li>
+          <h4 class="text-xs uppercase tracking-[0.14em] text-secondary font-semibold mb-4">Science &amp; Datasets</h4>
+          <ul class="space-y-2.5 text-[13px]">
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="data-and-analytics" href="data-and-analytics.html">Population Telemetry</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="habitats-and-corridors" href="habitats-and-corridors.html">Protected Sanctuary Corridors</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data.json" download="data.json">data.json (Spatial API)</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="elephant_population_and_mortality_stats.csv" download>population_stats.csv</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Methodology Register</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="font-headline-sm text-label-editorial tracking-[0.14em] uppercase text-secondary mb-space-sm font-semibold">Conservation &amp; Policy</h4>
-          <ul class="space-y-space-xs">
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Mitigation Matrix</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="conservation-news" href="conservation-news.html">Field Dispatches &amp; News</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="human-elephant-conflict.html">National Buffer Strategy</a></li>
-            <li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="conservation-news.html">Ranger Telemetry Dispatch</a></li>
+          <h4 class="text-xs uppercase tracking-[0.14em] text-secondary font-semibold mb-4">Conservation &amp; Policy</h4>
+          <ul class="space-y-2.5 text-[13px]">
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="human-elephant-conflict" href="human-elephant-conflict.html">HEC Mitigation Matrix</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" data-path="conservation-news" href="conservation-news.html">Field Dispatches &amp; News</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="human-elephant-conflict.html">National Buffer Strategy</a></li>
+            <li><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="conservation-news.html">Ranger Telemetry Dispatch</a></li>
           </ul>
         </div>
       </div>
     </div>
     
-    <div class="space-y-space-sm pt-space-xs text-on-surface-variant">
-      <p class="font-body-sm text-body-sm leading-relaxed max-w-4xl text-outline">Scientific Notice: Scientific observations and population metrics should be interpreted in conjunction with indicated census years and peer-reviewed field methodologies. All spatial corridors reflect validated multi-seasonal telemetry tracking.</p>
-      <p class="font-label-editorial text-label-editorial uppercase tracking-wider text-outline">Photography and cartographic assets courtesy of the Department of Wildlife Conservation, Sri Lanka Wildlife Archives, and open scientific field collaborations.</p>
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-space-sm gap-space-sm mt-space-md">
-        <p class="font-body-sm text-body-sm">&copy; 2026 Gaja Lanka Digital Conservation Initiative. All rights reserved.</p>
-        <div class="flex items-center gap-space-md">
-          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Open Access Agreement</a>
-          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="species-profile.html">Taxonomic Protocol</a>
+    <div class="space-y-3.5 text-xs text-on-surface-variant">
+      <p class="leading-relaxed max-w-4xl text-outline text-[12px]">Scientific Notice: Scientific observations and population metrics should be interpreted in conjunction with indicated census years and peer-reviewed field methodologies. All spatial corridors reflect validated multi-seasonal telemetry tracking.</p>
+      <p class="uppercase tracking-wider text-outline text-[11px]">Photography and cartographic assets courtesy of the Department of Wildlife Conservation, Sri Lanka Wildlife Archives, and open scientific field collaborations.</p>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pt-6 gap-4">
+        <p class="text-[12px] text-outline">&copy; 2026 Gaja Lanka Digital Conservation Initiative. All rights reserved.</p>
+        <div class="flex items-center gap-8">
+          <a class="text-[12px] text-outline hover:text-secondary-fixed transition-colors" href="data-and-analytics.html#repository">Open Access Agreement</a>
+          <a class="text-[12px] text-outline hover:text-secondary-fixed transition-colors" href="species-profile.html">Taxonomic Protocol</a>
         </div>
       </div>
     </div>

@@ -509,7 +509,7 @@
       "estimatedAgeYears": 69,
       "badge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
       "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
-      "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
+      "image": "assets/images/Nadungamuwa_Raja.jpg",
       "height": "10.5 ft (3.20 m) — Tallest Tamed Tusker in Asia",
       "weight": "Approx. 5,400 kg",
       "tuskLength": "7.0 ft (2.13 m)",
@@ -610,7 +610,7 @@
       "estimatedAgeYears": 75,
       "badge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
       "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
-      "image": "assets/images/history-elephant.jpg",
+      "image": "assets/images/Maligawa_Raja.jpg",
       "height": "9 ft 3 in (2.82 m)",
       "weight": "Approx. 4,600 kg",
       "tuskLength": "5 ft 8 in (1.73 m)",
@@ -3078,7 +3078,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Kumari.jpg",
       "sinhalaName": "කුමාරි (පින්නවල මුල් ඇතින්න 1975)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3128,7 +3128,7 @@
     },
     {
       "id": "nila",
-      "name": "Nila",
+      "name": "Neela (Nila)",
       "aliases": [
         "Neela"
       ],
@@ -3147,8 +3147,8 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
-      "sinhalaName": "නීලා (පින්නවල මුල් ඇතා 1975)",
+      "image": "assets/images/Neela.jpg",
+      "sinhalaName": "නීලා (පින්නවල මුල් ඇතින්න 1975)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
       "height": "Approx. 8.5 – 9.8 ft (2.6 – 3.0 m)",
@@ -3214,7 +3214,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Kadira.jpg",
       "sinhalaName": "කදිරා (පින්නවල මුල් ඇතා 1975)",
       "badge": "PINNAWALA HERD HISTORY",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3284,7 +3284,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Vijaya.jpg",
       "sinhalaName": "විජය (පින්නවල මුල් ඇතා 1975)",
       "badge": "PINNAWALA HERD HISTORY",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3353,7 +3353,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Mathali.jpg",
       "sinhalaName": "මාතලී (පින්නවල මුල් ඇතින්න 1975)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3419,7 +3419,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Sukumali.jpg",
       "sinhalaName": "සුකුමලී (පින්නවල උපන් ප්‍රථම පැටවා 1984)",
       "badge": "PINNAWALA HERD HISTORY",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3486,7 +3486,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-twin-calves.jpg",
+      "image": "assets/images/Pinnawala_Twin_Calves.jpg",
       "sinhalaName": "සජන (නිවුන් පැටවා 2021)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3553,7 +3553,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-twin-calves.jpg",
+      "image": "assets/images/Pinnawala_Twin_Calves.jpg",
       "sinhalaName": "දිස (නිවුන් පැටවා 2021)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -4998,6 +4998,49 @@
         "statBadge": "Sri Dalada Maligawa stable",
         "excerpt": "Kadhira is a celebrated elephant of Sri Lanka belonging to the sacred registry. Named as an elephant associated with the Sri Dalada Maligawa in a 2021 report. Individual biography and current status r..."
       }
+    },
+    {
+      "id": "sandamali",
+      "name": "Sandamali",
+      "aliases": [
+        "Udawalawe Sandamali"
+      ],
+      "category": "orphanage",
+      "type": "orphanage",
+      "typeLabel": "Rehabilitated Matriarch",
+      "status": "Living in Wild",
+      "statusDetail": "Rescued as calf; successfully released into Udawalawe wild and observed thriving with wild-born calf",
+      "statusType": "living",
+      "lifespan": "Rescued 1990s – Present",
+      "range": "Udawalawe National Park & Buffer Corridors",
+      "details": {
+        "knownDetails": [
+          "Rescued as vulnerable wild orphan found among buffalo herds in Habarana area",
+          "Transferred to Udawalawe Elephant Transit Home (ETH) for milk-rearing and intensive socialization",
+          "Released into Udawalawe National Park in the July 2000 milestone cohort",
+          "Observed in April 2008 living independently in the wild with her own healthy wild-born calf"
+        ]
+      },
+      "dataCompleteness": "comprehensive",
+      "image": "assets/images/Sandamali.jpg",
+      "sinhalaName": "සඳමාලි (උඩවලව ඇත් අතුරු සෙවන)",
+      "badge": "ETH REHABILITATION MILESTONE",
+      "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+      "height": "Approx. 7.9 ft (2.4 m)",
+      "weight": "Approx. 3,200 kg",
+      "tuskLength": "Female / Tushes",
+      "tuskCircumference": "N/A",
+      "overview": "Sandamali is an acclaimed rehabilitated elephant matriarch of the Udawalawe Elephant Transit Home (ETH). Rescued as an orphaned calf and released into Udawalawe National Park in 2000, she was documented in the wild thriving with her own wild-born calf by Dr. Suhada Jayawardana, confirming the long-term reproductive success of ethical rehabilitation.",
+      "narrative": [
+        "Found stranded as a young calf with domestic buffaloes in Habarana, Sandamali was brought to Udawalawe ETH under Department of Wildlife Conservation veterinarians.",
+        "She formed deep maternal bonds with smaller orphaned calves at the facility, demonstrating protective leadership.",
+        "Released in 2000, she successfully reintegrated with wild herds and in April 2008 was sighted with a healthy calf, proving captive-to-wild reproductive viability."
+      ],
+      "cardMetadata": {
+        "statusBadge": "LIVING IN WILD (ETH)",
+        "statBadge": "Udawalawe Wild",
+        "excerpt": "Rescued orphan calf released into Udawalawe in 2000, successfully living wild with her own wild-born calf."
+      }
     }
   ],
   "historicalLegends": [
@@ -5465,7 +5508,7 @@
       "estimatedAgeYears": 69,
       "badge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
       "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
-      "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
+      "image": "assets/images/Nadungamuwa_Raja.jpg",
       "height": "10.5 ft (3.20 m) — Tallest Tamed Tusker in Asia",
       "weight": "Approx. 5,400 kg",
       "tuskLength": "7.0 ft (2.13 m)",
@@ -5566,7 +5609,7 @@
       "estimatedAgeYears": 75,
       "badge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
       "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
-      "image": "assets/images/history-elephant.jpg",
+      "image": "assets/images/Maligawa_Raja.jpg",
       "height": "9 ft 3 in (2.82 m)",
       "weight": "Approx. 4,600 kg",
       "tuskLength": "5 ft 8 in (1.73 m)",
@@ -8034,7 +8077,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Kumari.jpg",
       "sinhalaName": "කුමාරි (පින්නවල මුල් ඇතින්න 1975)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -8084,7 +8127,7 @@
     },
     "nila": {
       "id": "nila",
-      "name": "Nila",
+      "name": "Neela (Nila)",
       "aliases": [
         "Neela"
       ],
@@ -8103,8 +8146,8 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
-      "sinhalaName": "නීලා (පින්නවල මුල් ඇතා 1975)",
+      "image": "assets/images/Neela.jpg",
+      "sinhalaName": "නීලා (පින්නවල මුල් ඇතින්න 1975)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
       "height": "Approx. 8.5 – 9.8 ft (2.6 – 3.0 m)",
@@ -8170,7 +8213,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Kadira.jpg",
       "sinhalaName": "කදිරා (පින්නවල මුල් ඇතා 1975)",
       "badge": "PINNAWALA HERD HISTORY",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -8240,7 +8283,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Vijaya.jpg",
       "sinhalaName": "විජය (පින්නවල මුල් ඇතා 1975)",
       "badge": "PINNAWALA HERD HISTORY",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -8309,7 +8352,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Mathali.jpg",
       "sinhalaName": "මාතලී (පින්නවල මුල් ඇතින්න 1975)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -8375,7 +8418,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-river-bathing.jpg",
+      "image": "assets/images/Sukumali.jpg",
       "sinhalaName": "සුකුමලී (පින්නවල උපන් ප්‍රථම පැටවා 1984)",
       "badge": "PINNAWALA HERD HISTORY",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -8442,7 +8485,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-twin-calves.jpg",
+      "image": "assets/images/Pinnawala_Twin_Calves.jpg",
       "sinhalaName": "සජන (නිවුන් පැටවා 2021)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -8509,7 +8552,7 @@
         ]
       },
       "dataCompleteness": "name-and-summary",
-      "image": "assets/images/pinnawala-twin-calves.jpg",
+      "image": "assets/images/Pinnawala_Twin_Calves.jpg",
       "sinhalaName": "දිස (නිවුන් පැටවා 2021)",
       "badge": "ORPHANAGE RESIDENT • PINNAWALA",
       "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -9953,6 +9996,49 @@
         "specimenTypeBadge": "Sacred Sovereign",
         "statBadge": "Sri Dalada Maligawa stable",
         "excerpt": "Kadhira is a celebrated elephant of Sri Lanka belonging to the sacred registry. Named as an elephant associated with the Sri Dalada Maligawa in a 2021 report. Individual biography and current status r..."
+      }
+    },
+    "sandamali": {
+      "id": "sandamali",
+      "name": "Sandamali",
+      "aliases": [
+        "Udawalawe Sandamali"
+      ],
+      "category": "orphanage",
+      "type": "orphanage",
+      "typeLabel": "Rehabilitated Matriarch",
+      "status": "Living in Wild",
+      "statusDetail": "Rescued as calf; successfully released into Udawalawe wild and observed thriving with wild-born calf",
+      "statusType": "living",
+      "lifespan": "Rescued 1990s – Present",
+      "range": "Udawalawe National Park & Buffer Corridors",
+      "details": {
+        "knownDetails": [
+          "Rescued as vulnerable wild orphan found among buffalo herds in Habarana area",
+          "Transferred to Udawalawe Elephant Transit Home (ETH) for milk-rearing and intensive socialization",
+          "Released into Udawalawe National Park in the July 2000 milestone cohort",
+          "Observed in April 2008 living independently in the wild with her own healthy wild-born calf"
+        ]
+      },
+      "dataCompleteness": "comprehensive",
+      "image": "assets/images/Sandamali.jpg",
+      "sinhalaName": "සඳමාලි (උඩවලව ඇත් අතුරු සෙවන)",
+      "badge": "ETH REHABILITATION MILESTONE",
+      "badgeClass": "bg-emerald-950/80 text-emerald-300 border-emerald-500/30",
+      "height": "Approx. 7.9 ft (2.4 m)",
+      "weight": "Approx. 3,200 kg",
+      "tuskLength": "Female / Tushes",
+      "tuskCircumference": "N/A",
+      "overview": "Sandamali is an acclaimed rehabilitated elephant matriarch of the Udawalawe Elephant Transit Home (ETH). Rescued as an orphaned calf and released into Udawalawe National Park in 2000, she was documented in the wild thriving with her own wild-born calf by Dr. Suhada Jayawardana, confirming the long-term reproductive success of ethical rehabilitation.",
+      "narrative": [
+        "Found stranded as a young calf with domestic buffaloes in Habarana, Sandamali was brought to Udawalawe ETH under Department of Wildlife Conservation veterinarians.",
+        "She formed deep maternal bonds with smaller orphaned calves at the facility, demonstrating protective leadership.",
+        "Released in 2000, she successfully reintegrated with wild herds and in April 2008 was sighted with a healthy calf, proving captive-to-wild reproductive viability."
+      ],
+      "cardMetadata": {
+        "statusBadge": "LIVING IN WILD (ETH)",
+        "statBadge": "Udawalawe Wild",
+        "excerpt": "Rescued orphan calf released into Udawalawe in 2000, successfully living wild with her own wild-born calf."
       }
     }
   },

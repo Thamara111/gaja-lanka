@@ -312,6 +312,7 @@
       <div id="pantheon-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <!-- Rendered dynamically by JavaScript from gaja-lanka-elephants-merged-researched.json -->
       </div>
+      <div id="pagination-controls" class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mt-10 pt-6 border-t border-white/5"></div>
     </section>
 
     </main>
@@ -400,258 +401,331 @@
   <script src="assets/js/dossier-modal.js"></script>
   <script>
     (async function initFamousElephantsPage() {
-      // 1. Load Data from gaja-lanka-elephants-merged-researched.json with fallback
-      let data = null;
-      try {
-        const res = await fetch('gaja-lanka-elephants-merged-researched.json');
-        if (res.ok) {
-          data = await res.json();
-        }
-      } catch (e) {
-        console.warn('[FamousElephants] File protocol or fetch error, using local fallback:', e);
-      }
+  // 1. Load Data from gaja-lanka-elephants-merged-researched.json with fallback
+  let data = null;
+  try {
+    const res = await fetch('gaja-lanka-elephants-merged-researched.json');
+    if (res.ok) {
+      data = await res.json();
+    }
+  } catch (e) {
+    console.warn('[FamousElephants] File protocol or fetch error, using local fallback:', e);
+  }
 
-      // Fallback to global variables if fetch fails
-      if (!data || !data.specimens) {
-        if (typeof GAJA_LANKA_DOSSIERS !== 'undefined') {
-          const allList = typeof GAJA_LANKA_ALL_SPECIMENS !== 'undefined' ? GAJA_LANKA_ALL_SPECIMENS : Object.values(GAJA_LANKA_DOSSIERS);
-          data = {
-            specimens: allList,
-            specimensById: GAJA_LANKA_DOSSIERS,
-            categories: typeof GAJA_LANKA_CATEGORIES !== 'undefined' ? GAJA_LANKA_CATEGORIES : []
-          };
-        }
-      }
+  // Fallback to global variables if fetch fails
+  if (!data || !data.specimens) {
+    if (typeof GAJA_LANKA_DOSSIERS !== 'undefined') {
+      const allList = typeof GAJA_LANKA_ALL_SPECIMENS !== 'undefined' ? GAJA_LANKA_ALL_SPECIMENS : Object.values(GAJA_LANKA_DOSSIERS);
+      data = {
+        specimens: allList,
+        specimensById: GAJA_LANKA_DOSSIERS,
+        categories: typeof GAJA_LANKA_CATEGORIES !== 'undefined' ? GAJA_LANKA_CATEGORIES : []
+      };
+    }
+  }
 
-      if (!data || !data.specimens) {
-        console.error('[FamousElephants] Failed to load elephant dataset.');
-        return;
-      }
+  if (!data || !data.specimens) {
+    console.error('[FamousElephants] Failed to load elephant dataset.');
+    return;
+  }
 
-      const specimens = data.specimens;
-      const specimensById = data.specimensById || {};
-      if (Object.keys(specimensById).length === 0) {
-        specimens.forEach(s => { specimensById[s.id] = s; });
-      }
+  const specimens = data.specimens;
+  const specimensById = data.specimensById || {};
+  if (Object.keys(specimensById).length === 0) {
+    specimens.forEach(s => { specimensById[s.id] = s; });
+  }
 
-      // Synchronize with GAJA_LANKA_DOSSIERS for modal controller
-      if (typeof window !== 'undefined') {
-        window.GAJA_LANKA_DOSSIERS = specimensById;
-      }
+  // Synchronize with GAJA_LANKA_DOSSIERS for modal controller
+  if (typeof window !== 'undefined') {
+    window.GAJA_LANKA_DOSSIERS = specimensById;
+  }
 
-      const grid = document.getElementById('pantheon-grid');
-      const counterEl = document.getElementById('pantheon-counter');
-      const searchInput = document.getElementById('pantheon-search');
-      const filterPills = document.querySelectorAll('#pantheon-filters .filter-pill');
+  const grid = document.getElementById('pantheon-grid');
+  const counterEl = document.getElementById('pantheon-counter');
+  const searchInput = document.getElementById('pantheon-search');
+  const filterPills = document.querySelectorAll('#pantheon-filters .filter-pill');
+  const paginationEl = document.getElementById('pagination-controls');
 
-      let currentCategory = 'all';
-      let searchQuery = '';
+  let currentCategory = 'all';
+  let searchQuery = '';
+  const itemsPerPage = 10;
+  let currentPage = 1;
+  let filteredSpecimens = [];
 
-      // Helper function to get Category theme classes
-      function getCategoryTheme(cat) {
-        switch(cat) {
-          case 'wild-living':
-            return {
-              border: 'border-emerald-900/30 hover:border-emerald-700/60',
-              pillBg: 'bg-emerald-950/90 text-emerald-300 border-emerald-800/40',
-              dot: 'bg-emerald-400 animate-pulse',
-              label: 'Wild Living',
-              labelBadge: 'text-emerald-300 border-emerald-700/30'
-            };
-          case 'wild-deceased':
-            return {
-              border: 'border-rose-900/30 hover:border-rose-700/60',
-              pillBg: 'bg-rose-950/90 text-rose-300 border-rose-800/40',
-              dot: 'bg-rose-400',
-              label: 'Wild Fallen',
-              labelBadge: 'text-rose-300 border-rose-700/30'
-            };
-          case 'sacred':
-            return {
-              border: 'border-amber-900/30 hover:border-amber-700/60',
-              pillBg: 'bg-amber-950/90 text-amber-300 border-amber-800/40',
-              dot: 'bg-amber-400',
-              label: 'Sacred',
-              labelBadge: 'text-amber-300 border-amber-700/30'
-            };
-          case 'domestic':
-            return {
-              border: 'border-sky-900/30 hover:border-sky-700/60',
-              pillBg: 'bg-sky-950/90 text-sky-300 border-sky-800/40',
-              dot: 'bg-sky-400',
-              label: 'Domestic',
-              labelBadge: 'text-sky-300 border-sky-700/30'
-            };
-          case 'orphanage':
-          default:
-            return {
-              border: 'border-purple-900/30 hover:border-purple-700/60',
-              pillBg: 'bg-purple-950/90 text-purple-300 border-purple-800/40',
-              dot: 'bg-purple-400',
-              label: 'Orphanage',
-              labelBadge: 'text-purple-300 border-purple-700/30'
-            };
-        }
-      }
+  // Helper function to get Category theme classes
+  function getCategoryTheme(cat) {
+    switch(cat) {
+      case 'wild-living':
+        return { border: 'border-emerald-900/30 hover:border-emerald-700/60', pillBg: 'bg-emerald-950/90 text-emerald-300 border-emerald-800/40', dot: 'bg-emerald-400 animate-pulse', label: 'Wild Living', labelBadge: 'text-emerald-300 border-emerald-700/30' };
+      case 'wild-deceased':
+        return { border: 'border-rose-900/30 hover:border-rose-700/60', pillBg: 'bg-rose-950/90 text-rose-300 border-rose-800/40', dot: 'bg-rose-400', label: 'Wild Fallen', labelBadge: 'text-rose-300 border-rose-700/30' };
+      case 'sacred':
+        return { border: 'border-amber-900/30 hover:border-amber-700/60', pillBg: 'bg-amber-950/90 text-amber-300 border-amber-800/40', dot: 'bg-amber-400', label: 'Sacred', labelBadge: 'text-amber-300 border-amber-700/30' };
+      case 'domestic':
+        return { border: 'border-sky-900/30 hover:border-sky-700/60', pillBg: 'bg-sky-950/90 text-sky-300 border-sky-800/40', dot: 'bg-sky-400', label: 'Domestic', labelBadge: 'text-sky-300 border-sky-700/30' };
+      case 'orphanage':
+      default:
+        return { border: 'border-purple-900/30 hover:border-purple-700/60', pillBg: 'bg-purple-950/90 text-purple-300 border-purple-800/40', dot: 'bg-purple-400', label: 'Orphanage', labelBadge: 'text-purple-300 border-purple-700/30' };
+    }
+  }
 
-      // Render all 68 Pantheon Cards
-      function renderCards() {
-        if (!grid) return;
-        grid.innerHTML = specimens.map(s => {
-          const theme = getCategoryTheme(s.category);
-          const meta = s.cardMetadata || {};
-          const statusBadge = meta.statusBadge || s.badge || s.status || 'RECORDED SPECIMEN';
-          const statBadge = meta.statBadge || s.height || s.tuskLength || s.range || 'Sri Lanka';
-          const excerpt = meta.excerpt || s.overview || '';
-          const nameShort = s.name.split(' (')[0];
-          const sinhalaShort = s.sinhalaName ? s.sinhalaName.split(' (')[0] : '';
+  // Render cards given a list of specimens
+  function renderCards(list) {
+    if (!grid) return;
+    grid.innerHTML = list.map(s => {
+      const theme = getCategoryTheme(s.category);
+      const meta = s.cardMetadata || {};
+      const statusBadge = meta.statusBadge || s.badge || s.status || 'RECORDED SPECIMEN';
+      const statBadge = meta.statBadge || s.height || s.tuskLength || s.range || 'Sri Lanka';
+      const excerpt = meta.excerpt || s.overview || '';
+      const nameShort = s.name.split(' (')[0];
+      const sinhalaShort = s.sinhalaName ? s.sinhalaName.split(' (')[0] : '';
+      return `
+        <div data-category="${s.category}" data-id="${s.id}" data-search="${(s.name + ' ' + (s.sinhalaName||'') + ' ' + (s.range||'') + ' ' + s.category).toLowerCase()}" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border ${theme.border} shadow-xl hover:-translate-y-1">
+          <img src="${s.image}" alt="${s.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
 
-          return `
-            <div data-category="${s.category}" data-id="${s.id}" data-search="${(s.name + ' ' + (s.sinhalaName||'') + ' ' + (s.range||'') + ' ' + s.category).toLowerCase()}" class="famous-card relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border ${theme.border} shadow-xl hover:-translate-y-1">
-              <img src="${s.image}" alt="${s.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
+          <!-- Top Status Pill -->
+          <div class="relative z-10 flex items-center justify-between gap-1">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full ${theme.pillBg} backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap overflow-hidden text-ellipsis max-w-[70%]">
+              <span class="w-1.5 h-1.5 rounded-full shrink-0 ${theme.dot}"></span>
+              <span class="truncate">${statusBadge}</span>
+            </span>
+            <span class="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/50 ${theme.labelBadge} font-semibold border backdrop-blur-sm whitespace-nowrap">
+              ${theme.label}
+            </span>
+          </div>
 
-              <!-- Top Status Pill -->
-              <div class="relative z-10 flex items-center justify-between gap-1">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full ${theme.pillBg} backdrop-blur-md font-semibold text-[10px] uppercase tracking-wider border whitespace-nowrap overflow-hidden text-ellipsis max-w-[70%]">
-                  <span class="w-1.5 h-1.5 rounded-full shrink-0 ${theme.dot}"></span>
-                  <span class="truncate">${statusBadge}</span>
-                </span>
-                <span class="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded bg-black/50 ${theme.labelBadge} font-semibold border backdrop-blur-sm whitespace-nowrap">
-                  ${theme.label}
-                </span>
-              </div>
-
-              <!-- Bottom Content Details -->
-              <div class="relative z-10 space-y-2.5 pt-20">
-                <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
-                  <span>${statBadge}</span>
-                </div>
-                <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="text-lg font-bold text-white group-hover:text-secondary-fixed transition-colors">
-                    ${nameShort}
-                  </h3>
-                  <span class="text-xs text-secondary font-medium shrink-0">${sinhalaShort}</span>
-                </div>
-                <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
-                  ${excerpt}
-                </p>
-                <div class="pt-2 flex items-center justify-between gap-2">
-                  <button onclick="GajaDossierModal.open('${s.id}')" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold group/link cursor-pointer">
-                    <span>View Monograph</span>
-                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-                  </button>
-                  <button onclick="GajaDossierModal.open('${s.id}')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Briefing Modal">
-                    <span class="material-symbols-outlined text-[16px]">visibility</span>
-                  </button>
-                </div>
-              </div>
+          <!-- Bottom Content Details -->
+          <div class="relative z-10 space-y-2.5 pt-20">
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
+              <span>${statBadge}</span>
             </div>
-          `;
-        }).join('');
-      }
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-secondary-fixed transition-colors">
+                ${nameShort}
+              </h3>
+              <span class="text-xs text-secondary font-medium shrink-0">${sinhalaShort}</span>
+            </div>
+            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
+              ${excerpt}
+            </p>
+            <div class="pt-2 flex items-center justify-between gap-2">
+              <button onclick="GajaDossierModal.open('${s.id}')" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold group/link cursor-pointer">
+                <span>View Monograph</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+              </button>
+              <button onclick="GajaDossierModal.open('${s.id}')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Briefing Modal">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+  }
 
-      // Filter and Search Cards
-      function filterCards() {
-        const cards = document.querySelectorAll('#pantheon-grid .famous-card');
-        let visibleCount = 0;
-        cards.forEach(card => {
-          const cardCat = card.getAttribute('data-category');
-          const searchData = card.getAttribute('data-search') || '';
-          const matchesCat = (currentCategory === 'all' || cardCat === currentCategory);
-          const matchesSearch = !searchQuery || searchData.includes(searchQuery);
+  // Render pagination controls
+  function renderPagination(totalItems) {
+    if (!paginationEl) return;
+    const totalPages = Math.ceil(totalItems / itemsPerPage) || 1;
+    
+    if (totalItems === 0) {
+      paginationEl.innerHTML = `
+        <div class="text-center py-8 text-on-surface-variant text-sm">
+          No elephant monographs match your filter criteria.
+        </div>
+      `;
+      return;
+    }
 
-          if (matchesCat && matchesSearch) {
-            card.classList.remove('hidden');
-            visibleCount++;
-          } else {
-            card.classList.add('hidden');
+    let buttonsHtml = '';
+    // Previous Button
+    buttonsHtml += `
+      <button id="prev-page" ${currentPage === 1 ? 'disabled' : ''} class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold font-label-data transition-all border ${currentPage === 1 ? 'bg-surface-container/40 text-on-surface-variant/40 border-white/5 cursor-not-allowed' : 'bg-surface-container text-on-surface hover:text-primary hover:bg-surface-container-high border-white/10 cursor-pointer'}">
+        <span class="material-symbols-outlined text-[16px]">chevron_left</span>
+        <span>Previous</span>
+      </button>
+    `;
+
+    // Page Number Pills
+    buttonsHtml += `<div class="flex flex-wrap items-center gap-1.5">`;
+    for (let i = 1; i <= totalPages; i++) {
+      if (totalPages > 8) {
+        if (i !== 1 && i !== totalPages && Math.abs(i - currentPage) > 1) {
+          if (i === 2 || i === totalPages - 1) {
+            buttonsHtml += `<span class="px-2 text-on-surface-variant/50 text-xs select-none">&hellip;</span>`;
           }
-        });
-
-        if (counterEl) {
-          counterEl.textContent = `Showing ${visibleCount} of ${specimens.length}`;
+          continue;
         }
       }
 
-      // Wire Filter Pills
-      filterPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          filterPills.forEach(p => {
-            p.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
-            p.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
-          });
-          pill.classList.remove('bg-surface-container', 'text-on-surface', 'font-medium');
-          pill.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
-
-          currentCategory = pill.getAttribute('data-filter') || 'all';
-          filterCards();
-        });
-      });
-
-      // Wire Live Search
-      if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-          searchQuery = (e.target.value || '').trim().toLowerCase();
-          filterCards();
-        });
+      if (i === currentPage) {
+        buttonsHtml += `
+          <button class="page-num w-9 h-9 rounded-xl text-xs font-bold font-label-data bg-secondary-fixed text-on-secondary-fixed border border-secondary-fixed shadow-md shadow-secondary-fixed/20 transition-all cursor-pointer" data-page="${i}">
+            ${i}
+          </button>
+        `;
+      } else {
+        buttonsHtml += `
+          <button class="page-num w-9 h-9 rounded-xl text-xs font-medium font-label-data bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high border border-white/5 transition-all cursor-pointer" data-page="${i}">
+            ${i}
+          </button>
+        `;
       }
+    }
+    buttonsHtml += `</div>`;
 
-      // Check URL query param or hash to open modal automatically
-      function checkDeepLink() {
-        let id = null;
-        try {
-          const urlParams = new URLSearchParams(window.location.search);
-          id = urlParams.get('id');
-        } catch (e) {}
+    // Next Button
+    buttonsHtml += `
+      <button id="next-page" ${currentPage === totalPages ? 'disabled' : ''} class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold font-label-data transition-all border ${currentPage === totalPages ? 'bg-surface-container/40 text-on-surface-variant/40 border-white/5 cursor-not-allowed' : 'bg-surface-container text-on-surface hover:text-primary hover:bg-surface-container-high border-white/10 cursor-pointer'}">
+        <span>Next</span>
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      </button>
+    `;
 
-        if (!id && window.location.href.includes('id=')) {
-          const match = window.location.href.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-          if (match) id = match[1];
-        }
-        if (!id && window.location.hash) {
-          id = window.location.hash.replace('#', '').trim();
-        }
+    paginationEl.innerHTML = buttonsHtml;
 
-        if (id && specimensById[id] && typeof GajaDossierModal !== 'undefined') {
-          setTimeout(() => {
-            GajaDossierModal.open(id);
-          }, 200);
-        }
-      }
-
-      window.copyPermalink = function() {
-        const url = window.location.href.split('?')[0].split('#')[0];
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(() => {
-            const btnText = document.getElementById('copy-btn-text');
-            if (btnText) {
-              btnText.textContent = 'Copied!';
-              setTimeout(() => { btnText.textContent = 'Share Page'; }, 2000);
-            }
-          }).catch(() => {
-            prompt('Copy link:', url);
-          });
-        } else {
-          prompt('Copy link:', url);
+    // Attach listeners
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    if (prevBtn && currentPage > 1) {
+      prevBtn.onclick = () => {
+        currentPage--;
+        updateView(true);
+      };
+    }
+    if (nextBtn && currentPage < totalPages) {
+      nextBtn.onclick = () => {
+        currentPage++;
+        updateView(true);
+      };
+    }
+    paginationEl.querySelectorAll('.page-num').forEach(btn => {
+      btn.onclick = () => {
+        const p = Number(btn.dataset.page);
+        if (!isNaN(p) && p !== currentPage) {
+          currentPage = p;
+          updateView(true);
         }
       };
+    });
+  }
 
-      // Initial Render
-      renderCards();
-      checkDeepLink();
+  // Update view based on filters, search, and pagination
+  function updateView(scrollToTop = false) {
+    filteredSpecimens = specimens.filter(s => {
+      const matchesCat = (currentCategory === 'all' || s.category === currentCategory);
+      const searchData = (s.name + ' ' + (s.sinhalaName||'') + ' ' + (s.range||'') + ' ' + s.category).toLowerCase();
+      const matchesSearch = !searchQuery || searchData.includes(searchQuery);
+      return matchesCat && matchesSearch;
+    });
+    const total = filteredSpecimens.length;
+    const maxPage = Math.max(1, Math.ceil(total / itemsPerPage));
+    if (currentPage > maxPage) currentPage = maxPage;
+    const startIdx = (currentPage - 1) * itemsPerPage;
+    const pageItems = filteredSpecimens.slice(startIdx, startIdx + itemsPerPage);
+    renderCards(pageItems);
 
-      window.addEventListener('hashchange', checkDeepLink);
-
-      // Mobile Menu Toggle
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileDrawer = document.getElementById('mobile-menu');
-      if (mobileBtn && mobileDrawer) {
-        mobileBtn.addEventListener('click', () => {
-          mobileDrawer.classList.toggle('hidden');
-        });
+    if (counterEl) {
+      if (total === 0) {
+        counterEl.textContent = 'Showing 0';
+      } else {
+        const start = startIdx + 1;
+        const end = Math.min(startIdx + itemsPerPage, total);
+        counterEl.textContent = `Showing ${start}–${end} of ${total}`;
       }
-    })();
+    }
+    renderPagination(total);
+
+    if (scrollToTop) {
+      const target = document.getElementById('pantheon-filters');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  // Wire Filter Pills
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
+        p.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface', 'font-medium');
+      pill.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
+
+      currentCategory = pill.getAttribute('data-filter') || 'all';
+      currentPage = 1; // reset pagination
+      updateView();
+    });
+  });
+
+  // Wire Live Search
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = (e.target.value || '').trim().toLowerCase();
+      currentPage = 1; // reset pagination
+      updateView();
+    });
+  }
+
+  // Check URL query param or hash to open modal automatically
+  function checkDeepLink() {
+    let id = null;
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      id = urlParams.get('id');
+    } catch (e) {}
+
+    if (!id && window.location.href.includes('id=')) {
+      const match = window.location.href.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (match) id = match[1];
+    }
+    if (!id && window.location.hash) {
+      id = window.location.hash.replace('#', '').trim();
+    }
+
+    if (id && specimensById[id] && typeof GajaDossierModal !== 'undefined') {
+      setTimeout(() => {
+        GajaDossierModal.open(id);
+      }, 200);
+    }
+  }
+
+  window.copyPermalink = function() {
+    const url = window.location.href.split('?')[0].split('#')[0];
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => {
+        const btnText = document.getElementById('copy-btn-text');
+        if (btnText) {
+          btnText.textContent = 'Copied!';
+          setTimeout(() => { btnText.textContent = 'Share Page'; }, 2000);
+        }
+      }).catch(() => {
+        prompt('Copy link:', url);
+      });
+    } else {
+      prompt('Copy link:', url);
+    }
+  };
+
+  // Initial Render
+  updateView();
+
+  // Deep link handling
+  checkDeepLink();
+  window.addEventListener('hashchange', checkDeepLink);
+
+  // Mobile Menu Toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileDrawer) {
+    mobileBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+    });
+  }
+})();
   </script>
   <script src="assets/js/counter.js"></script>
 </body>

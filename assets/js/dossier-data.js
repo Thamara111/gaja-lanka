@@ -428,7 +428,7 @@ const GAJA_LANKA_DOSSIERS = {
     "estimatedAgeYears": 69,
     "badge": "DECEASED • NATIONAL TREASURE (10.5 FT)",
     "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
-    "image": "assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg",
+    "image": "assets/images/Nadungamuwa_Raja.jpg",
     "height": "10.5 ft (3.20 m) — Tallest Tamed Tusker in Asia",
     "weight": "Approx. 5,400 kg",
     "tuskLength": "7.0 ft (2.13 m)",
@@ -529,7 +529,7 @@ const GAJA_LANKA_DOSSIERS = {
     "estimatedAgeYears": 75,
     "badge": "DECEASED • 50-YEAR SACRED SOVEREIGN",
     "badgeClass": "bg-amber-950/80 text-amber-300 border-amber-500/30",
-    "image": "assets/images/history-elephant.jpg",
+    "image": "assets/images/Maligawa_Raja.jpg",
     "height": "9 ft 3 in (2.82 m)",
     "weight": "Approx. 4,600 kg",
     "tuskLength": "5 ft 8 in (1.73 m)",
@@ -2997,7 +2997,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-river-bathing.jpg",
+    "image": "assets/images/Kumari.jpg",
     "sinhalaName": "කුමාරි (පින්නවල මුල් ඇතින්න 1975)",
     "badge": "ORPHANAGE RESIDENT • PINNAWALA",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3066,7 +3066,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-river-bathing.jpg",
+    "image": "assets/images/Neela.jpg",
     "sinhalaName": "නීලා (පින්නවල මුල් ඇතා 1975)",
     "badge": "ORPHANAGE RESIDENT • PINNAWALA",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3133,7 +3133,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-river-bathing.jpg",
+    "image": "assets/images/Kadira.jpg",
     "sinhalaName": "කදිරා (පින්නවල මුල් ඇතා 1975)",
     "badge": "PINNAWALA HERD HISTORY",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3203,7 +3203,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-river-bathing.jpg",
+    "image": "assets/images/Vijaya.jpg",
     "sinhalaName": "විජය (පින්නවල මුල් ඇතා 1975)",
     "badge": "PINNAWALA HERD HISTORY",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3272,7 +3272,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-river-bathing.jpg",
+    "image": "assets/images/Mathali.jpg",
     "sinhalaName": "මාතලී (පින්නවල මුල් ඇතින්න 1975)",
     "badge": "ORPHANAGE RESIDENT • PINNAWALA",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3338,7 +3338,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-river-bathing.jpg",
+    "image": "assets/images/Sukumali.jpg",
     "sinhalaName": "සුකුමලී (පින්නවල උපන් ප්‍රථම පැටවා 1984)",
     "badge": "PINNAWALA HERD HISTORY",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3405,7 +3405,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-twin-calves.jpg",
+    "image": "assets/images/Pinnawala_Twin_Calves.jpg",
     "sinhalaName": "සජන (නිවුන් පැටවා 2021)",
     "badge": "ORPHANAGE RESIDENT • PINNAWALA",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
@@ -3472,7 +3472,7 @@ const GAJA_LANKA_DOSSIERS = {
       ]
     },
     "dataCompleteness": "name-and-summary",
-    "image": "assets/images/pinnawala-twin-calves.jpg",
+    "image": "assets/images/Pinnawala_Twin_Calves.jpg",
     "sinhalaName": "දිස (නිවුන් පැටවා 2021)",
     "badge": "ORPHANAGE RESIDENT • PINNAWALA",
     "badgeClass": "bg-sky-950/80 text-sky-300 border-sky-500/30",
