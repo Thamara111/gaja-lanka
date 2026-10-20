@@ -158,9 +158,6 @@
     <!-- Right Actions -->
     <div class="flex items-center gap-2 shrink-0">
       <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" data-path="data-and-analytics" href="data-and-analytics.html#repository">Open Data</a>
-      <a href="species-profile.html" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-secondary-fixed hover:text-on-secondary-fixed text-secondary flex items-center justify-center transition-colors" title="Species Monograph">
-        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 6 4.3 5 6.8 3.2 7.2 2 8.8 2 11c0 2.2 1.3 3.8 3.1 4.3.3 1.7 1.3 3.2 2.9 3.9v2.8h2V19.8c.6.1 1.3.2 2 .2s1.4-.1 2-.2v2.2h2v-2.8c1.6-.7 2.6-2.2 2.9-3.9 1.8-.5 3.1-2.1 3.1-4.3 0-2.2-1.2-3.8-3-4.2C18 4.3 15.5 2 12 2zm-3.5 7.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm7 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-3.5 2c.83 0 1.5.67 1.5 1.5v3.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V13c0-.83.67-1.5 1.5-1.5z"/></svg>
-      </a>
       <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface cursor-pointer rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">
         <span class="material-symbols-outlined text-[22px]">menu</span>
       </button>
@@ -283,7 +280,7 @@
               <span class="text-[11px] uppercase tracking-wider text-secondary font-semibold">Wild Census</span>
               <span class="material-symbols-outlined text-[18px] text-secondary">monitoring</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-primary font-light">~7,451</div>
+            <div class="text-3xl sm:text-4xl text-primary font-light counter-value" data-counter="7451" data-prefix="~" data-format="comma">~7,451</div>
             <span class="text-xs text-on-surface-variant mt-1">2026 range estimate</span>
           </div>
 
@@ -292,7 +289,7 @@
               <span class="text-[11px] uppercase tracking-wider text-secondary font-semibold">Tusked Males (Ath-Dhal)</span>
               <span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-secondary-fixed font-light">&lt; 2.5%</div>
+            <div class="text-3xl sm:text-4xl text-secondary-fixed font-light counter-value" data-counter="2.5" data-prefix="&lt; " data-suffix="%" data-decimals="1">&lt; 2.5%</div>
             <span class="text-xs text-on-surface-variant mt-1">Rare evolutionary gene pool</span>
           </div>
 
@@ -301,7 +298,7 @@
               <span class="text-[11px] uppercase tracking-wider text-secondary font-semibold">The Great Gathering</span>
               <span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-primary font-light">350+</div>
+            <div class="text-3xl sm:text-4xl text-primary font-light counter-value" data-counter="350" data-suffix="+">350+</div>
             <span class="text-xs text-on-surface-variant mt-1">Minneriya congregation</span>
           </div>
 
@@ -310,7 +307,7 @@
               <span class="text-[11px] uppercase tracking-wider text-error font-semibold">Annual Casualties</span>
               <span class="material-symbols-outlined text-[18px] text-error">warning</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-error font-light">~400+</div>
+            <div class="text-3xl sm:text-4xl text-error font-light counter-value" data-counter="400" data-prefix="~" data-suffix="+">~400+</div>
             <span class="text-xs text-on-surface-variant mt-1">Human-Elephant Conflict</span>
           </div>
         </div>
@@ -451,13 +448,6 @@
 
       </div>
 
-      <!-- Centered View More Button Redirecting to News Page -->
-      <div class="text-center mt-10">
-        <a href="conservation-news.html" class="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-surface-container-high hover:bg-secondary-fixed text-on-surface hover:text-on-secondary-fixed text-xs font-semibold uppercase tracking-wider transition-all group">
-          <span>View All Conservation News &amp; Field Intelligence Wire</span>
-          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">open_in_new</span>
-        </a>
-      </div>
     </section>
 
     <!-- ====================================================================
@@ -478,7 +468,7 @@
           </p>
         </div>
         <div class="shrink-0">
-          <a href="conservation-news.html#famous-elephants" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold uppercase tracking-wider hover:bg-primary-container transition-all whitespace-nowrap">
+          <a href="famous-elephants.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold uppercase tracking-wider hover:bg-primary-container transition-all whitespace-nowrap">
             <span>Explore All 10 Famous Elephants</span>
             <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
           </a>
@@ -489,373 +479,189 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <!-- 1. Kawanthissa (Wild Tusker • Tragically Fallen Oct 16, 2026) -->
-        <div class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between group hover:bg-surface-container/90 transition-all border border-rose-900/30">
-          <div>
-            <div class="relative h-56 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/kavantissa-wild-tusker.jpg" alt="Kawanthissa of Galgamuwa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-rose-950/80 backdrop-blur-md text-rose-300 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-                <span>FELL OCT 16, 2026 &bull; GUNSHOT</span>
-              </div>
-              <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] text-on-surface font-semibold">
-                11 ft Tallest Wild Giant
-              </div>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <h3 class="text-lg font-bold text-primary group-hover:text-secondary-fixed transition-colors">
-                  Kawanthissa
-                </h3>
-                <span class="text-xs text-secondary">කාවන්තිස්ස</span>
-              </div>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Sri Lanka's tallest wild tusker (11 ft). Shot by poachers in Galgamuwa, he was treated for 3 weeks by DWC vets before tragically passing away on Oct 16, 2026, prompting a national independent inquiry.
-              </p>
-            </div>
+        <div class="relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-rose-900/30 hover:border-rose-700/60 shadow-xl">
+          <!-- Full-Bleed Background Image -->
+          <img src="assets/images/kavantissa-wild-tusker.jpg" alt="Kawanthissa of Galgamuwa" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
+          <!-- Cinematic Scrim Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
+
+          <!-- Top Status Pill -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-950/90 backdrop-blur-md text-rose-300 font-semibold text-[10px] uppercase tracking-wider border border-rose-800/40 whitespace-nowrap">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+              <span>FELL OCT 16, 2026 &bull; GUNSHOT</span>
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="conservation-news.html#famous-elephants" class="inline-flex items-center gap-1.5 text-xs text-rose-400 hover:text-rose-300 font-semibold">
-              <span>Read Kawanthissa Dispatch</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
+
+          <!-- Bottom Content Details -->
+          <div class="relative z-10 space-y-2.5 pt-20">
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
+              <span>11 ft Tallest Wild Giant</span>
+            </div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
+                Kawanthissa
+              </h3>
+              <span class="text-xs text-secondary font-medium">කාවන්තිස්ස</span>
+            </div>
+            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
+              Sri Lanka's tallest wild tusker (11 ft). Shot by poachers in Galgamuwa, he was treated for 3 weeks by DWC vets before tragically passing away on Oct 16, 2026, prompting a national independent inquiry.
+            </p>
+            <div class="pt-1">
+              <a href="famous-elephants.html?id=kawanthissa" class="inline-flex items-center gap-1.5 text-xs text-rose-400 hover:text-rose-300 font-semibold group/link">
+                <span>Read Kawanthissa Dispatch</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- 2. Agbo of Thirappane (Living Wild Giant • Under Recovery) -->
-        <div class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between group hover:bg-surface-container/90 transition-all border border-emerald-900/30">
-          <div>
-            <div class="relative h-56 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-elephant-udawalawe.jpg" alt="Agbo of Thirappane" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>LIVING WILD TUSKER &bull; RECOVERY</span>
-              </div>
-              <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] text-on-surface font-semibold">
-                Anuradhapura Wilds
-              </div>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <h3 class="text-lg font-bold text-primary group-hover:text-secondary-fixed transition-colors">
-                  Agbo of Thirappane
-                </h3>
-                <span class="text-xs text-secondary">තිරප්පනේ අග්බෝ</span>
-              </div>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Celebrated living wild tusker. Shot in the left leg by poachers in 2023, he was saved through intensive nationwide DWC veterinary mobilization and continuous radio telemetry tracking.
-              </p>
-            </div>
+        <div class="relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-emerald-900/30 hover:border-emerald-700/60 shadow-xl">
+          <!-- Full-Bleed Background Image -->
+          <img src="assets/images/sri-lanka-elephant-udawalawe.jpg" alt="Agbo of Thirappane" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
+          <!-- Cinematic Scrim Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
+
+          <!-- Top Status Pill -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/90 backdrop-blur-md text-emerald-300 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1.5 border border-emerald-800/40 whitespace-nowrap">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>LIVING WILD TUSKER &bull; RECOVERY</span>
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="conservation-news.html#famous-elephants" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>View Veterinary Dossier</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
+
+          <!-- Bottom Content Details -->
+          <div class="relative z-10 space-y-2.5 pt-20">
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
+              <span>Anuradhapura Wilds</span>
+            </div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
+                Agbo of Thirappane
+              </h3>
+              <span class="text-xs text-secondary font-medium">තිරප්පනේ අග්බෝ</span>
+            </div>
+            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
+              Celebrated living wild tusker. Shot in the left leg by poachers in 2023, he was saved through intensive nationwide DWC veterinary mobilization and continuous radio telemetry tracking.
+            </p>
+            <div class="pt-1">
+              <a href="famous-elephants.html?id=agbo-thirappane" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold group/link">
+                <span>View Veterinary Dossier</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- 3. Nadungamuwa Raja (Sacred Tusker • 10.5 ft National Treasure) -->
-        <div class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between group hover:bg-surface-container/90 transition-all">
-          <div>
-            <div class="relative h-56 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg" alt="Nadungamuwa Raja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-amber-950/80 backdrop-blur-md text-amber-300 font-semibold text-[10px] uppercase tracking-wider">
-                DECEASED &bull; 1953–2022
-              </div>
-              <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] text-on-surface font-semibold">
-                10.5 ft Tallest in Asia
-              </div>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <h3 class="text-lg font-bold text-primary group-hover:text-secondary-fixed transition-colors">
-                  Nadungamuwa Raja
-                </h3>
-                <span class="text-xs text-secondary">නැදුන්ගමුවේ රාජා</span>
-              </div>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Declared a National Cultural Treasure. The 10.5-foot tusker walked 90km on foot from Gampaha to Kandy under military honor escort to carry the Sacred Tooth Relic casket.
-              </p>
-            </div>
+        <div class="relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-amber-900/30 hover:border-amber-700/60 shadow-xl">
+          <!-- Full-Bleed Background Image -->
+          <img src="assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg" alt="Nadungamuwa Raja" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
+          <!-- Cinematic Scrim Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
+
+          <!-- Top Status Pill -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/90 backdrop-blur-md text-amber-300 font-semibold text-[10px] uppercase tracking-wider border border-amber-800/40 whitespace-nowrap">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              <span>DECEASED &bull; 1953–2022</span>
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="heritage-and-culture.html#sacred-tuskers" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>Read Biography Dossier</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
+
+          <!-- Bottom Content Details -->
+          <div class="relative z-10 space-y-2.5 pt-20">
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
+              <span>10.5 ft Tallest in Asia</span>
+            </div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
+                Nadungamuwa Raja
+              </h3>
+              <span class="text-xs text-secondary font-medium">නැදුන්ගමුවේ රාජා</span>
+            </div>
+            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
+              Declared a National Cultural Treasure. The 10.5-foot tusker walked 90km on foot from Gampaha to Kandy under military honor escort to carry the Sacred Tooth Relic casket.
+            </p>
+            <div class="pt-1">
+              <a href="famous-elephants.html?id=nadungamuwa-raja" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold group/link">
+                <span>Read Biography Dossier</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- 4. Mahasen of Minneriya (Living Wild Monarch) -->
-        <div class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between group hover:bg-surface-container/90 transition-all border border-emerald-900/30">
-          <div>
-            <div class="relative h-56 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/mahasen-wild-tusker.jpg" alt="Mahasen of Minneriya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>LIVING WILD MONARCH</span>
-              </div>
-              <div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[10px] text-on-surface font-semibold">
-                Minneriya Gathering
-              </div>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <h3 class="text-lg font-bold text-primary group-hover:text-secondary-fixed transition-colors">
-                  Mahasen of Minneriya
-                </h3>
-                <span class="text-xs text-secondary">මින්නේරියේ මහසෙන්</span>
-              </div>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Dominant wild bull of the great Minneriya Gathering with majestic 6+ foot tusks. Named after King Mahasen, he roams the central tank cascades as an iconic wild patriarch.
-              </p>
-            </div>
+        <div class="relative rounded-2xl overflow-hidden min-h-[460px] flex flex-col justify-between p-6 group transition-all duration-300 border border-emerald-900/30 hover:border-emerald-700/60 shadow-xl">
+          <!-- Full-Bleed Background Image -->
+          <img src="assets/images/mahasen-wild-tusker.jpg" alt="Mahasen of Minneriya" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"/>
+          <!-- Cinematic Scrim Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/85 to-surface-container-lowest/30 group-hover:via-surface-container-lowest/70 transition-colors pointer-events-none"></div>
+
+          <!-- Top Status Pill -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/90 backdrop-blur-md text-emerald-300 font-semibold text-[10px] uppercase tracking-wider border border-emerald-800/40 whitespace-nowrap">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>LIVING WILD MONARCH</span>
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="conservation-news.html#famous-elephants" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>View Gathering Profile</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
+
+          <!-- Bottom Content Details -->
+          <div class="relative z-10 space-y-2.5 pt-20">
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-[10px] text-secondary font-semibold uppercase tracking-wider border border-white/10 w-fit whitespace-nowrap">
+              <span>Minneriya Gathering</span>
+            </div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-xl font-bold text-white group-hover:text-secondary-fixed transition-colors">
+                Mahasen of Minneriya
+              </h3>
+              <span class="text-xs text-secondary font-medium">මින්නේරියේ මහසෙන්</span>
+            </div>
+            <p class="text-xs text-on-surface/85 leading-relaxed line-clamp-3">
+              Dominant wild bull of the great Minneriya Gathering with majestic 6+ foot tusks. Named after King Mahasen, he roams the central tank cascades as an iconic wild patriarch.
+            </p>
+            <div class="pt-1">
+              <a href="famous-elephants.html?id=mahasen" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold group/link">
+                <span>View Gathering Profile</span>
+                <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ====================================================================
-         THE 8 GATEWAY CHAPTERS (Enriched with Authentic Elephant Photos)
+<!-- ====================================================================
+         PANORAMIC PHOTOGRAPHIC FEATURE: The Great Gathering at Minneriya
          ==================================================================== -->
-    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-        <div class="space-y-1 max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-secondary">
-            <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
-            <span class="text-[11px] uppercase tracking-[0.14em] font-semibold">Comprehensive Dossiers</span>
+    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+      <div class="relative rounded-3xl overflow-hidden bg-surface-container-lowest min-h-[460px] flex items-end p-6 sm:p-12">
+        <div class="absolute inset-0 z-0 bg-cover bg-center filter contrast-105" style="background-image: url('assets/images/sri-lanka-minneriya-herd.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+        
+        <div class="relative z-10 max-w-2xl space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/90 text-on-secondary-container text-[10px] font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span>ECOLOGICAL WONDER OF ASIA</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl text-primary tracking-tight font-light">The Eight Conservation Gateways</h2>
-          <p class="text-sm text-on-surface-variant">
-            Explore dedicated field research dossiers spanning biological monographs, declassified colonial archives, satellite corridor tracking, and community coexistence engineering.
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-tight">
+            The Great Gathering at <span class="text-secondary-fixed font-medium">Minneriya</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+            During the dry season from July to October, hundreds of wild Asian elephants congregate on the lush receding mudflats of the ancient Minneriya reservoir. It is recognized as one of the world's greatest wildlife spectacles.
           </p>
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a href="habitats-and-corridors.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold uppercase tracking-wider hover:bg-primary-container transition-all">
+              <span>Explore Habitats &amp; Migration Maps</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+            <a href="data-and-analytics.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high/90 text-on-surface text-xs font-semibold uppercase tracking-wider hover:text-secondary-fixed transition-all">
+              <span>View Gathering Census Data</span>
+            </a>
+          </div>
         </div>
-        <div class="shrink-0">
-          <a href="data-and-analytics.html#repository" class="inline-flex items-center gap-1 text-xs font-semibold text-secondary-fixed hover:underline">
-            <span>Explore Open Datasets</span>
-            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Grid of 8 Cards with Photographic Previews -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Gateway 1: Species Profile -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-elephant-male-portrait.jpg" alt="Species Profile elephant portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">01 &bull; Taxonomy</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">pets</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">Species Profile</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Anatomy of Elephas maximus maximus, evolutionary depigmentation markers, acoustic communication, and keystone ecological roles.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">Anatomy &bull; Genetics</span>
-            <a href="species-profile.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>View Monograph</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 2: Heritage & Culture -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-tusker-nadungamuwa-raja.jpg" alt="Nadungamuwa Raja sacred tusker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">02 &bull; Heritage</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">temple_buddhist</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">Heritage &amp; Culture</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                2,500 years of reverence in Sinhala chronicles, royal war stables, Esala Perahera relic caskets, and legendary tusker lineages.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">History &bull; Lineage</span>
-            <a href="heritage-and-culture.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>View Chronicle</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 3: Colonial Archive -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/history-elephant.jpg" alt="Colonial archive highland history" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter sepia-[0.25]"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-error text-[10px] uppercase font-semibold tracking-wider">03 &bull; Investigation</span>
-                <span class="material-symbols-outlined text-error text-[20px]">history_edu</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-error transition-colors">Colonial Archive</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Declassified 1796–1948 records of British bounty hunting, montane rain forest clearings for tea, and systematic highland extermination.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">1848 Enclosure Ledger</span>
-            <a href="colonial-archive.html" class="inline-flex items-center gap-1 text-xs text-error hover:underline font-semibold">
-              <span>Open Archive</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 4: Habitats & Corridors -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/habitats-elephant.jpg" alt="Elephant migration corridor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">04 &bull; Spatial GIS</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">alt_route</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">Habitats &amp; Corridors</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Satellite telemetry across Minneriya, Kaudulla, Yala, Udawalawe, and critical migratory bottlenecks intersecting railway lines.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">Telemetry &bull; Corridors</span>
-            <a href="habitats-and-corridors.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>Track Corridors</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 5: Welfare & Care -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-elephant-mother-calf.jpg" alt="Wild elephant ethology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">05 &bull; Ethology</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">health_and_safety</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">Welfare &amp; Care</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Ethological comparison of free-ranging wild herds versus captive management, Pinnawala Orphanage, and ETH Udawalawe rewilding.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">Welfare Science</span>
-            <a href="welfare-and-care.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>Ethology Audit</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 6: Data & Analytics -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-minneriya-herd.jpg" alt="Minneriya gathering dataset census" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">06 &bull; Empirical</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">analytics</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">Data &amp; Analytics</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Population demographics from 1800 to 2026, mortality cause breakdowns, regional incident densities, and open research data downloads.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">CSV &bull; GEOJSON &bull; API</span>
-            <a href="data-and-analytics.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>View Data</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 7: HEC Portal -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-elephant-udawalawe.jpg" alt="Human elephant coexistence buffer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">07 &bull; Coexistence</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">fence</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">HEC Coexistence</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Empirical mitigation of Human-Elephant Conflict, community-managed seasonal electric fences, early warning telemetry, and crop insurance.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">Mitigation Matrix</span>
-            <a href="human-elephant-conflict.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>HEC Portal</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Gateway 8: News Wire -->
-        <article class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl overflow-hidden flex flex-col justify-between hover:bg-surface-container/90 transition-all group">
-          <div>
-            <div class="h-44 w-full overflow-hidden bg-surface-container-high">
-              <img src="assets/images/sri-lanka-elephant-wild-herd.jpg" alt="Wild elephant conservation news" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            </div>
-            <div class="p-5 space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] uppercase font-semibold tracking-wider">08 &bull; Intelligence</span>
-                <span class="material-symbols-outlined text-secondary text-[20px]">rss_feed</span>
-              </div>
-              <h3 class="text-lg font-semibold text-primary group-hover:text-secondary-fixed transition-colors">Conservation News</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Live field dispatches, DWC bulletins, veterinary rescue updates, legal precedents, and ranger telemetry intelligence across Sri Lanka.
-              </p>
-            </div>
-          </div>
-          <div class="p-5 pt-0 flex items-center justify-between">
-            <span class="text-[11px] text-outline">Live Wire Synced</span>
-            <a href="conservation-news.html" class="inline-flex items-center gap-1 text-xs text-secondary hover:text-secondary-fixed font-semibold">
-              <span>Read News</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-        </article>
-
       </div>
     </section>
 
@@ -864,7 +670,7 @@
          Two Paths. One Future for Sri Lanka's Elephants.
          ==================================================================== -->
     <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full" id="elephant-orphanages-spotlight">
-      <div class="bg-gradient-to-b from-surface-container/80 to-surface-container-low/90 backdrop-blur-2xl rounded-3xl p-8 sm:p-12 space-y-8">
+      <div class="space-y-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div class="space-y-2 max-w-3xl">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">
@@ -940,38 +746,6 @@
       </div>
     </section>
 
-    <!-- ====================================================================
-         PANORAMIC PHOTOGRAPHIC FEATURE: The Great Gathering at Minneriya
-         ==================================================================== -->
-    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
-      <div class="relative rounded-3xl overflow-hidden bg-surface-container-lowest min-h-[460px] flex items-end p-6 sm:p-12">
-        <div class="absolute inset-0 z-0 bg-cover bg-center filter contrast-105" style="background-image: url('assets/images/sri-lanka-minneriya-herd.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
-        
-        <div class="relative z-10 max-w-2xl space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/90 text-on-secondary-container text-[10px] font-semibold uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-            <span>ECOLOGICAL WONDER OF ASIA</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-primary tracking-tight leading-tight">
-            The Great Gathering at <span class="text-secondary-fixed font-medium">Minneriya</span>
-          </h2>
-          <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-            During the dry season from July to October, hundreds of wild Asian elephants congregate on the lush receding mudflats of the ancient Minneriya reservoir. It is recognized as one of the world's greatest wildlife spectacles.
-          </p>
-          <div class="pt-2 flex flex-wrap items-center gap-3">
-            <a href="habitats-and-corridors.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold uppercase tracking-wider hover:bg-primary-container transition-all">
-              <span>Explore Habitats &amp; Migration Maps</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <a href="data-and-analytics.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high/90 text-on-surface text-xs font-semibold uppercase tracking-wider hover:text-secondary-fixed transition-all">
-              <span>View Gathering Census Data</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- SECTION: Scientific Realities vs Myths Comparison -->
     <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
       <div class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl p-space-lg">
@@ -985,45 +759,57 @@
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-          <!-- Item 1 -->
-          <div class="bg-surface-container-low/80 rounded-2xl p-space-md space-y-space-xs">
-            <div class="flex items-center gap-2 text-error font-semibold text-sm">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-              <span>Myth: Park Fencing Works</span>
-            </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Believing that wild elephants can be permanently penned inside national park boundaries using perimeter electric fences.
-            </p>
-            <div class="pt-2 text-secondary-fixed text-xs leading-relaxed">
-              <strong class="font-semibold text-secondary">Ecological Reality:</strong> 70% of wild elephant range in Sri Lanka falls outside protected parks. Fences must protect villages and cultivation, while leaving natural corridors open.
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="bg-surface-container-low/80 rounded-2xl p-space-md space-y-space-xs">
-            <div class="flex items-center gap-2 text-error font-semibold text-sm">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-              <span>Myth: All Bulls Have Tusks</span>
-            </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Assuming that male Sri Lankan elephants universally grow elongated ivory tusks like African elephants or Indian counterparts.
-            </p>
-            <div class="pt-2 text-secondary-fixed text-xs leading-relaxed">
-              <strong class="font-semibold text-secondary">Ecological Reality:</strong> Less than 2.5% of Sri Lankan bulls carry tusks (Ath-Dhal). Over 97% are naturally tuskless tush-bearing bulls (Aliya), an evolutionary hallmark.
+          <!-- Myth 1: Park Fencing Works -->
+          <div class="group relative rounded-2xl overflow-hidden bg-surface-container-low/80 border border-white/5 hover:border-secondary/40 shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openMythLightbox('assets/images/Myth vs Reality_ Park Fencing Works.png', 'Myth vs Reality: Park Fencing Works')">
+              <img 
+                src="assets/images/Myth vs Reality_ Park Fencing Works.png" 
+                alt="Infographic: Myth vs Reality - Park Fencing Works. 70% of wild elephant range in Sri Lanka falls outside protected parks." 
+                class="w-full h-auto aspect-[3/2] object-cover group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-xs font-semibold text-white shadow-xl border border-white/10">
+                  <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                  <span>View Full Infographic</span>
+                </span>
+              </div>
             </div>
           </div>
 
-          <!-- Item 3 -->
-          <div class="bg-surface-container-low/80 rounded-2xl p-space-md space-y-space-xs">
-            <div class="flex items-center gap-2 text-error font-semibold text-sm">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-              <span>Myth: Captivity Equals Safety</span>
+          <!-- Myth 2: All Bulls Have Tusks -->
+          <div class="group relative rounded-2xl overflow-hidden bg-surface-container-low/80 border border-white/5 hover:border-secondary/40 shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openMythLightbox('assets/images/Sri Lankan Elephant Tusks_ Myth vs Reality.png', 'Myth vs Reality: Sri Lankan Elephant Tusks')">
+              <img 
+                src="assets/images/Sri Lankan Elephant Tusks_ Myth vs Reality.png" 
+                alt="Infographic: Myth vs Reality - Sri Lankan Elephant Tusks. Less than 2.5% of Sri Lankan bulls carry tusks (Ath-Dhal); over 97% are naturally tuskless Aliya." 
+                class="w-full h-auto aspect-[3/2] object-cover group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-xs font-semibold text-white shadow-xl border border-white/10">
+                  <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                  <span>View Full Infographic</span>
+                </span>
+              </div>
             </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Believing that captive shelter and tethering offer a humane alternative to the harsh dry-zone wild environment.
-            </p>
-            <div class="pt-2 text-secondary-fixed text-xs leading-relaxed">
-              <strong class="font-semibold text-secondary">Ecological Reality:</strong> Wild herds roam 10–20 km daily with complex matrilineal social bonds. Captive tethering causes chronic stereotypic pacing, foot rot, and social trauma.
+          </div>
+
+          <!-- Myth 3: Captivity Equals Safety -->
+          <div class="group relative rounded-2xl overflow-hidden bg-surface-container-low/80 border border-white/5 hover:border-secondary/40 shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openMythLightbox('assets/images/Myth vs Reality_ Captivity Equals Safety.png', 'Myth vs Reality: Captivity Equals Safety')">
+              <img 
+                src="assets/images/Myth vs Reality_ Captivity Equals Safety.png" 
+                alt="Infographic: Myth vs Reality - Captivity Equals Safety. Wild herds roam 10–20 km daily while captive tethering causes severe foot rot and trauma." 
+                class="w-full h-auto aspect-[3/2] object-cover group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-xs font-semibold text-white shadow-xl border border-white/10">
+                  <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                  <span>View Full Infographic</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -1067,7 +853,7 @@
 <!-- Unified Footer -->
 <footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl">
   <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
-    <div class="bg-surface-container/60 backdrop-blur-xl rounded-2xl p-space-lg mb-space-xl">
+    <div class="mb-space-xl">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg">
         <div class="lg:col-span-2 space-y-space-sm">
           <a href="index.html" class="flex items-center gap-space-sm text-decoration-none group">
@@ -1147,7 +933,77 @@
     }
   })();
 </script>
+  <!-- Infographic Lightbox Modal -->
+  <div id="myth-lightbox-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true">
+    <div id="myth-lightbox-backdrop" class="fixed inset-0 bg-transparent cursor-pointer"></div>
+    <div class="relative max-w-5xl w-full my-auto flex flex-col items-center z-10" onclick="event.stopPropagation()">
+      <div class="w-full flex justify-between items-center px-3 py-2 mb-2 bg-surface-container/90 backdrop-blur-md rounded-xl border border-white/10">
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+          <span id="myth-lightbox-caption" class="text-xs sm:text-sm font-medium text-white tracking-wide truncate"></span>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a id="myth-lightbox-download" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-high text-on-surface hover:text-secondary-fixed transition-colors text-xs font-medium" title="Open full-resolution image in new tab">
+            <span>High-Res</span>
+            <span class="material-symbols-outlined text-[15px]">open_in_new</span>
+          </a>
+          <button type="button" onclick="closeMythLightbox()" class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high hover:bg-rose-950/80 text-on-surface hover:text-rose-300 transition-colors" aria-label="Close modal">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="w-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/60 border border-white/10 shadow-2xl">
+        <img id="myth-lightbox-img" src="" alt="" class="max-h-[82vh] w-auto max-w-full object-contain rounded-xl"/>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openMythLightbox(src, caption) {
+      const modal = document.getElementById('myth-lightbox-modal');
+      const img = document.getElementById('myth-lightbox-img');
+      const captionEl = document.getElementById('myth-lightbox-caption');
+      const dlBtn = document.getElementById('myth-lightbox-download');
+      if (modal && img) {
+        img.src = src;
+        img.alt = caption || 'Infographic';
+        if (captionEl) captionEl.textContent = caption || 'Ecological Monograph Infographic';
+        if (dlBtn) dlBtn.href = src;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        requestAnimationFrame(() => {
+          modal.classList.remove('opacity-0');
+          modal.classList.add('opacity-100');
+        });
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMythLightbox() {
+      const modal = document.getElementById('myth-lightbox-modal');
+      if (modal) {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }, 250);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const backdrop = document.getElementById('myth-lightbox-backdrop');
+      if (backdrop) {
+        backdrop.addEventListener('click', closeMythLightbox);
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMythLightbox();
+      });
+    });
+  </script>
   <script src="assets/js/dossier-data.js"></script>
   <script src="assets/js/dossier-modal.js"></script>
+  <script src="assets/js/counter.js"></script>
 </body>
 </html>

@@ -108,6 +108,7 @@
     const permalinkBtn = document.getElementById('modal-permalink-btn');
     if (permalinkBtn) {
       permalinkBtn.href = `dossier.html?id=${d.id}`;
+      permalinkBtn.onclick = (e) => e.stopPropagation();
     }
 
     const counter = document.getElementById('modal-counter');
@@ -268,7 +269,7 @@
             <p class="font-body-sm text-xs text-on-surface-variant">Access the complete monograph with downloadable citation and maps on the dedicated dossier page.</p>
           </div>
         </div>
-        <a href="dossier.html?id=${d.id}" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-data text-xs font-semibold hover:bg-primary-hover transition-colors whitespace-nowrap">
+        <a href="dossier.html?id=${d.id}" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-data text-xs font-semibold hover:bg-primary-hover transition-colors whitespace-nowrap">
           Open Standalone Monograph &rarr;
         </a>
       </div>
@@ -308,7 +309,11 @@
 
     // Update URL hash cleanly without jitter
     if (window.location.hash !== `#${elephantId}`) {
-      history.replaceState(null, '', `#${elephantId}`);
+      try {
+        history.replaceState(null, '', `#${elephantId}`);
+      } catch (e) {
+        // Fallback for file:// or restricted environments
+      }
     }
   }
 
@@ -327,7 +332,11 @@
       currentDossierId = null;
       // Remove hash if closing
       if (window.location.hash && dossierKeys.includes(window.location.hash.substring(1))) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
+        try {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        } catch (e) {
+          // Fallback
+        }
       }
     }, 250);
   }
@@ -344,6 +353,12 @@
   // Intercept click on links or elements with data-dossier-id or matching hash
   function setupDossierTriggers() {
     document.addEventListener('click', function (e) {
+      // NEVER intercept clicks originating inside the modal itself!
+      // This allows the "Full Page" button and "Open Standalone Monograph" link to navigate out to dossier.html
+      if (e.target.closest('#gaja-dossier-modal')) {
+        return;
+      }
+
       const trigger = e.target.closest('[data-dossier-id], a[href*="#kawanthissa"], a[href*="#agbo-thirappane"], a[href*="#mahasen"], a[href*="#dala-poottuwa"], a[href*="#nadungamuwa-raja"], a[href*="#maligawa-raja"], a[href*="#indi-raja"], a[href*="#millangoda-raja"], a[href*="#wasana-kataragama"], a[href*="#heiyantuduwa-raja"], a[href*="dossier.html?id="]');
       
       if (!trigger) return;

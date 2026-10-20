@@ -159,9 +159,6 @@ function generateHeader(activePath) {
     <!-- Right Actions -->
     <div class="flex items-center gap-2 shrink-0">
       <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" data-path="data-and-analytics" href="data-and-analytics.html#repository">Open Data</a>
-      <a href="species-profile.html" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-secondary-fixed hover:text-on-secondary-fixed text-secondary flex items-center justify-center transition-colors" title="Species Monograph">
-        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 6 4.3 5 6.8 3.2 7.2 2 8.8 2 11c0 2.2 1.3 3.8 3.1 4.3.3 1.7 1.3 3.2 2.9 3.9v2.8h2V19.8c.6.1 1.3.2 2 .2s1.4-.1 2-.2v2.2h2v-2.8c1.6-.7 2.6-2.2 2.9-3.9 1.8-.5 3.1-2.1 3.1-4.3 0-2.2-1.2-3.8-3-4.2C18 4.3 15.5 2 12 2zm-3.5 7.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm7 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-3.5 2c.83 0 1.5.67 1.5 1.5v3.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V13c0-.83.67-1.5 1.5-1.5z"/></svg>
-      </a>
       <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface cursor-pointer rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">
         <span class="material-symbols-outlined text-[22px]">menu</span>
       </button>

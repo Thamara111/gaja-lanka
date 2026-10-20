@@ -22,6 +22,7 @@ const NAV_ITEMS = [
   },
   { path: 'data-and-analytics', label: 'Data & Analytics', href: 'data-and-analytics.html' },
   { path: 'human-elephant-conflict', label: 'HEC Portal', href: 'human-elephant-conflict.html' },
+  { path: 'famous-elephants', label: 'Famous Elephants', href: 'famous-elephants.html' },
   { path: 'conservation-news', label: 'News', href: 'conservation-news.html' }
 ];
 
@@ -141,9 +142,6 @@ function generateCleanHeader(activePath) {
     <!-- Right Actions -->
     <div class="flex items-center gap-2 shrink-0">
       <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" data-path="data-and-analytics" href="data-and-analytics.html#repository">Open Data</a>
-      <a href="species-profile.html" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-secondary-fixed hover:text-on-secondary-fixed text-secondary flex items-center justify-center transition-colors" title="Species Monograph">
-        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 6 4.3 5 6.8 3.2 7.2 2 8.8 2 11c0 2.2 1.3 3.8 3.1 4.3.3 1.7 1.3 3.2 2.9 3.9v2.8h2V19.8c.6.1 1.3.2 2 .2s1.4-.1 2-.2v2.2h2v-2.8c1.6-.7 2.6-2.2 2.9-3.9 1.8-.5 3.1-2.1 3.1-4.3 0-2.2-1.2-3.8-3-4.2C18 4.3 15.5 2 12 2zm-3.5 7.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm7 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-3.5 2c.83 0 1.5.67 1.5 1.5v3.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V13c0-.83.67-1.5 1.5-1.5z"/></svg>
-      </a>
       <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface cursor-pointer rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">
         <span class="material-symbols-outlined text-[22px]">menu</span>
       </button>
@@ -166,7 +164,7 @@ function generateCleanHeader(activePath) {
 // Unified footer: NO BORDERS, NO SHADOWS
 function generateCleanFooter() {
   return `<footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl">
-  <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
     <div class="bg-surface-container/60 backdrop-blur-xl rounded-2xl p-space-lg mb-space-xl">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg">
         <div class="lg:col-span-2 space-y-space-sm">
@@ -346,6 +344,7 @@ const GLOBAL_SCRIPT = `
     }
   })();
 </script>
+<script src="assets/js/counter.js"></script>
 </body>`;
 
 const PAGES_CONFIG = [
@@ -524,7 +523,7 @@ ${generateCleanHeader('home')}
       <div class="absolute -top-32 right-1/4 w-[600px] h-[600px] rounded-full bg-secondary-fixed/5 blur-3xl pointer-events-none"></div>
       <div class="absolute bottom-0 left-10 w-[500px] h-[500px] rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
 
-      <div class="relative z-10 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-space-lg">
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-space-lg">
         <!-- Top Status Pill -->
         <div class="flex flex-wrap items-center justify-between gap-space-sm">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/90 text-secondary backdrop-blur-md">
@@ -581,7 +580,7 @@ ${generateCleanHeader('home')}
               <span class="text-[11px] uppercase tracking-wider text-secondary font-semibold">Wild Population</span>
               <span class="material-symbols-outlined text-[18px] text-secondary">monitoring</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-primary font-light">~7,451</div>
+            <div class="text-3xl sm:text-4xl text-primary font-light counter-value" data-counter="7451" data-prefix="~" data-format="comma">~7,451</div>
             <span class="text-xs text-on-surface-variant mt-1">2026 islandwide range audit</span>
           </div>
 
@@ -590,7 +589,7 @@ ${generateCleanHeader('home')}
               <span class="text-[11px] uppercase tracking-wider text-secondary font-semibold">Tusked Males (Ath-Dhal)</span>
               <span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-secondary-fixed font-light">&lt; 2.5%</div>
+            <div class="text-3xl sm:text-4xl text-secondary-fixed font-light counter-value" data-counter="2.5" data-prefix="&lt; " data-suffix="%" data-decimals="1">&lt; 2.5%</div>
             <span class="text-xs text-on-surface-variant mt-1">Rare evolutionary gene pool</span>
           </div>
 
@@ -599,7 +598,7 @@ ${generateCleanHeader('home')}
               <span class="text-[11px] uppercase tracking-wider text-secondary font-semibold">The Great Gathering</span>
               <span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-primary font-light">350+</div>
+            <div class="text-3xl sm:text-4xl text-primary font-light counter-value" data-counter="350" data-suffix="+">350+</div>
             <span class="text-xs text-on-surface-variant mt-1">Minneriya dry-season congregation</span>
           </div>
 
@@ -608,7 +607,7 @@ ${generateCleanHeader('home')}
               <span class="text-[11px] uppercase tracking-wider text-error font-semibold">Annual Casualties</span>
               <span class="material-symbols-outlined text-[18px] text-error">warning</span>
             </div>
-            <div class="text-3xl sm:text-4xl text-error font-light">~400+</div>
+            <div class="text-3xl sm:text-4xl text-error font-light counter-value" data-counter="400" data-prefix="~" data-suffix="+">~400+</div>
             <span class="text-xs text-on-surface-variant mt-1">Human-Elephant Conflict priority</span>
           </div>
         </div>
@@ -617,7 +616,7 @@ ${generateCleanHeader('home')}
     </section>
 
     <!-- SECTION: The 8 Gateway Chapters (Pillars of Gaja Lanka) -->
-    <section class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl w-full">
+    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl w-full">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
         <div class="space-y-space-xs max-w-2xl">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-secondary">
@@ -828,7 +827,7 @@ ${generateCleanHeader('home')}
     </section>
 
     <!-- SECTION: Scientific Realities vs Myths Comparison -->
-    <section class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl w-full">
+    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl w-full">
       <div class="bg-surface-container/70 backdrop-blur-2xl rounded-2xl p-space-lg">
         <div class="flex items-center gap-2 mb-2">
           <span class="text-[11px] uppercase tracking-[0.14em] text-secondary font-semibold">Scientific Epistemic Baseline</span>
@@ -840,45 +839,57 @@ ${generateCleanHeader('home')}
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-          <!-- Item 1 -->
-          <div class="bg-surface-container-low/80 rounded-2xl p-space-md space-y-space-xs">
-            <div class="flex items-center gap-2 text-error font-semibold text-sm">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-              <span>Myth: Park Fencing Works</span>
-            </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Believing that wild elephants can be permanently penned inside national park boundaries using perimeter electric fences.
-            </p>
-            <div class="pt-2 text-secondary-fixed text-xs leading-relaxed">
-              <strong class="font-semibold text-secondary">Ecological Reality:</strong> 70% of wild elephant range in Sri Lanka falls outside protected parks. Fences must protect villages and cultivation, while leaving natural corridors open.
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="bg-surface-container-low/80 rounded-2xl p-space-md space-y-space-xs">
-            <div class="flex items-center gap-2 text-error font-semibold text-sm">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-              <span>Myth: All Bulls Have Tusks</span>
-            </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Assuming that male Sri Lankan elephants universally grow elongated ivory tusks like African elephants or Indian counterparts.
-            </p>
-            <div class="pt-2 text-secondary-fixed text-xs leading-relaxed">
-              <strong class="font-semibold text-secondary">Ecological Reality:</strong> Less than 2.5% of Sri Lankan bulls carry tusks (Ath-Dhal). Over 97% are naturally tuskless tush-bearing bulls (Aliya), an evolutionary hallmark.
+          <!-- Myth 1: Park Fencing Works -->
+          <div class="group relative rounded-2xl overflow-hidden bg-surface-container-low/80 border border-white/5 hover:border-secondary/40 shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openMythLightbox('assets/images/Myth vs Reality_ Park Fencing Works.png', 'Myth vs Reality: Park Fencing Works')">
+              <img 
+                src="assets/images/Myth vs Reality_ Park Fencing Works.png" 
+                alt="Infographic: Myth vs Reality - Park Fencing Works. 70% of wild elephant range in Sri Lanka falls outside protected parks." 
+                class="w-full h-auto aspect-[3/2] object-cover group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-xs font-semibold text-white shadow-xl border border-white/10">
+                  <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                  <span>View Full Infographic</span>
+                </span>
+              </div>
             </div>
           </div>
 
-          <!-- Item 3 -->
-          <div class="bg-surface-container-low/80 rounded-2xl p-space-md space-y-space-xs">
-            <div class="flex items-center gap-2 text-error font-semibold text-sm">
-              <span class="material-symbols-outlined text-[20px]">cancel</span>
-              <span>Myth: Captivity Equals Safety</span>
+          <!-- Myth 2: All Bulls Have Tusks -->
+          <div class="group relative rounded-2xl overflow-hidden bg-surface-container-low/80 border border-white/5 hover:border-secondary/40 shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openMythLightbox('assets/images/Sri Lankan Elephant Tusks_ Myth vs Reality.png', 'Myth vs Reality: Sri Lankan Elephant Tusks')">
+              <img 
+                src="assets/images/Sri Lankan Elephant Tusks_ Myth vs Reality.png" 
+                alt="Infographic: Myth vs Reality - Sri Lankan Elephant Tusks. Less than 2.5% of Sri Lankan bulls carry tusks (Ath-Dhal); over 97% are naturally tuskless Aliya." 
+                class="w-full h-auto aspect-[3/2] object-cover group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-xs font-semibold text-white shadow-xl border border-white/10">
+                  <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                  <span>View Full Infographic</span>
+                </span>
+              </div>
             </div>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Believing that captive shelter and tethering offer a humane alternative to the harsh dry-zone wild environment.
-            </p>
-            <div class="pt-2 text-secondary-fixed text-xs leading-relaxed">
-              <strong class="font-semibold text-secondary">Ecological Reality:</strong> Wild herds roam 10–20 km daily with complex matrilineal social bonds. Captive tethering causes chronic stereotypic pacing, foot rot, and social trauma.
+          </div>
+
+          <!-- Myth 3: Captivity Equals Safety -->
+          <div class="group relative rounded-2xl overflow-hidden bg-surface-container-low/80 border border-white/5 hover:border-secondary/40 shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="relative overflow-hidden cursor-pointer" onclick="openMythLightbox('assets/images/Myth vs Reality_ Captivity Equals Safety.png', 'Myth vs Reality: Captivity Equals Safety')">
+              <img 
+                src="assets/images/Myth vs Reality_ Captivity Equals Safety.png" 
+                alt="Infographic: Myth vs Reality - Captivity Equals Safety. Wild herds roam 10–20 km daily while captive tethering causes severe foot rot and trauma." 
+                class="w-full h-auto aspect-[3/2] object-cover group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur-md text-xs font-semibold text-white shadow-xl border border-white/10">
+                  <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                  <span>View Full Infographic</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -886,7 +897,7 @@ ${generateCleanHeader('home')}
     </section>
 
     <!-- SECTION: Open Data Repository & Download Hub Banner -->
-    <section class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-space-xl w-full">
+    <section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-space-xl w-full">
       <div class="bg-gradient-to-r from-surface-container-high/90 via-surface-container/95 to-surface-container-low/90 rounded-2xl p-space-lg flex flex-col lg:flex-row items-center justify-between gap-space-lg">
         <div class="space-y-space-xs max-w-2xl text-center lg:text-left">
           <div class="flex items-center justify-center lg:justify-start gap-2">
@@ -921,6 +932,78 @@ ${generateCleanHeader('home')}
 
 ${generateCleanFooter()}
 
+  <!-- Infographic Lightbox Modal -->
+  <div id="myth-lightbox-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true">
+    <div id="myth-lightbox-backdrop" class="fixed inset-0 bg-transparent cursor-pointer"></div>
+    <div class="relative max-w-5xl w-full my-auto flex flex-col items-center z-10" onclick="event.stopPropagation()">
+      <div class="w-full flex justify-between items-center px-3 py-2 mb-2 bg-surface-container/90 backdrop-blur-md rounded-xl border border-white/10">
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+          <span id="myth-lightbox-caption" class="text-xs sm:text-sm font-medium text-white tracking-wide truncate"></span>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a id="myth-lightbox-download" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-high text-on-surface hover:text-secondary-fixed transition-colors text-xs font-medium" title="Open full-resolution image in new tab">
+            <span>High-Res</span>
+            <span class="material-symbols-outlined text-[15px]">open_in_new</span>
+          </a>
+          <button type="button" onclick="closeMythLightbox()" class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high hover:bg-rose-950/80 text-on-surface hover:text-rose-300 transition-colors" aria-label="Close modal">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+      <div class="w-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/60 border border-white/10 shadow-2xl">
+        <img id="myth-lightbox-img" src="" alt="" class="max-h-[82vh] w-auto max-w-full object-contain rounded-xl"/>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openMythLightbox(src, caption) {
+      const modal = document.getElementById('myth-lightbox-modal');
+      const img = document.getElementById('myth-lightbox-img');
+      const captionEl = document.getElementById('myth-lightbox-caption');
+      const dlBtn = document.getElementById('myth-lightbox-download');
+      if (modal && img) {
+        img.src = src;
+        img.alt = caption || 'Infographic';
+        if (captionEl) captionEl.textContent = caption || 'Ecological Monograph Infographic';
+        if (dlBtn) dlBtn.href = src;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        requestAnimationFrame(() => {
+          modal.classList.remove('opacity-0');
+          modal.classList.add('opacity-100');
+        });
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMythLightbox() {
+      const modal = document.getElementById('myth-lightbox-modal');
+      if (modal) {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }, 250);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const backdrop = document.getElementById('myth-lightbox-backdrop');
+      if (backdrop) {
+        backdrop.addEventListener('click', closeMythLightbox);
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMythLightbox();
+      });
+    });
+  </script>
+  <script src="assets/js/dossier-data.js"></script>
+  <script src="assets/js/dossier-modal.js"></script>
+  <script src="assets/js/counter.js"></script>
 ${GLOBAL_SCRIPT}
 </html>`;
 
@@ -929,6 +1012,11 @@ ${GLOBAL_SCRIPT}
 }
 
 processAllSubpages();
-require('./enrich_site_images.js');
-require('./enrich_all_site_imagery.js');
+try {
+  require('./enrich_site_images.js');
+} catch (e) {}
+try {
+  require('./enrich_all_site_imagery.js');
+} catch (e) {}
 console.log('Build pipeline complete: All pages generated and enriched with authentic elephant imagery.');
+

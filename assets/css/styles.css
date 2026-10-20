@@ -115,3 +115,19 @@ input:focus, textarea:focus, select:focus {
 nav a {
   white-space: nowrap !important;
 }
+
+/* Number Counter Telemetry Animation */
+.counter-value,
+[data-counter],
+[data-count] {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+/* Progress Bar Telemetry Animation */
+.progress-bar-fill,
+[data-progress] {
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: width;
+}
+

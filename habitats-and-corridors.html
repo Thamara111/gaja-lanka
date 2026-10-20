@@ -149,9 +149,6 @@
     <!-- Right Actions -->
     <div class="flex items-center gap-2 shrink-0">
       <a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs uppercase tracking-wider font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all whitespace-nowrap" data-path="data-and-analytics" href="data-and-analytics.html#repository">Open Data</a>
-      <a href="species-profile.html" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-secondary-fixed hover:text-on-secondary-fixed text-secondary flex items-center justify-center transition-colors" title="Species Monograph">
-        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 6 4.3 5 6.8 3.2 7.2 2 8.8 2 11c0 2.2 1.3 3.8 3.1 4.3.3 1.7 1.3 3.2 2.9 3.9v2.8h2V19.8c.6.1 1.3.2 2 .2s1.4-.1 2-.2v2.2h2v-2.8c1.6-.7 2.6-2.2 2.9-3.9 1.8-.5 3.1-2.1 3.1-4.3 0-2.2-1.2-3.8-3-4.2C18 4.3 15.5 2 12 2zm-3.5 7.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm7 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-3.5 2c.83 0 1.5.67 1.5 1.5v3.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V13c0-.83.67-1.5 1.5-1.5z"/></svg>
-      </a>
       <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="xl:hidden p-2 text-on-surface-variant hover:text-on-surface cursor-pointer rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" type="button">
         <span class="material-symbols-outlined text-[22px]">menu</span>
       </button>
@@ -213,7 +210,7 @@
 <!-- Atmospheric Ambient Lighting & Topographic Silhouette -->
 <div class="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_30%_20%,_rgba(172,211,124,0.18),transparent_65%)]"></div>
 <div class="absolute -right-24 top-1/4 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
-<div class="relative z-10 max-w-[1440px] mx-auto px-margin">
+<div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 <!-- Specimen Meta Bar -->
 <div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
 <div class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-high text-secondary font-label-editorial text-label-editorial uppercase tracking-wider">
@@ -284,7 +281,7 @@
 </section>
 <!-- Section 1: The Great Gathering Monograph -->
 <section class="w-full py-space-xl bg-surface">
-<div class="max-w-[1440px] mx-auto px-margin">
+<div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 <!-- Section Tag -->
 <div class="flex items-center gap-space-xs mb-space-sm">
 <span class="font-label-editorial text-label-editorial uppercase tracking-widest text-secondary">Biological Phenomenon 01</span>
@@ -394,7 +391,7 @@
 </section>
 <!-- Section 2: Interactive Conservation Geography Map Interface -->
 <section class="w-full py-space-xl bg-surface-container-lowest">
-<div class="max-w-[1440px] mx-auto px-margin">
+<div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 <!-- Section Header -->
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
 <div>
@@ -630,7 +627,7 @@
 </section>
 <!-- Section 3: Protected Area Dossiers (Asymmetric Grid) -->
 <section class="w-full py-space-xl bg-surface">
-<div class="max-w-[1440px] mx-auto px-margin space-y-space-xl">
+<div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-space-xl">
 <!-- Section Header -->
 <div class="space-y-space-xs max-w-3xl">
 <span class="font-label-editorial text-label-editorial uppercase tracking-widest text-secondary">Sanctuary Profiles</span>
@@ -750,7 +747,7 @@
 </section>
 <!-- Section 4: Seasonal Movement & Climatic Cycles -->
 <section class="w-full py-space-xl bg-surface-container-lowest">
-<div class="max-w-[1440px] mx-auto px-margin">
+<div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
 <!-- Climate Logic Explanation (6 Cols) -->
 <div class="lg:col-span-6 space-y-space-md">
@@ -809,7 +806,7 @@
 <span class="text-secondary-fixed font-label-data">78% Intact</span>
 </div>
 <div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
-<div class="h-full bg-secondary rounded-full" style="width: 78%"></div>
+<div class="h-full bg-secondary rounded-full progress-bar-fill" data-progress="78%" style="width: 78%"></div>
 </div>
 <span class="text-outline font-label-data text-label-data">Riparian corridor preserved by DWC; minor sand-mining pressure along lower banks.</span>
 </div>
@@ -819,7 +816,7 @@
 <span class="text-secondary-fixed font-label-data">54% Intact</span>
 </div>
 <div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
-<div class="h-full bg-secondary-fixed-dim rounded-full" style="width: 54%"></div>
+<div class="h-full bg-secondary-fixed-dim rounded-full progress-bar-fill" data-progress="54%" style="width: 54%"></div>
 </div>
 <span class="text-outline font-label-data text-label-data">Pockets of chena cultivation create human-elephant conflict squeeze points.</span>
 </div>
@@ -829,7 +826,7 @@
 <span class="text-error font-label-data">32% Intact (Severely Fragmented)</span>
 </div>
 <div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
-<div class="h-full bg-error rounded-full" style="width: 32%"></div>
+<div class="h-full bg-error rounded-full progress-bar-fill" data-progress="32%" style="width: 32%"></div>
 </div>
 <span class="text-outline font-label-data text-label-data">Highway extensions and commercial banana plantations require designated underpasses.</span>
 </div>
@@ -839,7 +836,7 @@
 <span class="text-secondary-fixed font-label-data">68% Intact</span>
 </div>
 <div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
-<div class="h-full bg-secondary rounded-full" style="width: 68%"></div>
+<div class="h-full bg-secondary rounded-full progress-bar-fill" data-progress="68%" style="width: 68%"></div>
 </div>
 <span class="text-outline font-label-data text-label-data">Post-war northern regrowth allows herds to expand historically dormant ranges.</span>
 </div>
@@ -857,7 +854,7 @@
 </section>
 <!-- Section 5: Field Protocol: Responsible Wildlife Observation -->
 <section class="w-full py-space-xl bg-surface">
-<div class="max-w-[1440px] mx-auto px-margin space-y-space-lg">
+<div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 space-y-space-lg">
 <!-- Section Header -->
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
 <div class="space-y-space-xs">
@@ -1078,7 +1075,7 @@
     })();
   </script>
 </div></main><footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl">
-  <div class="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-space-xl">
     <div class="bg-surface-container/60 backdrop-blur-xl rounded-2xl p-space-lg mb-space-xl">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg">
         <div class="lg:col-span-2 space-y-space-sm">
@@ -1158,4 +1155,5 @@
     }
   })();
 </script>
+  <script src="assets/js/counter.js"></script>
 </body></html>
