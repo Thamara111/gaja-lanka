@@ -314,50 +314,7 @@
       </div>
     </section>
 
-    <!-- Deep-Dive Monograph Viewer Anchor Section -->
-    <section id="monograph-viewer" class="pt-10 space-y-6">
-      <div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
-        <div class="flex items-center gap-2.5">
-          <span class="material-symbols-outlined text-secondary text-2xl">menu_book</span>
-          <div>
-            <h2 class="text-xl sm:text-2xl font-bold text-primary tracking-tight">In-Depth Scientific Monograph &amp; Biometrics Register</h2>
-            <p class="text-xs text-on-surface-variant">Validated DWC morphometrics, historical timelines, and forensic necropsy reports</p>
-          </div>
-        </div>
-        <span class="text-xs text-secondary-fixed font-label-data hidden md:inline">Click any elephant pill below to switch</span>
-      </div>
-
-      <!-- Specimen Selector Pills Rail -->
-      <div id="elephant-rail-container" class="space-y-3">
-        <div id="elephant-rail" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-          <!-- Rendered by JS from all 68 specimens -->
-        </div>
-      </div>
-
-      <!-- Main Dynamic Monograph Card -->
-      <div id="dossier-root" class="space-y-8">
-        <!-- Injected via JavaScript from gaja-lanka-elephants-merged-researched.json -->
-      </div>
-
-      <!-- Bottom Prev / Next Bar -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-surface-container/60 backdrop-blur-md border border-white/5">
-        <button id="bottom-prev-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-data text-xs font-semibold transition-colors cursor-pointer">
-          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-          <span id="bottom-prev-label">Previous Elephant</span>
-        </button>
-
-        <a href="conservation-news.html" class="inline-flex items-center gap-1.5 text-secondary hover:text-secondary-fixed font-label-data text-xs font-semibold">
-          <span>Go to Conservation News Wire</span>
-          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-        </a>
-
-        <button id="bottom-next-btn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-data text-xs font-semibold transition-colors cursor-pointer">
-          <span id="bottom-next-label">Next Elephant</span>
-          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </button>
-      </div></section>
-
-  </main>
+    </main>
 
   <!-- Global Footer -->
   <!-- Unified Footer -->
@@ -470,10 +427,7 @@
         window.GAJA_LANKA_DOSSIERS = specimensById;
       }
 
-      const keys = specimens.map(s => s.id);
       const grid = document.getElementById('pantheon-grid');
-      const rail = document.getElementById('elephant-rail');
-      const root = document.getElementById('dossier-root');
       const counterEl = document.getElementById('pantheon-counter');
       const searchInput = document.getElementById('pantheon-search');
       const filterPills = document.querySelectorAll('#pantheon-filters .filter-pill');
@@ -571,11 +525,11 @@
                   ${excerpt}
                 </p>
                 <div class="pt-2 flex items-center justify-between gap-2">
-                  <button onclick="selectAndScrollDossier('${s.id}')" class="inline-flex items-center gap-1.5 text-xs text-secondary-fixed hover:text-white font-semibold group/link cursor-pointer">
-                    <span>Read Monograph</span>
+                  <button onclick="GajaDossierModal.open('${s.id}')" class="inline-flex items-center gap-1.5 text-xs text-secondary hover:text-secondary-fixed font-semibold group/link cursor-pointer">
+                    <span>View Monograph</span>
                     <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1">arrow_forward</span>
                   </button>
-                  <button onclick="GajaDossierModal.open('${s.id}')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Modal Briefing">
+                  <button onclick="GajaDossierModal.open('${s.id}')" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-on-surface-variant hover:text-white transition-colors cursor-pointer" title="Quick Briefing Modal">
                     <span class="material-symbols-outlined text-[16px]">visibility</span>
                   </button>
                 </div>
@@ -631,8 +585,8 @@
         });
       }
 
-      // Active Dossier ID Resolver
-      function getActiveId() {
+      // Check URL query param or hash to open modal automatically
+      function checkDeepLink() {
         let id = null;
         try {
           const urlParams = new URLSearchParams(window.location.search);
@@ -646,281 +600,16 @@
         if (!id && window.location.hash) {
           id = window.location.hash.replace('#', '').trim();
         }
-        if (!id || !specimensById[id]) {
-          id = 'agbo-thirappane';
+
+        if (id && specimensById[id] && typeof GajaDossierModal !== 'undefined') {
+          setTimeout(() => {
+            GajaDossierModal.open(id);
+          }, 200);
         }
-        return id;
       }
-
-      let activeId = getActiveId();
-
-      // Render Horizontal Rail of all 68 Elephants
-      function renderRail() {
-        if (!rail) return;
-        rail.innerHTML = keys.map(k => {
-          const d = specimensById[k];
-          if (!d) return '';
-          const isActive = k === activeId;
-          const theme = getCategoryTheme(d.category);
-          return `
-            <button onclick="switchDossier('${k}')" id="rail-pill-${k}" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-xl transition-all font-label-data text-xs cursor-pointer ${
-              isActive 
-                ? 'bg-secondary-fixed text-on-secondary-fixed font-bold shadow-lg scale-105' 
-                : 'bg-surface-container text-on-surface hover:bg-surface-container-high'
-            }">
-              <img src="${d.image}" alt="${d.name}" class="w-6 h-6 rounded-full object-cover">
-              <span class="whitespace-nowrap">${d.name.split(' (')[0]}</span>
-              <span class="text-[9px] px-1.5 py-0.2 rounded ${
-                isActive 
-                  ? 'bg-on-secondary-fixed/20 text-on-secondary-fixed' 
-                  : 'bg-black/40 text-on-surface-variant'
-              }">
-                ${theme.label}
-              </span>
-            </button>
-          `;
-        }).join('');
-
-        // Smooth scroll rail into active pill
-        setTimeout(() => {
-          const activePill = document.getElementById(`rail-pill-${activeId}`);
-          if (activePill && rail) {
-            activePill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-          }
-        }, 100);
-      }
-
-      // Render In-Depth Monograph
-      function renderMonograph(id) {
-        if (!root) return;
-        const d = specimensById[id];
-        if (!d) return;
-
-        document.title = `${d.name} • Most Famous Elephants of Sri Lanka | Gaja Lanka`;
-
-        const biometricsHtml = d.biometrics && d.biometrics.length > 0 ? `
-          <div class="bg-surface-container rounded-2xl p-6 sm:p-8 space-y-4 border border-white/5">
-            <div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
-              <h3 class="font-headline-sm text-lg text-primary font-semibold flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary">straighten</span>
-                Scientific Biometrics &amp; Physical Register
-              </h3>
-              <span class="font-label-data text-xs text-secondary-fixed bg-surface-container-high px-3 py-1 rounded-full">
-                DWC Standard Morphometry
-              </span>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              ${d.biometrics.map(b => `
-                <div class="p-4 rounded-xl bg-surface-container-low space-y-1">
-                  <span class="block text-[11px] font-label-editorial uppercase tracking-wider text-outline">${b.label}</span>
-                  <span class="font-headline-sm font-semibold text-primary text-base block">${b.value}</span>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        ` : '';
-
-        const narrativeHtml = d.narrative && d.narrative.length > 0 ? `
-          <div class="bg-surface-container rounded-2xl p-6 sm:p-8 space-y-4 border border-white/5">
-            <div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
-              <h3 class="font-headline-sm text-lg text-primary font-semibold flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary">menu_book</span>
-                Historical &amp; Field Ethological Narrative
-              </h3>
-              <span class="font-label-editorial text-xs uppercase tracking-wider text-outline">
-                Field Documentation
-              </span>
-            </div>
-            <div class="space-y-4 font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed">
-              ${d.narrative.map(p => `<p>${p}</p>`).join('')}
-            </div>
-          </div>
-        ` : '';
-
-        const timelineHtml = d.timeline && d.timeline.length > 0 ? `
-          <div class="bg-surface-container rounded-2xl p-6 sm:p-8 space-y-4 border border-white/5">
-            <div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
-              <h3 class="font-headline-sm text-lg text-primary font-semibold flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary">history_edu</span>
-                Life Milestones &amp; Incident Chronology
-              </h3>
-              <span class="font-label-editorial text-xs uppercase tracking-wider text-outline">
-                Chronological Sequence
-              </span>
-            </div>
-            <div class="relative before:absolute before:left-4 before:top-3 before:bottom-3 before:w-0.5 before:bg-outline-variant/30 pl-10 space-y-6">
-              ${d.timeline.map(t => `
-                <div class="relative space-y-1">
-                  <div class="absolute -left-10 top-1.5 w-4 h-4 rounded-full bg-secondary-fixed ring-4 ring-surface-container"></div>
-                  <span class="font-label-data text-xs font-semibold text-secondary-fixed uppercase tracking-wider">${t.date}</span>
-                  <h4 class="font-headline-sm text-base text-primary font-medium">${t.title}</h4>
-                  <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">${t.detail}</p>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        ` : '';
-
-        const veterinaryHtml = d.veterinaryNotes ? `
-          <div class="bg-surface-container rounded-2xl p-6 sm:p-8 space-y-3 border border-white/5">
-            <h3 class="font-headline-sm text-lg text-amber-300 font-semibold flex items-center gap-2">
-              <span class="material-symbols-outlined text-amber-300">medical_services</span>
-              DWC Field Veterinary &amp; Forensic Necropsy / Telemetry Bulletin
-            </h3>
-            <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed bg-surface-container-low p-4 sm:p-5 rounded-xl">
-              ${d.veterinaryNotes}
-            </p>
-          </div>
-        ` : '';
-
-        const legacyHtml = d.legacy ? `
-          <div class="bg-surface-container rounded-2xl p-6 sm:p-8 space-y-3 border border-white/5">
-            <h3 class="font-headline-sm text-lg text-secondary font-semibold flex items-center gap-2">
-              <span class="material-symbols-outlined text-secondary">verified</span>
-              Conservation Legacy &amp; National Significance
-            </h3>
-            <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed bg-surface-container-low p-4 sm:p-5 rounded-xl">
-              ${d.legacy}
-            </p>
-          </div>
-        ` : '';
-
-        const theme = getCategoryTheme(d.category);
-
-        root.innerHTML = `
-          <!-- Hero Section -->
-          <div class="bg-surface-container rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-            <div class="relative h-80 sm:h-96 md:h-[480px] w-full overflow-hidden bg-surface-container-highest">
-              <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
-              
-              <!-- Badges -->
-              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-lg backdrop-blur-md font-label-editorial text-xs uppercase tracking-wider font-semibold ${theme.pillBg} border">
-                  ${d.badge || d.status}
-                </span>
-                <span class="px-3 py-1.5 rounded-lg backdrop-blur-md font-label-data text-xs bg-surface-container/90 text-on-surface border border-white/10">
-                  ${theme.label}
-                </span>
-              </div>
-
-              <!-- Action Bar in Hero -->
-              <div class="absolute top-4 right-4 flex items-center gap-2">
-                <a href="gaja-lanka-elephants-merged-researched.json" target="_blank" class="px-3 py-1.5 rounded-lg bg-surface-container/90 backdrop-blur-md text-xs font-semibold text-secondary hover:text-white transition-colors border border-white/10 flex items-center gap-1.5 cursor-pointer" title="View Machine-Readable Monograph Record">
-                  <span class="material-symbols-outlined text-[15px]">code</span>
-                  <span>JSON Record</span>
-                </a>
-                <button onclick="GajaDossierModal.open('${id}')" class="px-3 py-1.5 rounded-lg bg-surface-container/90 backdrop-blur-md text-xs font-semibold text-secondary hover:text-white transition-colors border border-white/10 flex items-center gap-1.5 cursor-pointer">
-                  <span class="material-symbols-outlined text-[15px]">fullscreen</span>
-                  <span>Open Modal View</span>
-                </button>
-              </div>
-
-              <!-- Title Block -->
-              <div class="absolute bottom-6 left-6 right-6">
-                <div class="text-xs font-label-editorial uppercase tracking-widest text-secondary font-semibold mb-1">
-                  ${d.sinhalaName || ''}
-                </div>
-                <h2 class="font-headline-lg text-3xl sm:text-4xl text-primary font-bold">
-                  ${d.name}
-                </h2>
-                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-2 font-label-data text-xs sm:text-sm text-on-surface">
-                  <span class="flex items-center gap-1"><span class="text-secondary">📅</span> ${d.lifespan || ''}</span>
-                  <span class="flex items-center gap-1"><span class="text-secondary">📍</span> ${d.range || ''}</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Overview & Key Stat Chips -->
-            <div class="p-6 sm:p-8 space-y-6">
-              <p class="font-body-lg text-base sm:text-lg text-on-surface leading-relaxed max-w-4xl">
-                ${d.overview || ''}
-              </p>
-
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
-                <div class="p-4 rounded-2xl bg-surface-container-low text-center space-y-1">
-                  <span class="block text-[11px] font-label-editorial uppercase tracking-wider text-outline">Shoulder Height</span>
-                  <span class="font-headline-md font-bold text-primary text-xl">${d.height || 'N/A'}</span>
-                </div>
-                <div class="p-4 rounded-2xl bg-surface-container-low text-center space-y-1">
-                  <span class="block text-[11px] font-label-editorial uppercase tracking-wider text-outline">Estimated Mass</span>
-                  <span class="font-headline-md font-bold text-primary text-xl">${d.weight || 'N/A'}</span>
-                </div>
-                <div class="p-4 rounded-2xl bg-surface-container-low text-center space-y-1">
-                  <span class="block text-[11px] font-label-editorial uppercase tracking-wider text-outline">Tusk Length</span>
-                  <span class="font-headline-md font-bold text-primary text-xl">${d.tuskLength || 'N/A'}</span>
-                </div>
-                <div class="p-4 rounded-2xl bg-surface-container-low text-center space-y-1">
-                  <span class="block text-[11px] font-label-editorial uppercase tracking-wider text-outline">Status Record</span>
-                  <span class="font-headline-md font-bold ${d.statusType === 'living' ? 'text-emerald-400' : 'text-rose-400'} text-xl">${d.status}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Biometrics -->
-          ${biometricsHtml}
-
-          <!-- Narrative -->
-          ${narrativeHtml}
-
-          <!-- Timeline -->
-          ${timelineHtml}
-
-          <!-- Veterinary -->
-          ${veterinaryHtml}
-
-          <!-- Legacy -->
-          ${legacyHtml}
-        `;
-
-        // Update Bottom Nav labels
-        const currentIdx = keys.indexOf(id);
-        const prevIdx = (currentIdx - 1 + keys.length) % keys.length;
-        const nextIdx = (currentIdx + 1) % keys.length;
-
-        const prevLabel = document.getElementById('bottom-prev-label');
-        const nextLabel = document.getElementById('bottom-next-label');
-        const prevBtn = document.getElementById('bottom-prev-btn');
-        const nextBtn = document.getElementById('bottom-next-btn');
-
-        if (prevLabel && specimensById[keys[prevIdx]]) {
-          prevLabel.textContent = `← ${specimensById[keys[prevIdx]].name.split(' (')[0]}`;
-        }
-        if (nextLabel && specimensById[keys[nextIdx]]) {
-          nextLabel.textContent = `${specimensById[keys[nextIdx]].name.split(' (')[0]} →`;
-        }
-        
-        if (prevBtn) prevBtn.onclick = () => switchDossier(keys[prevIdx]);
-        if (nextBtn) nextBtn.onclick = () => switchDossier(keys[nextIdx]);
-      }
-
-      window.switchDossier = function(id) {
-        if (!specimensById[id]) return;
-        activeId = id;
-        try {
-          history.replaceState(null, '', `?id=${id}`);
-        } catch (e) {
-          try {
-            history.replaceState(null, '', `#${id}`);
-          } catch (e2) {
-            window.location.hash = `#${id}`;
-          }
-        }
-        renderRail();
-        renderMonograph(id);
-      };
-
-      window.selectAndScrollDossier = function(id) {
-        switchDossier(id);
-        const target = document.getElementById('monograph-viewer');
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      };
 
       window.copyPermalink = function() {
-        const url = window.location.href.split('?')[0].split('#')[0] + `?id=${activeId}`;
+        const url = window.location.href.split('?')[0].split('#')[0];
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(url).then(() => {
             const btnText = document.getElementById('copy-btn-text');
@@ -936,19 +625,11 @@
         }
       };
 
-      window.addEventListener('hashchange', () => {
-        const newId = getActiveId();
-        if (newId && newId !== activeId && specimensById[newId]) {
-          activeId = newId;
-          renderRail();
-          renderMonograph(activeId);
-        }
-      });
-
-      // Initial Renders
+      // Initial Render
       renderCards();
-      renderRail();
-      renderMonograph(activeId);
+      checkDeepLink();
+
+      window.addEventListener('hashchange', checkDeepLink);
 
       // Mobile Menu Toggle
       const mobileBtn = document.getElementById('mobile-menu-btn');
