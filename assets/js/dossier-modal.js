@@ -45,10 +45,6 @@
           </div>
 
           <div class="flex items-center gap-2">
-            <a id="modal-permalink-btn" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-surface-container-highest transition-colors font-label-data text-xs font-medium" title="Open Dedicated Standalone Page">
-              <span>Full Page</span>
-              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
-            </a>
             <button id="modal-close-btn" type="button" class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-highest/80 hover:bg-rose-950/80 text-on-surface hover:text-rose-300 transition-colors" aria-label="Close dossier">
               <span class="material-symbols-outlined text-[20px]">close</span>
             </button>
@@ -259,20 +255,6 @@
 
       <!-- Conservation Legacy -->
       ${legacyHtml}
-
-      <!-- Standalone Page Link Box -->
-      <div class="p-4 rounded-xl bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary text-2xl">menu_book</span>
-          <div>
-            <h5 class="font-headline-sm text-sm text-primary font-medium">Need full citation or printable report?</h5>
-            <p class="font-body-sm text-xs text-on-surface-variant">Access the complete monograph with downloadable citation and maps on the dedicated dossier page.</p>
-          </div>
-        </div>
-        <a href="famous-elephants.html?id=${d.id}" target="_blank" onclick="event.stopPropagation();" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-data text-xs font-semibold hover:bg-primary-hover transition-colors whitespace-nowrap">
-          Open Standalone Monograph &rarr;
-        </a>
-      </div>
     `;
   }
 
