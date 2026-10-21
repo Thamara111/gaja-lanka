@@ -14,6 +14,7 @@
 
   const dossierKeys = Object.keys(GAJA_LANKA_DOSSIERS);
   let currentDossierId = null;
+  const originalDocTitle = document.title;
 
   // Build Modal Container in DOM if not present
   function ensureModalElement() {
@@ -189,7 +190,7 @@
       <!-- Hero Header Card -->
       <div class="bg-surface-container rounded-2xl overflow-hidden">
         <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-surface-container-highest">
-          <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover">
+          <img src="${d.image}" alt="${d.name} - Sri Lankan ${d.type === 'wild' ? 'Wild Tusker' : 'Sacred Sovereign'} Profile" loading="lazy" decoding="async" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
           
           <div class="absolute top-3 left-3 flex flex-wrap gap-2">
@@ -289,6 +290,11 @@
 
     document.body.style.overflow = 'hidden';
 
+    // Update document title dynamically for browser history and deep links
+    try {
+      document.title = `${dossier.name} (${dossier.typeLabel || 'Sri Lankan Elephant'}) • Dossier Monograph | Gaja Lanka`;
+    } catch (e) {}
+
     // Update URL hash cleanly without jitter
     if (window.location.hash !== `#${elephantId}`) {
       try {
@@ -312,6 +318,10 @@
       modal.classList.remove('flex');
       document.body.style.overflow = '';
       currentDossierId = null;
+      // Restore original document title
+      try {
+        if (originalDocTitle) document.title = originalDocTitle;
+      } catch (e) {}
       // Remove hash if closing
       if (window.location.hash && dossierKeys.includes(window.location.hash.substring(1))) {
         try {

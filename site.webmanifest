@@ -1,0 +1,17 @@
+{
+  "name": "Gaja Lanka | The Sri Lankan Elephant Sanctuary",
+  "short_name": "Gaja Lanka",
+  "description": "Scientific monograph and empirical observatory for the Sri Lankan Elephant (Elephas maximus maximus).",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b160c",
+  "theme_color": "#0b160c",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

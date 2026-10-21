@@ -1,0 +1,19 @@
+# Robots.txt for Gaja Lanka - The Sri Lankan Elephant Sanctuary & Conservation Monograph
+# Production URL: https://thamara111.github.io/gaja-lanka/
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /data.json
+Allow: /elephant_population_and_mortality_stats.csv
+Allow: /famous-elephants.json
+Allow: /gaja-lanka-elephants-merged-researched.json
+
+# Disallow internal scratch and build artifacts
+Disallow: /build.js
+Disallow: /sync_navigation.js
+Disallow: /*_seo_*.js
+Disallow: /scratch_*.js
+
+# XML Sitemap
+Sitemap: https://thamara111.github.io/gaja-lanka/sitemap.xml

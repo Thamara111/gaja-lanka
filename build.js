@@ -927,7 +927,7 @@ ${generateCleanFooter()}
         </div>
       </div>
       <div class="w-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/60 border border-white/10 shadow-2xl">
-        <img id="myth-lightbox-img" src="" alt="" class="max-h-[82vh] w-auto max-w-full object-contain rounded-xl"/>
+        <img id="myth-lightbox-img" src="" alt="Sri Lankan Elephant Conservation Infographic" class="max-h-[82vh] w-auto max-w-full object-contain rounded-xl"/>
       </div>
     </div>
   </div>
